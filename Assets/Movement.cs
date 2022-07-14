@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class Movement : MonoBehaviour
 {
 
-    public float movementSpeed;
-    public float rotationSpeed;
+    public float WalkSpeed;
+    public float RunSpeed;
     public float jumpForce;
     public int maxJumps;
     public int counter = 2;
@@ -26,19 +26,37 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            transform.Translate(0, 0, movementSpeed);
+            transform.Translate(0, 0, WalkSpeed);
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                transform.Translate(0, 0, RunSpeed);
+
+            }
         }
         if (Input.GetKey(KeyCode.S))
         {
-            transform.Translate(0, 0, -movementSpeed);
+            transform.Translate(0, 0, -WalkSpeed);
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                transform.Translate(0, 0, -RunSpeed);
+
+            }
         }
         if (Input.GetKey(KeyCode.D) && hasJump > 0)
         {
-            transform.Rotate(0, rotationSpeed, 0);
+            transform.Translate(WalkSpeed, 0, 0);
+            if (Input.GetKey(KeyCode.LeftShift) && hasJump > 0)
+            {
+                transform.Translate(RunSpeed, 0, 0);
+            }
         }
         if (Input.GetKey(KeyCode.A) && hasJump > 0)
         {
-            transform.Rotate(0, -rotationSpeed, 0);
+            transform.Translate(-WalkSpeed, 0, 0);
+            if (Input.GetKey(KeyCode.LeftShift) && hasJump > 0)
+            {
+                transform.Translate(-RunSpeed, 0, 0);
+            }
         }
         if (Input.GetKey(KeyCode.Space) && hasJump > 0)
         {
@@ -57,5 +75,11 @@ public class Movement : MonoBehaviour
         {
             hasJump = maxJumps;
         }
+        if (col.gameObject.name == "enemigo")
+        {
+            SceneManager.LoadScene("Lucha");
+        }
     }
+    
+
 }
