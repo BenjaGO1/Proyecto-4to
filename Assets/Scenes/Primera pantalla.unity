@@ -514,7 +514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WalkSpeed: 0.1
-  RunSpeed: 0.5
+  RunSpeed: 0.3
   jumpForce: 5
   maxJumps: 2
   counter: 2
@@ -603,5 +603,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c2d827b730e0d440a6ed13e094467b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShowCursor: 0
   Sensitivity: 5
+  ShowCursor: 0

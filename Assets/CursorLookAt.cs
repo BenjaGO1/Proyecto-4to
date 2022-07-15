@@ -5,8 +5,9 @@ using UnityEngine;
 public class CursorLookAt : MonoBehaviour
 {
 
-    public bool ShowCursor = false;
     public float Sensitivity;
+    public bool ShowCursor = false;
+    
 
     void Start()
     {
@@ -19,7 +20,6 @@ public class CursorLookAt : MonoBehaviour
     
     void Update()
     {
-        Debug.Log(Input.GetAxis("Mouse X"));
         float newRotationY = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * Sensitivity;
         float newRotationX = transform.localEulerAngles.x - Input.GetAxis("Mouse Y") * Sensitivity;
 
