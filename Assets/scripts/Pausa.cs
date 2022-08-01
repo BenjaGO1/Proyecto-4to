@@ -7,18 +7,26 @@ public class Pausa : MonoBehaviour
 {
     public GameObject Pause;
     public bool ayuda = false;
+    public bool despausa = false;
     public bool ShowCursor;
-    
+
     void Update()
     {
         if (Input.GetKey(KeyCode.P))
         {
             ayuda = true;
-        }
-        if (ayuda == true)
-        {
             Pause.SetActive(true);
             Cursor.visible = true;
         }
+        if (despausa == true)
+        {
+            Pause.SetActive(false);
+        }
     }
+
+    public void Volver()
+    {
+        despausa = true;
+    }
+
 }

@@ -873,6 +873,7 @@ GameObject:
   - component: {fileID: 1119216852}
   - component: {fileID: 1119216851}
   - component: {fileID: 1119216854}
+  - component: {fileID: 1119216855}
   m_Layer: 5
   m_Name: VolverAlJuego
   m_TagString: Untagged
@@ -940,7 +941,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1119216854}
+      - m_Target: {fileID: 1119216855}
         m_MethodName: Volver
         m_Mode: 1
         m_Arguments:
@@ -998,7 +999,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 728abbeab035e904194492e20a1986d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
   Pause: {fileID: 131002241}
+  despausa: 0
+--- !u!114 &1119216855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119216849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af1b88556e150ee4f9151353cd0c2a37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pause: {fileID: 131002241}
+  ayuda: 0
+  despausa: 0
+  ShowCursor: 0
 --- !u!1 &1326277681
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,6 +1068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pause: {fileID: 131002241}
   ayuda: 0
+  despausa: 0
   ShowCursor: 0
 --- !u!4 &1326277683
 Transform:
@@ -1499,7 +1538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c2d827b730e0d440a6ed13e094467b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sensitivity: 5
+  Sensitivity: 8
   ShowCursor: 0
 --- !u!1 &2072727318
 GameObject:
