@@ -4,44 +4,39 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Attack : MonoBehaviour
-{
-    public bool activate = false;
-    public bool botones = true;
+{    
     public GameObject Cuenta;
     public GameObject Heal;
     public GameObject Object;
     public GameObject Ataque;
+    public GameObject Enter;
 
 
-    private void Update()
+    private void Start()
     {
-        if (activate == false)
-        {
-            Cuenta.SetActive(false);
-        }
-        if(activate == true)
-        {
-            Cuenta.SetActive(true);
-        }
-        if (botones == false)
-        {
-            Heal.SetActive(false);
-            Object.SetActive(false);
-            Ataque.SetActive(false);
-        }
-        if (botones == true)
-        {
-            Heal.SetActive(true);
-            Object.SetActive(true);
-            Ataque.SetActive(true);
-        }
+        Cuenta.SetActive(false);
+        Heal.SetActive(true);
+        Object.SetActive(true);
+        Ataque.SetActive(true);
+        Enter.SetActive(false);
     }
     
    
     public void Activar()
     {
-        activate = true;
-        botones = false;
+        Cuenta.SetActive(true);
+        Heal.SetActive(false);
+        Object.SetActive(false);
+        Ataque.SetActive(false);
+        Enter.SetActive(true);
     }
 
+    public void Desactivar()
+    {
+        Cuenta.SetActive(false);
+        Heal.SetActive(true);
+        Object.SetActive(true);
+        Ataque.SetActive(true);
+        Enter.SetActive(false);
+    }
 }
