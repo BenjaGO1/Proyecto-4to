@@ -446,7 +446,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Escape
+  m_Text: Escapar
 --- !u!222 &273601015
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -523,7 +523,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Attack
+  m_Text: Atacar
 --- !u!222 &341428747
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -672,7 +672,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Object
+  m_Text: Objeto
 --- !u!222 &510792683
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -749,7 +749,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Heal
+  m_Text: Curar
 --- !u!222 &513744589
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1316,13 +1316,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 90
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 2 + 2 =
+  m_Text: 10+10=
 --- !u!222 &803102302
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1519,6 +1519,7 @@ GameObject:
   - component: {fileID: 1031176410}
   - component: {fileID: 1031176409}
   - component: {fileID: 1031176412}
+  - component: {fileID: 1031176413}
   m_Layer: 5
   m_Name: Attack
   m_TagString: Untagged
@@ -1597,6 +1598,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1031176413}
+        m_MethodName: BtnAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1031176410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1650,6 +1662,20 @@ MonoBehaviour:
   Heal: {fileID: 1480576952}
   Object: {fileID: 1574832764}
   Ataque: {fileID: 1031176407}
+--- !u!114 &1031176413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031176407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a440187b600604f4c8ac314a3ccbd77a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  largeText: {fileID: 803102301}
+  maxInt: 9
 --- !u!1 &1083834234
 GameObject:
   m_ObjectHideFlags: 0
