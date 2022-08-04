@@ -1,20 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DamageCalc : MonoBehaviour
 {
 
-    private float daño;  
+    private string daño;
+    public InputField Res;
 
-    void Start()
-    {
-        
-    }
 
-    
-    void Update()
+    public void GuardarRes()
     {
-        
+        daño = Res.text;
+        Debug.Log(daño);
     }
 }

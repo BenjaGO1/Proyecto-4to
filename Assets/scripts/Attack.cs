@@ -9,7 +9,6 @@ public class Attack : MonoBehaviour
     public GameObject Heal;
     public GameObject Object;
     public GameObject Ataque;
-    public GameObject Enter;
 
 
     private void Start()
@@ -18,7 +17,6 @@ public class Attack : MonoBehaviour
         Heal.SetActive(true);
         Object.SetActive(true);
         Ataque.SetActive(true);
-        Enter.SetActive(false);
     }
     
    
@@ -28,7 +26,6 @@ public class Attack : MonoBehaviour
         Heal.SetActive(false);
         Object.SetActive(false);
         Ataque.SetActive(false);
-        Enter.SetActive(true);
     }
 
     public void Desactivar()
@@ -37,6 +34,5 @@ public class Attack : MonoBehaviour
         Heal.SetActive(true);
         Object.SetActive(true);
         Ataque.SetActive(true);
-        Enter.SetActive(false);
     }
 }

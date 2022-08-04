@@ -17,7 +17,7 @@ public class EnemyLife : MonoBehaviour
 
     public void update()
     {
-        //damageCalc.daño;
+        //damageCalc.GuardarRes;
     }
 
     public void TakeDamage()
