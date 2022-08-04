@@ -69,6 +69,9 @@ public class Movement : MonoBehaviour
             transform.eulerAngles=new Vector3(0, 0, 0);
         }
     }
+
+    public GameObject DialogoTuto;
+
     private void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.name == "ground")
@@ -78,6 +81,10 @@ public class Movement : MonoBehaviour
         if (col.gameObject.name == "enemigo")
         {
             SceneManager.LoadScene("Lucha");
+        }
+        if (col.gameObject.name == "tutor")
+        {
+            DialogoTuto.SetActive(true);
         }
     }
     
