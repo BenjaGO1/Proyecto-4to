@@ -6,13 +6,17 @@ using UnityEngine.UI;
 public class DamageCalc : MonoBehaviour
 {
 
-    private string daño;
+   
     public InputField Res;
+    public string daño;
+    public int dañoInt;
+
 
 
     public void GuardarRes()
     {
         daño = Res.text;
         Debug.Log(daño);
-    }
+         dañoInt = int.Parse(daño);
+}
 }
