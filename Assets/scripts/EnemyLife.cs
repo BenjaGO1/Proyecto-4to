@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyLife : MonoBehaviour
 {
@@ -17,13 +18,14 @@ public class EnemyLife : MonoBehaviour
 
     public void update()
     {
-        //damageCalc.GuardarRes;
+        damageCalc.GuardarRes();
+        TakeDamage();
     }
 
     public void TakeDamage()
     {
-        //health -= daño;
-        //int barhealth = daño * gameObject.transform.localScale * 100;
+            health -= damageCalc.dañoInt;
+            //int barhealth = damageCalc.dañoInt * gameObject.transform.localScale * 100;
         if (health <= 0)
         {
             Die();
@@ -34,5 +36,6 @@ public class EnemyLife : MonoBehaviour
     void Die()
     {
         Destroy(gameObject);
+        SceneManager.LoadScene("Primera pantalla");
     }
 }
