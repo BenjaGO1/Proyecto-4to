@@ -3,22 +3,32 @@ using UnityEngine.UI;
 
 public class Randomizar : MonoBehaviour
 {
-    public Text largeText;
-    public int maxInt = 9;
+//    public GameObject CuentaN1;
+//    public Text N1Text;
+//    public int maxInt = 10;
 
-    public void BtnAction()
-    {
-        //largeText.text = ;
-    }
+//    public int randomnum;
 
-    public void CuentaRandom ()
-    {
-        int randomnum = Random.Range(1, maxInt + 1);
-        Debug.Log(randomnum);
-    }
-    public void CuentaRandom2()
-    {
-        int randomnum2 = Random.Range(1, maxInt + 1);
-        Debug.Log(randomnum2);
-    }
+    
+
+//    public void CuentaRandom ()
+//    {
+//        int randomnum = Random.Range(1, maxInt);
+//        Debug.Log(randomnum +"+");
+
+//        string n1text = randomnum.ToString();
+//    }
+//    public void CuentaRandom2()
+//    {
+//        int randomnum2 = Random.Range(1, maxInt);
+//        Debug.Log(randomnum2 + "=");
+        
+//        string n2text = randomnum2.ToString();
+//    }
+
+//    public void BtnAction()
+//    {
+//        N1Text.text = randomnum;
+//    }
+
 }
