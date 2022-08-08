@@ -11,27 +11,116 @@ public class EligeCuenta : MonoBehaviour
     public int minInt = 1;
     public int maxInt = 10;
 
-    public int randomnum;
-    public int randomnum2;
+    int randomnum;
+    int randomnum2;
 
+    public Text Respuesta;
+
+    int insertRes;
+
+    public Text correccionando;
+    public GameObject correccionado;
 
     public void Start()
+    {
+        RandomizarEnTexto();
+
+        correccionado.SetActive(false);
+    }
+
+    void Update()
+    {
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Corrección();
+            Correccionado();
+
+            //si pasan 3 segundos o la animacion reiniciar
+            Reset();
+        }
+    }
+
+    public void RandomizarEnTexto()
     {
         randomnum = Random.Range(minInt, maxInt);
         //Debug.Log(randomnum + "+");
 
-        string n1text = randomnum.ToString();
-    
         randomnum2 = Random.Range(minInt, maxInt);
         //Debug.Log(randomnum2 + "=");
 
+
+
+        string n1text = randomnum.ToString();
         string n2text = randomnum2.ToString();
 
-        
+
         N1Text.text = n1text + " +";
         N2Text.text = n2text + " =";
+
+
     }
 
-   
+    public void Corrección()
+    {
+
+        insertRes = (int.Parse(Respuesta.text));
+
+        int res = randomnum + randomnum2;
+
+
+        if (insertRes == res)
+        {
+            Debug.Log("Respuesta correcta");
+
+            string correcionando = ("Respuesta correcta");
+            correccionando.text = correcionando;
+
+        }
+        else
+        {
+            Debug.Log("Respuesta incorrecta");
+            string correcionando = ("Respuesta incorrecta");
+            correccionando.text = correcionando;
+        }
+
+
+    }
+
+    public void Correccionado()
+    {
+
+        correccionado.SetActive(true);
+
+
+    }
+
+    public GameObject Cuenta;
+    public GameObject Heal;
+    public GameObject Object;
+    public GameObject Ataque;
+
+
+    public void Reset()
+    {
+        Cuenta.SetActive(false);
+        Heal.SetActive(true);
+        Object.SetActive(true);
+        Ataque.SetActive(true);
+
+        RandomizarEnTexto();
+
+        string textReset = ("");
+        correccionando.text = textReset;
+
+        //RESETEAR EL INPUT
+        string InputReset = "";
+        Respuesta.text = InputReset;
+    
+    }
+
+
+
+
 
 }

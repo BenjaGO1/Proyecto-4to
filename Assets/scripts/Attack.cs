@@ -18,8 +18,8 @@ public class Attack : MonoBehaviour
         Object.SetActive(true);
         Ataque.SetActive(true);
     }
-    
-   
+
+
     public void Activar()
     {
         Cuenta.SetActive(true);
