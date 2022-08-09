@@ -996,8 +996,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -58, y: 28.171}
-  m_SizeDelta: {x: 178.03302, y: 116.14264}
+  m_AnchoredPosition: {x: -27.2, y: 31.94}
+  m_SizeDelta: {x: 239.7279, y: 123.68082}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &698825152
 MonoBehaviour:
@@ -1076,7 +1076,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 129, y: 20.69}
+  m_AnchoredPosition: {x: 167, y: 20.69}
   m_SizeDelta: {x: 179.27493, y: 146.18118}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &701222964
@@ -1437,8 +1437,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -220, y: 28.171}
-  m_SizeDelta: {x: 172.23505, y: 116.1427}
+  m_AnchoredPosition: {x: -269.5, y: 31.94}
+  m_SizeDelta: {x: 271.28067, y: 123.68097}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &803102301
 MonoBehaviour:
@@ -3314,9 +3314,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   N1Text: {fileID: 803102301}
   N2Text: {fileID: 698825152}
-  minInt: 1
-  maxInt: 10
+  minInt: 10
+  maxInt: 50
   Respuesta: {fileID: 701222964}
+  res: 0
   correccionando: {fileID: 1877614526}
   correccionado: {fileID: 1877614525}
   Cuenta: {fileID: 1955610530}

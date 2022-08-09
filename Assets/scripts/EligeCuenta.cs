@@ -37,9 +37,9 @@ public class EligeCuenta : MonoBehaviour
             Corrección();
             Correccionado();
 
-            //si pasan 3 segundos o la animacion reiniciar
+            
             //Hacer timer de respuesta
-            Reset();
+         
         }
     }
 
