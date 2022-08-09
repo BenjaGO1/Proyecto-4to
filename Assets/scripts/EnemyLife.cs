@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EnemyLife : MonoBehaviour
 {
-    public float health = 50f;
+    public int health = 1;
 
     DamageCalc damageCalc;
     public GameObject res;

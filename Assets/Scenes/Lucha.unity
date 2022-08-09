@@ -3316,9 +3316,13 @@ MonoBehaviour:
   N2Text: {fileID: 698825152}
   minInt: 1
   maxInt: 10
-  Respuesta: {fileID: 771673093}
+  Respuesta: {fileID: 701222964}
   correccionando: {fileID: 1877614526}
   correccionado: {fileID: 1877614525}
+  Cuenta: {fileID: 1955610530}
+  Heal: {fileID: 1480576952}
+  Object: {fileID: 1574832764}
+  Ataque: {fileID: 1031176407}
 --- !u!4 &1932232936
 Transform:
   m_ObjectHideFlags: 0

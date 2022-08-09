@@ -14,9 +14,10 @@ public class EligeCuenta : MonoBehaviour
     int randomnum;
     int randomnum2;
 
-    public Text Respuesta;
+    public InputField Respuesta;
 
     int insertRes;
+    public int res;
 
     public Text correccionando;
     public GameObject correccionado;
@@ -37,6 +38,7 @@ public class EligeCuenta : MonoBehaviour
             Correccionado();
 
             //si pasan 3 segundos o la animacion reiniciar
+            //Hacer timer de respuesta
             Reset();
         }
     }
@@ -44,10 +46,10 @@ public class EligeCuenta : MonoBehaviour
     public void RandomizarEnTexto()
     {
         randomnum = Random.Range(minInt, maxInt);
-        //Debug.Log(randomnum + "+");
+        
 
         randomnum2 = Random.Range(minInt, maxInt);
-        //Debug.Log(randomnum2 + "=");
+        
 
 
 
@@ -89,10 +91,7 @@ public class EligeCuenta : MonoBehaviour
 
     public void Correccionado()
     {
-
         correccionado.SetActive(true);
-
-
     }
 
     public GameObject Cuenta;
@@ -113,7 +112,6 @@ public class EligeCuenta : MonoBehaviour
         string textReset = ("");
         correccionando.text = textReset;
 
-        //RESETEAR EL INPUT
         string InputReset = "";
         Respuesta.text = InputReset;
     
