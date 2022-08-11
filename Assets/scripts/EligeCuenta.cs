@@ -22,9 +22,13 @@ public class EligeCuenta : MonoBehaviour
     public Text correccionando;
     public GameObject correccionado;
 
-    public float counter = 10;
-    public float timeRes = 0;
-    public float ayuda;
+    public Text tiempo;
+
+    //public float counter = 10;
+    //public float timeRes = 0;
+    //public float ayuda;
+
+    //private int InttiempoMuestra;
 
     public void Start()
     {
@@ -33,14 +37,22 @@ public class EligeCuenta : MonoBehaviour
         RandomizarEnTexto();
 
         correccionado.SetActive(false);
+
+
     }
+
+    //public string tiempoMuestra;
 
     void Update()
     {
         //Poner un UI para que aparezca el tiempo que tiene
       
-        timeRes += Time.time;
-        counter += Time.time;
+        //timeRes += Time.time;
+        //counter += Time.time;
+
+
+        //tiempoMuestra = Mathf.Floor(counter).ToString();
+        //tiempo.text = tiempoMuestra;
 
 
         if (Input.GetKeyDown(KeyCode.Return))
@@ -91,13 +103,7 @@ public class EligeCuenta : MonoBehaviour
             correccionando.text = correcionando;
 
         }
-        //else if (insertRes == 0)
-        //{
-        //    Debug.Log("Respuesta incorrecta");
-        //    string correcionando = ("Respuesta incorrecta");
-        //    correccionando.text = correcionando;
-        //}
-
+     
         else
         {
             Debug.Log("Respuesta incorrecta");
@@ -105,7 +111,7 @@ public class EligeCuenta : MonoBehaviour
             correccionando.text = correcionando;
         }
 
-
+      
     }
 
     public void Correccionado()
@@ -133,33 +139,39 @@ public class EligeCuenta : MonoBehaviour
 
         string InputReset = "";
         Respuesta.text = InputReset;
-    
+
+        //InttiempoMuestra = int.Parse(tiempoMuestra);
+        //InttiempoMuestra = 0;
+
+
     }
 
-    
+    //private bool ActCorrec = false;
 
-    public void timeResp()
-    {
-        ayuda = counter;
+    //public void timeResp()
+    //{
+    //    ayuda = counter;
 
-        Debug.Log(ayuda + "ayuda");
+    //    Corrección();
+    //    Correccionado();
 
-        if (ayuda <= timeRes)
-        {
-            Debug.Log("Hacer algo");
-           
-            Corrección();
-            Correccionado();
+        
+    //    Debug.Log(ayuda + "ayuda");
 
+    //    if (ayuda <= timeRes)
+    //    {
+    //        Debug.Log("Se te acabo el tiempo");
+    //        ActCorrec = true;
+          
             
-        }
+    //    }
 
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            timeRes = 0;
-        }
+    //    if (Input.GetKeyDown(KeyCode.Return))
+    //    {
+    //        timeRes = 0;
+    //    }
 
-    }
+    //}
 
 
 
