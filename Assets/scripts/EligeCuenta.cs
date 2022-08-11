@@ -22,8 +22,14 @@ public class EligeCuenta : MonoBehaviour
     public Text correccionando;
     public GameObject correccionado;
 
+    public float counter = 10;
+    public float timeRes = 0;
+    public float ayuda;
+
     public void Start()
     {
+      
+
         RandomizarEnTexto();
 
         correccionado.SetActive(false);
@@ -31,6 +37,11 @@ public class EligeCuenta : MonoBehaviour
 
     void Update()
     {
+        //Poner un UI para que aparezca el tiempo que tiene
+      
+        timeRes += Time.time;
+        counter += Time.time;
+
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
@@ -65,12 +76,13 @@ public class EligeCuenta : MonoBehaviour
 
     public void Corrección()
     {
+    
 
         insertRes = (int.Parse(Respuesta.text));
 
         int res = randomnum + randomnum2;
 
-
+     
         if (insertRes == res)
         {
             Debug.Log("Respuesta correcta");
@@ -79,6 +91,13 @@ public class EligeCuenta : MonoBehaviour
             correccionando.text = correcionando;
 
         }
+        //else if (insertRes == 0)
+        //{
+        //    Debug.Log("Respuesta incorrecta");
+        //    string correcionando = ("Respuesta incorrecta");
+        //    correccionando.text = correcionando;
+        //}
+
         else
         {
             Debug.Log("Respuesta incorrecta");
@@ -117,6 +136,30 @@ public class EligeCuenta : MonoBehaviour
     
     }
 
+    
+
+    public void timeResp()
+    {
+        ayuda = counter;
+
+        Debug.Log(ayuda + "ayuda");
+
+        if (ayuda <= timeRes)
+        {
+            Debug.Log("Hacer algo");
+           
+            Corrección();
+            Correccionado();
+
+            
+        }
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            timeRes = 0;
+        }
+
+    }
 
 
 
