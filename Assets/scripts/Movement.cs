@@ -82,10 +82,6 @@ public class Movement : MonoBehaviour
         {
             SceneManager.LoadScene("Lucha");
         }
-        if (col.gameObject.name == "tutor")
-        {
-            DialogoTuto.SetActive(true);
-        }
     }
     
 
