@@ -1,33 +1,33 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
+//using UnityEngine.UI;
 
-public class TimeManager : MonoBehaviour
-{
-    public float timeRes;
-    public float timeToDoSomething;
+//public class timeAnswer : MonoBehaviour
+//{
+//    public float timeRes = 10;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        timeRes = 10;
-    }
+//    // Start is called before the first frame update
+//    void Start()
+//    {
+       
+        
+//    }
 
-    // Update is called once per frame
-    void Update()
-    {
+//    // Update is called once per frame
+//    void Update()
+//    {
 
-        if (Time.time > timeToDoSomething)
-        {
-            Debug.Log("Hacer algo");
-        }
+//        if (Time.time > timeRes)
+//        {
+//            Debug.Log("Hacer algo");
+//        }
 
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            timeRes = 0;
-        }
+//        if (Input.GetKeyDown(KeyCode.Return))
+//        {
+//            timeRes = 0;
+//        }
 
 
-    }
-}
+//    }
+//}

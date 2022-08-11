@@ -300,6 +300,9 @@ MonoBehaviour:
   res: 0
   correccionando: {fileID: 1877614526}
   correccionado: {fileID: 1877614525}
+  counter: 0
+  timeRes: 10
+  ayuda: 0
   Cuenta: {fileID: 1955610530}
   Heal: {fileID: 1480576952}
   Object: {fileID: 1574832764}
@@ -1544,7 +1547,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 0
 --- !u!222 &771673094
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1819,6 +1822,7 @@ GameObject:
   - component: {fileID: 1031176409}
   - component: {fileID: 1031176412}
   - component: {fileID: 1031176413}
+  - component: {fileID: 1031176414}
   m_Layer: 5
   m_Name: Attack
   m_TagString: Untagged
@@ -1839,7 +1843,7 @@ RectTransform:
   m_Children:
   - {fileID: 341428745}
   m_Father: {fileID: 1293229576}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1888,6 +1892,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1031176412}
         m_MethodName: Activar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1031176414}
+        m_MethodName: timeResp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1960,6 +1975,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a440187b600604f4c8ac314a3ccbd77a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1031176414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031176407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c42725720caa1045abb06adb5474fa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  N1Text: {fileID: 803102301}
+  N2Text: {fileID: 698825152}
+  minInt: 1
+  maxInt: 10
+  Respuesta: {fileID: 701222964}
+  res: 0
+  correccionando: {fileID: 1877614526}
+  correccionado: {fileID: 1877614525}
+  counter: 0
+  timeRes: 10
+  ayuda: 0
+  Cuenta: {fileID: 1955610530}
+  Heal: {fileID: 1480576952}
+  Object: {fileID: 1574832764}
+  Ataque: {fileID: 1031176407}
 --- !u!1 &1083834234
 GameObject:
   m_ObjectHideFlags: 0
@@ -2600,9 +2642,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 240618205}
-  - {fileID: 1480576953}
   - {fileID: 1031176408}
   - {fileID: 1574832765}
+  - {fileID: 1480576953}
   m_Father: {fileID: 1184072532}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2807,7 +2849,7 @@ RectTransform:
   m_Children:
   - {fileID: 513744587}
   m_Father: {fileID: 1293229576}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2988,7 +3030,7 @@ RectTransform:
   m_Children:
   - {fileID: 510792681}
   m_Father: {fileID: 1293229576}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3482,7 +3524,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Se termino el tiempo
 --- !u!222 &1877614527
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3547,6 +3589,9 @@ MonoBehaviour:
   res: 0
   correccionando: {fileID: 1877614526}
   correccionado: {fileID: 1877614525}
+  counter: 0
+  timeRes: 10
+  ayuda: 0
   Cuenta: {fileID: 1955610530}
   Heal: {fileID: 1480576952}
   Object: {fileID: 1574832764}
