@@ -32,13 +32,11 @@ public class EligeCuenta : MonoBehaviour
 
     public void Start()
     {
-      
-
-        RandomizarEnTexto();
+        RandomizarDivi();
+        //RandomizarResta();
+        //RandomizarEnTexto();
 
         correccionado.SetActive(false);
-
-
     }
 
     //public string tiempoMuestra;
@@ -57,45 +55,48 @@ public class EligeCuenta : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            Corrección();
+            CorrecciónDivi();
+            //CorrecciónMulti();
+            //CorrecciónResta();
+            //CorrecciónSuma();
             Correccionado();
-
-            
-            //Hacer timer de respuesta
-         
         }
     }
 
     public void RandomizarEnTexto()
     {
         randomnum = Random.Range(minInt, maxInt);
-        
-
         randomnum2 = Random.Range(minInt, maxInt);
-        
-
-
-
+ 
         string n1text = randomnum.ToString();
         string n2text = randomnum2.ToString();
 
 
+
         N1Text.text = n1text + " +";
         N2Text.text = n2text + " =";
-
-
     }
 
-    public void Corrección()
+    public void CorrecciónSuma()
     {
-    
+
+        //randomnum = Random.Range(minInt, maxInt);
+        //randomnum2 = Random.Range(minInt, maxInt);
+
+        //string n1text = randomnum.ToString();
+        //string n2text = randomnum2.ToString();
+
+
+
+        //N1Text.text = n1text + " +";
+        //N2Text.text = n2text + " =";
+
 
         insertRes = (int.Parse(Respuesta.text));
 
         int res = randomnum + randomnum2;
 
-     
-        if (insertRes == res)
+    if (insertRes == res)
         {
             Debug.Log("Respuesta correcta");
 
@@ -132,7 +133,9 @@ public class EligeCuenta : MonoBehaviour
         Object.SetActive(true);
         Ataque.SetActive(true);
 
-        RandomizarEnTexto();
+        RandomizarDivi();
+        // RandomizarEnTexto();
+        // RandomizarResta();
 
         string textReset = ("");
         correccionando.text = textReset;
@@ -155,15 +158,15 @@ public class EligeCuenta : MonoBehaviour
     //    Corrección();
     //    Correccionado();
 
-        
+
     //    Debug.Log(ayuda + "ayuda");
 
     //    if (ayuda <= timeRes)
     //    {
     //        Debug.Log("Se te acabo el tiempo");
     //        ActCorrec = true;
-          
-            
+
+
     //    }
 
     //    if (Input.GetKeyDown(KeyCode.Return))
@@ -172,8 +175,103 @@ public class EligeCuenta : MonoBehaviour
     //    }
 
     //}
+    public void RandomizarResta()
+    {
 
+        randomnum = Random.Range(maxInt, minInt);
+        randomnum2 = Random.Range(randomnum, minInt);
 
+        string n1text = randomnum.ToString();
+        string n2text = randomnum2.ToString();
+
+        N1Text.text = n1text + " -";
+        N2Text.text = n2text + " =";
+    }
+    public void CorrecciónResta()
+    {
+        insertRes = (int.Parse(Respuesta.text));
+
+        int res = randomnum - randomnum2;
+
+        if (insertRes == res)
+        {
+            Debug.Log("Respuesta correcta");
+
+            string correcionando = ("Respuesta correcta");
+            correccionando.text = correcionando;
+
+        }
+
+        else
+        {
+            //Debug.Log("Respuesta incorrecta");
+            string correcionando = ("Respuesta incorrecta");
+            correccionando.text = correcionando;
+        }
+
+    }
+
+    public void CorrecciónMulti()
+    {
+        insertRes = (int.Parse(Respuesta.text));
+
+        int res = randomnum * randomnum2;
+
+        if (insertRes == res)
+        {
+            Debug.Log("Respuesta correcta");
+
+            string correcionando = ("Respuesta correcta");
+            correccionando.text = correcionando;
+
+        }
+
+        else
+        {
+            //Debug.Log("Respuesta incorrecta");
+            string correcionando = ("Respuesta incorrecta");
+            correccionando.text = correcionando;
+        }
+
+    }
+
+    public void RandomizarDivi()
+    {
+
+        randomnum = Random.Range(maxInt, minInt);
+       //NUMERO QUE N1 SEA RESTO 0 randomnum2 = randomnum % 0;
+
+        string n1text = randomnum.ToString();
+        string n2text = randomnum2.ToString();
+
+        N1Text.text = n1text + " /";
+        N2Text.text = n2text + " =";
+    }
+
+    public void CorrecciónDivi()
+    {
+
+        insertRes = (int.Parse(Respuesta.text));
+
+        int res = randomnum / randomnum2;
+
+        if (insertRes == res)
+        {
+            Debug.Log("Respuesta correcta");
+
+            string correcionando = ("Respuesta correcta");
+            correccionando.text = correcionando;
+
+        }
+
+        else
+        {
+            //Debug.Log("Respuesta incorrecta");
+            string correcionando = ("Respuesta incorrecta");
+            correccionando.text = correcionando;
+        }
+
+    }
 
 
 }
