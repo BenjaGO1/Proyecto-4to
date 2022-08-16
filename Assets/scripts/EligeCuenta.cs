@@ -106,7 +106,7 @@ public class EligeCuenta : MonoBehaviour
      
         else
         {
-            Debug.Log("Respuesta incorrecta");
+            //Debug.Log("Respuesta incorrecta");
             string correcionando = ("Respuesta incorrecta");
             correccionando.text = correcionando;
         }

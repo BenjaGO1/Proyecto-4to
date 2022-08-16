@@ -24,7 +24,7 @@ public class EnemyLife : MonoBehaviour
 
     public void TakeDamage()
     {
-            health -= damageCalc.dañoInt;
+        health -= damageCalc.dañoInt;
             //int barhealth = damageCalc.dañoInt * gameObject.transform.localScale * 100;
         if (health <= 0)
         {

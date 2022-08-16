@@ -16,7 +16,7 @@ public class DamageCalc : MonoBehaviour
     public void GuardarRes()
     {
         daño = Res.text;
-        dañoInt = int.Parse(daño);
         Debug.Log(dañoInt);
+        dañoInt = int.Parse(daño);
     }
 }
