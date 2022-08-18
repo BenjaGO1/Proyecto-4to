@@ -12,6 +12,7 @@ public class ShowPrompt : MonoBehaviour
 
 
 
+
     void Update()
     {
         if (Input.GetKey(KeyCode.E) && trigger == true)

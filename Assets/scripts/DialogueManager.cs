@@ -1,11 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
 
+    public Text nameText;
+    public Text dialogueText;
+
     private Queue<string> sentences;
+    
 
 
     void Start()
@@ -15,9 +21,10 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        Debug.Log("Comenzando conversasión con " + dialogue.name);
+        
+        nameText.text = dialogue.name; 
 
-        sentences.Clear();
+        sentences.Clear(); 
 
         foreach(string sentence in dialogue.sentences)
         {
@@ -34,10 +41,13 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
+
+        string sentence = sentences.Dequeue();
+        dialogueText.text = sentence;
     }
     void EndDialogue()
     {
-        Debug.Log("Termino el dialogo");
+        SceneManager.LoadScene("Primera pantalla");
     }
 
 }
