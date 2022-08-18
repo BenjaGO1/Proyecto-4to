@@ -36,6 +36,8 @@ public class EligeCuenta : MonoBehaviour
         //RandomizarResta();
         //RandomizarEnTexto();
 
+        //HACER UN RANDOMIZAR PARA LA MULTIPLICACION IGUAL PERO CAMBIANDO EL SIGNO
+
         correccionado.SetActive(false);
     }
 
@@ -122,8 +124,10 @@ public class EligeCuenta : MonoBehaviour
         Ataque.SetActive(true);
 
         RandomizarDivi();
-        // RandomizarEnTexto();
+        //RandomizarEnTexto();
         // RandomizarResta();
+
+        
 
         string textReset = ("");
         correccionando.text = textReset;
@@ -225,49 +229,50 @@ public class EligeCuenta : MonoBehaviour
 
     public void RandomizarDivi()
     {
-        maxInt = 30;
-        randomnum = Random.Range(maxInt, minInt);
 
-        bool esPrimo = true;
         
-        for (int i = 2; i < randomnum; i++)
-        {
+            maxInt = 30;
+            randomnum = Random.Range(maxInt, minInt);
 
-            if (randomnum % i == 0)
+            bool esPrimo = true;
+
+            for (int i = 2; i < randomnum; i++)
             {
-                esPrimo = false;
-                break;            
+
+                if (randomnum % i == 0)
+                {
+                    esPrimo = false;
+                    break;
+                }
             }
-        }
 
-        if (esPrimo == true)
-        {
-            RandomizarDivi();
-        }
-
-        randomnum2 = Random.Range(maxInt-1, minInt);
-
-        bool esDivisor = true;
-
-        for (int i = 1; i < randomnum2; i++)
-        {
-
-            if (randomnum % randomnum2 == 0)
+            if (esPrimo == true)
             {
-                esDivisor = false;
-                break;
+                RandomizarDivi();
             }
-        }
-
-        if (esDivisor == true)
-        {
-            RandomizarDivi();
-        }
+        
+       
+            randomnum2 = Random.Range(randomnum - 1, minInt);
 
 
+            bool esDivisor = true;
 
-        //NUMERO QUE N1 SEA RESTO 0 randomnum2 = randomnum % 0;
+            for (int i = 1; i < randomnum2; i++)
+            {
 
+                if (randomnum % randomnum2 == 0)
+                {
+                    esDivisor = false;
+                    break;
+                }
+            }
+
+            if (esDivisor == true)
+            {
+                RandomizarDivi();
+            }
+        
+        
         string n1text = randomnum.ToString();
         string n2text = randomnum2.ToString();
 
