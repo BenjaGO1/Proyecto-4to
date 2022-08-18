@@ -7,17 +7,18 @@ public class ShowPrompt : MonoBehaviour
 {
 
     public Canvas EPromptCanvas;
-    public GameObject dialogo;
     public GameObject Eprompt;
     private bool trigger = false;
+
+
 
     void Update()
     {
         if (Input.GetKey(KeyCode.E) && trigger == true)
         {
-            dialogo.SetActive(true);
             Eprompt.SetActive(false);
         }
+        
     }
 
     void OnTriggerEnter(Collider ElTrigger)
@@ -27,7 +28,7 @@ public class ShowPrompt : MonoBehaviour
             Debug.Log("Estas cerca del NPC");
             EPromptCanvas.enabled = true;
             trigger = true;
-            dialogo.SetActive(false);
+            
         }
         
     }
