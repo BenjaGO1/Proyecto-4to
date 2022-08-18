@@ -585,6 +585,7 @@ MonoBehaviour:
       esta calculadora magica podras resolver cuentas y da\xF1arlos."
     - "Pero ten cuidado porque un error en las cuentas llevara a hacerte da\xF1o a
       ti mismo"
+    - "Ahora te ense\xF1are a luchar"
 --- !u!65 &595756153
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -851,7 +852,6 @@ GameObject:
   - component: {fileID: 897841889}
   - component: {fileID: 897841888}
   - component: {fileID: 897841887}
-  - component: {fileID: 897841890}
   m_Layer: 5
   m_Name: Continuar
   m_TagString: Untagged
@@ -919,7 +919,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 897841890}
+      - m_Target: {fileID: 852249697}
         m_MethodName: DisplayNextSentence
         m_Mode: 1
         m_Arguments:
@@ -965,20 +965,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897841885}
   m_CullTransparentMesh: 0
---- !u!114 &897841890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 897841885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5148560d9fc39a40a19f374007354cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: {fileID: 0}
-  dialogueText: {fileID: 0}
 --- !u!1 &1036138700
 GameObject:
   m_ObjectHideFlags: 0
