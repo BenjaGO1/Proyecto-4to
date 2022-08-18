@@ -230,7 +230,8 @@ public class EligeCuenta : MonoBehaviour
     public void RandomizarDivi()
     {
 
-        
+            //SOLUCIONAR EL STACKOVERFLOW dice que se repite infinatamente el codigo hacer que ponga los numeros en menos intentos
+            
             maxInt = 30;
             randomnum = Random.Range(maxInt, minInt);
 
