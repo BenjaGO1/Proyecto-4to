@@ -80,18 +80,6 @@ public class EligeCuenta : MonoBehaviour
     public void CorrecciónSuma()
     {
 
-        //randomnum = Random.Range(minInt, maxInt);
-        //randomnum2 = Random.Range(minInt, maxInt);
-
-        //string n1text = randomnum.ToString();
-        //string n2text = randomnum2.ToString();
-
-
-
-        //N1Text.text = n1text + " +";
-        //N2Text.text = n2text + " =";
-
-
         insertRes = (int.Parse(Respuesta.text));
 
         int res = randomnum + randomnum2;
@@ -237,15 +225,55 @@ public class EligeCuenta : MonoBehaviour
 
     public void RandomizarDivi()
     {
-
+        maxInt = 30;
         randomnum = Random.Range(maxInt, minInt);
-       //NUMERO QUE N1 SEA RESTO 0 randomnum2 = randomnum % 0;
+
+        bool esPrimo = true;
+        
+        for (int i = 2; i < randomnum; i++)
+        {
+
+            if (randomnum % i == 0)
+            {
+                esPrimo = false;
+                break;            
+            }
+        }
+
+        if (esPrimo == true)
+        {
+            RandomizarDivi();
+        }
+
+        randomnum2 = Random.Range(maxInt-1, minInt);
+
+        bool esDivisor = true;
+
+        for (int i = 1; i < randomnum2; i++)
+        {
+
+            if (randomnum % randomnum2 == 0)
+            {
+                esDivisor = false;
+                break;
+            }
+        }
+
+        if (esDivisor == true)
+        {
+            RandomizarDivi();
+        }
+
+
+
+        //NUMERO QUE N1 SEA RESTO 0 randomnum2 = randomnum % 0;
 
         string n1text = randomnum.ToString();
         string n2text = randomnum2.ToString();
 
         N1Text.text = n1text + " /";
         N2Text.text = n2text + " =";
+        
     }
 
     public void CorrecciónDivi()
