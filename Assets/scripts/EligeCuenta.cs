@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class EligeCuenta : MonoBehaviour
 {
+    public GameObject btnContinuar;
+
     public Text N1Text;
     public Text N2Text;
 
@@ -32,12 +34,13 @@ public class EligeCuenta : MonoBehaviour
 
     public void Start()
     {
-        RandomizarDivi();
+        //RandomizarDivi();
         //RandomizarResta();
         //RandomizarEnTexto();
+        RandomizarMulti();
 
-        //HACER UN RANDOMIZAR PARA LA MULTIPLICACION IGUAL PERO CAMBIANDO EL SIGNO
 
+        btnContinuar.GetComponent<Button>().interactable = false;
         correccionado.SetActive(false);
     }
 
@@ -57,11 +60,13 @@ public class EligeCuenta : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            CorrecciónDivi();
-            //CorrecciónMulti();
+            //CorrecciónDivi();
+            CorrecciónMulti();
             //CorrecciónResta();
             //CorrecciónSuma();
             Correccionado();
+
+            btnContinuar.GetComponent<Button>().interactable = true;
         }
     }
 
@@ -77,6 +82,7 @@ public class EligeCuenta : MonoBehaviour
 
         N1Text.text = n1text + " +";
         N2Text.text = n2text + " =";
+    
     }
 
     public void CorrecciónSuma()
@@ -88,7 +94,7 @@ public class EligeCuenta : MonoBehaviour
 
     if (insertRes == res)
         {
-            Debug.Log("Respuesta correcta");
+            //Debug.Log("Respuesta correcta");
 
             string correcionando = ("Respuesta correcta");
             correccionando.text = correcionando;
@@ -123,10 +129,12 @@ public class EligeCuenta : MonoBehaviour
         Object.SetActive(true);
         Ataque.SetActive(true);
 
-        RandomizarDivi();
+        btnContinuar.GetComponent<Button>().interactable = false;
+
+        //RandomizarDivi();
         //RandomizarEnTexto();
         // RandomizarResta();
-
+        RandomizarMulti();
         
 
         string textReset = ("");
@@ -202,6 +210,17 @@ public class EligeCuenta : MonoBehaviour
         }
 
     }
+    public void RandomizarMulti()
+    {
+        randomnum = Random.Range(minInt, maxInt);
+        randomnum2 = Random.Range(minInt, maxInt);
+
+        string n1text = randomnum.ToString();
+        string n2text = randomnum2.ToString();
+
+        N1Text.text = n1text + " x";
+        N2Text.text = n2text + " =";
+    }
 
     public void CorrecciónMulti()
     {
@@ -230,9 +249,10 @@ public class EligeCuenta : MonoBehaviour
     public void RandomizarDivi()
     {
 
-            //SOLUCIONAR EL STACKOVERFLOW dice que se repite infinatamente el codigo hacer que ponga los numeros en menos intentos
-            
-            maxInt = 30;
+        
+        
+            maxInt = 50;
+        minInt = 10;
             randomnum = Random.Range(maxInt, minInt);
 
             bool esPrimo = true;
@@ -253,7 +273,7 @@ public class EligeCuenta : MonoBehaviour
             }
         
        
-            randomnum2 = Random.Range(randomnum - 1, minInt);
+            randomnum2 = Random.Range(randomnum/2, 2);
 
 
             bool esDivisor = true;
