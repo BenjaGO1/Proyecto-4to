@@ -24,7 +24,7 @@ public class EligeCuenta : MonoBehaviour
     public Text correccionando;
     public GameObject correccionado;
 
-    public Text tiempo;
+    public Text txtTiempo;
 
     //public float counter = 10;
     //public float timeRes = 0;
@@ -48,16 +48,9 @@ public class EligeCuenta : MonoBehaviour
 
     void Update()
     {
-        //Poner un UI para que aparezca el tiempo que tiene
-      
-        //timeRes += Time.time;
-        //counter += Time.time;
 
-
-        //tiempoMuestra = Mathf.Floor(counter).ToString();
-        //tiempo.text = tiempoMuestra;
-
-
+        timeResp();
+        
         if (Input.GetKeyDown(KeyCode.Return))
         {
             //CorrecciónDivi();
@@ -151,30 +144,12 @@ public class EligeCuenta : MonoBehaviour
 
     //private bool ActCorrec = false;
 
-    //public void timeResp()
-    //{
-    //    ayuda = counter;
+    public void timeResp()
+    {
+         txtTiempo.text = Mathf.FloorToInt(Time.time).ToString();
 
-    //    Corrección();
-    //    Correccionado();
-
-
-    //    Debug.Log(ayuda + "ayuda");
-
-    //    if (ayuda <= timeRes)
-    //    {
-    //        Debug.Log("Se te acabo el tiempo");
-    //        ActCorrec = true;
-
-
-    //    }
-
-    //    if (Input.GetKeyDown(KeyCode.Return))
-    //    {
-    //        timeRes = 0;
-    //    }
-
-    //}
+  
+    }
     public void RandomizarResta()
     {
 
