@@ -306,6 +306,9 @@ MonoBehaviour:
   Heal: {fileID: 1480576952}
   Object: {fileID: 1574832764}
   Ataque: {fileID: 1031176407}
+  counter: 10
+  timeToChange: 0
+  waitTime: 0
 --- !u!114 &162293391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2000,6 +2003,9 @@ MonoBehaviour:
   Heal: {fileID: 1480576952}
   Object: {fileID: 1574832764}
   Ataque: {fileID: 1031176407}
+  counter: 10
+  timeToChange: 0
+  waitTime: 0
 --- !u!1 &1083834234
 GameObject:
   m_ObjectHideFlags: 0
@@ -3593,6 +3599,9 @@ MonoBehaviour:
   Heal: {fileID: 1480576952}
   Object: {fileID: 1574832764}
   Ataque: {fileID: 1031176407}
+  counter: 10
+  timeToChange: 0
+  waitTime: 0
 --- !u!4 &1932232936
 Transform:
   m_ObjectHideFlags: 0
