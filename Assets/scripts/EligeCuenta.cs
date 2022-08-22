@@ -48,7 +48,7 @@ public class EligeCuenta : MonoBehaviour
 
     void Update()
     {
-
+        
         timeResp();
         
         if (Input.GetKeyDown(KeyCode.Return))
@@ -143,12 +143,28 @@ public class EligeCuenta : MonoBehaviour
     }
 
     //private bool ActCorrec = false;
+    public int counter = 10;
+    public float timeToChange = 30;
+    public float waitTime = 2;
 
     public void timeResp()
     {
-         txtTiempo.text = Mathf.FloorToInt(Time.time).ToString();
 
-  
+        if (timeToChange < Time.time)
+        {
+            counter--;
+            if (counter > 0)
+            {
+                txtTiempo.text = counter.ToString();
+                timeToChange += waitTime;
+            }
+            else
+            {
+                txtTiempo.text = "Se acabo el tiempo";
+            }
+        }
+        Debug.Log(counter);
+
     }
     public void RandomizarResta()
     {
