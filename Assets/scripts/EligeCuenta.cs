@@ -45,7 +45,7 @@ public class EligeCuenta : MonoBehaviour
     }
 
     //public string tiempoMuestra;
-
+    
     void Update()
     {
         
@@ -58,6 +58,7 @@ public class EligeCuenta : MonoBehaviour
             //CorrecciónResta();
             //CorrecciónSuma();
             Correccionado();
+            isCounting = false;
 
             btnContinuar.GetComponent<Button>().interactable = true;
         }
@@ -143,27 +144,38 @@ public class EligeCuenta : MonoBehaviour
     }
 
     //private bool ActCorrec = false;
-    public int counter = 10;
-    public float timeToChange = 30;
-    public float waitTime = 2;
+    
+    bool isCounting;
+    float time = 10;
+    int ayuda;
+    
 
     public void timeResp()
     {
+        isCounting = true;
+        time -= Time.deltaTime;
 
-        if (timeToChange < Time.time)
+        if (isCounting == true)
         {
-            counter--;
-            if (counter > 0)
+            txtTiempo.text = Mathf.Floor(time).ToString();
+
+            if (time < 1)
             {
-                txtTiempo.text = counter.ToString();
-                timeToChange += waitTime;
-            }
-            else
-            {
-                txtTiempo.text = "Se acabo el tiempo";
+                txtTiempo.text = "Se te acabo el tiempo";
+                isCounting = false;
             }
         }
-        Debug.Log(counter);
+
+        
+      
+        
+        
+        //if (timeToChange < Time.time)
+        //{
+        //    counter--;
+        //    txtTiempo.text = counter.ToString();
+        //    timeToChange += waitTime;
+        //}
 
     }
     public void RandomizarResta()
