@@ -8,6 +8,7 @@ public class EnemyLife : MonoBehaviour
     public int health = 1;
 
     DamageCalc damageCalc;
+
     public GameObject res;
 
     public void awake()
