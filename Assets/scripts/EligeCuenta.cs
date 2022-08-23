@@ -137,47 +137,32 @@ public class EligeCuenta : MonoBehaviour
         string InputReset = "";
         Respuesta.text = InputReset;
 
-        //InttiempoMuestra = int.Parse(tiempoMuestra);
-        //InttiempoMuestra = 0;
-
-
     }
-
-    //private bool ActCorrec = false;
     
-    bool isCounting;
+    public bool isCounting;
     float time = 10;
     int ayuda;
     
-
     public void timeResp()
     {
         isCounting = true;
-        time -= Time.deltaTime;
 
         if (isCounting == true)
         {
+            float time = 10;
+            time -= Time.deltaTime;
             txtTiempo.text = Mathf.Floor(time).ToString();
 
-            if (time < 1)
+            if (time <= 0)
             {
                 txtTiempo.text = "Se te acabo el tiempo";
                 isCounting = false;
             }
         }
 
-        
-      
-        
-        
-        //if (timeToChange < Time.time)
-        //{
-        //    counter--;
-        //    txtTiempo.text = counter.ToString();
-        //    timeToChange += waitTime;
-        //}
-
     }
+
+    
     public void RandomizarResta()
     {
 
