@@ -149,7 +149,7 @@ public class EligeCuenta : MonoBehaviour
 
         if (isCounting == true)
         {
-            float time = 10;
+            time = 10;
             time -= Time.deltaTime;
             txtTiempo.text = Mathf.Floor(time).ToString();
 
@@ -159,7 +159,6 @@ public class EligeCuenta : MonoBehaviour
                 isCounting = false;
             }
         }
-
     }
 
     
