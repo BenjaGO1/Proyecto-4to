@@ -45,10 +45,10 @@ public class EligeCuenta : MonoBehaviour
     }
 
     //public string tiempoMuestra;
-
+    
     void Update()
     {
-
+        
         timeResp();
         
         if (Input.GetKeyDown(KeyCode.Return))
@@ -58,6 +58,7 @@ public class EligeCuenta : MonoBehaviour
             //CorrecciónResta();
             //CorrecciónSuma();
             Correccionado();
+            isCounting = false;
 
             btnContinuar.GetComponent<Button>().interactable = true;
         }
@@ -136,20 +137,31 @@ public class EligeCuenta : MonoBehaviour
         string InputReset = "";
         Respuesta.text = InputReset;
 
-        //InttiempoMuestra = int.Parse(tiempoMuestra);
-        //InttiempoMuestra = 0;
-
-
     }
-
-    //private bool ActCorrec = false;
-
+    
+    public bool isCounting;
+    float time = 10;
+    int ayuda;
+    
     public void timeResp()
     {
-         txtTiempo.text = Mathf.FloorToInt(Time.time).ToString();
+        isCounting = true;
 
-  
+        if (isCounting == true)
+        {
+            time = 10;
+            time -= Time.deltaTime;
+            txtTiempo.text = Mathf.Floor(time).ToString();
+
+            if (time <= 0)
+            {
+                txtTiempo.text = "Se te acabo el tiempo";
+                isCounting = false;
+            }
+        }
     }
+
+    
     public void RandomizarResta()
     {
 
