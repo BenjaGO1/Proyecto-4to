@@ -9,13 +9,13 @@ public class Attack : MonoBehaviour
     public GameObject Heal;
     public GameObject Object;
     public GameObject Ataque;
-    EligeCuenta eligecuenta;
+   // EligeCuenta eligecuenta;
     public GameObject Lugar;
 
 
     private void awake()
     {
-        eligecuenta = Lugar.GetComponent<EligeCuenta>();
+      // eligecuenta = Lugar.GetComponent<EligeCuenta>();
     }
 
     private void Start()
@@ -24,7 +24,7 @@ public class Attack : MonoBehaviour
         Heal.SetActive(true);
         Object.SetActive(true);
         Ataque.SetActive(true);
-        eligecuenta.timeResp();
+        //eligecuenta.timeResp();
         
     }
 
@@ -35,7 +35,7 @@ public class Attack : MonoBehaviour
         Heal.SetActive(false);
         Object.SetActive(false);
         Ataque.SetActive(false);
-        eligecuenta.isCounting = true;
+       // eligecuenta.isCounting = true;
     }
 
     public void Desactivar()
@@ -44,6 +44,6 @@ public class Attack : MonoBehaviour
         Heal.SetActive(true);
         Object.SetActive(true);
         Ataque.SetActive(true);
-        eligecuenta.isCounting = false;
+        //eligecuenta.isCounting = false;
     }
 }

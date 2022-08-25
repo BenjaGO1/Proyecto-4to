@@ -26,12 +26,7 @@ public class EligeCuenta : MonoBehaviour
 
     public Text txtTiempo;
 
-    //public float counter = 10;
-    //public float timeRes = 0;
-    //public float ayuda;
-
-    //private int InttiempoMuestra;
-
+ 
     public void Start()
     {
         //RandomizarDivi();
@@ -44,13 +39,11 @@ public class EligeCuenta : MonoBehaviour
         correccionado.SetActive(false);
     }
 
-    //public string tiempoMuestra;
-    
     void Update()
     {
-        
+
         timeResp();
-        
+
         if (Input.GetKeyDown(KeyCode.Return))
         {
             //CorrecciónDivi();
@@ -138,30 +131,47 @@ public class EligeCuenta : MonoBehaviour
         Respuesta.text = InputReset;
 
     }
-    
-    public bool isCounting;
+
+    public bool isCounting = false;
     float time = 10;
     int ayuda;
-    
+
     public void timeResp()
     {
         isCounting = true;
 
         if (isCounting == true)
         {
-            time = 10;
+            
+            txtTiempo.text = Mathf.Floor(time + 1).ToString();
             time -= Time.deltaTime;
-            txtTiempo.text = Mathf.Floor(time).ToString();
 
             if (time <= 0)
             {
-                txtTiempo.text = "Se te acabo el tiempo";
+                txtTiempo.text = "se te acabo el tiempo";
                 isCounting = false;
+                
+            }
+            if (txtTiempo.text == "se te acabo el tiempo")
+            {
+                btnContinuar.GetComponent<Button>().interactable = true;
+
             }
         }
     }
+    public void tocaBoton()
+    {
+        isCounting = true;
+        btnContinuar.GetComponent<Button>().interactable = false;
+    }
+    public void Continua()
+    {
+        btnContinuar.GetComponent<Button>().interactable = false;
+        time = 10;
+       
+    }
 
-    
+
     public void RandomizarResta()
     {
 
