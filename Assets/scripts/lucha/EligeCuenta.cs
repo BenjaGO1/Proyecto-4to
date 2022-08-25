@@ -26,12 +26,7 @@ public class EligeCuenta : MonoBehaviour
 
     public Text txtTiempo;
 
-    //public float counter = 10;
-    //public float timeRes = 0;
-    //public float ayuda;
-
-    //private int InttiempoMuestra;
-
+ 
     public void Start()
     {
         //RandomizarDivi();
@@ -44,13 +39,11 @@ public class EligeCuenta : MonoBehaviour
         correccionado.SetActive(false);
     }
 
-    //public string tiempoMuestra;
-
     void Update()
     {
 
         timeResp();
-        
+
         if (Input.GetKeyDown(KeyCode.Return))
         {
             //CorrecciónDivi();
@@ -58,6 +51,7 @@ public class EligeCuenta : MonoBehaviour
             //CorrecciónResta();
             //CorrecciónSuma();
             Correccionado();
+            isCounting = false;
 
             btnContinuar.GetComponent<Button>().interactable = true;
         }
@@ -136,20 +130,48 @@ public class EligeCuenta : MonoBehaviour
         string InputReset = "";
         Respuesta.text = InputReset;
 
-        //InttiempoMuestra = int.Parse(tiempoMuestra);
-        //InttiempoMuestra = 0;
-
-
     }
 
-    //private bool ActCorrec = false;
+    public bool isCounting = false;
+    float time = 10;
+    int ayuda;
 
     public void timeResp()
     {
-         txtTiempo.text = Mathf.FloorToInt(Time.time).ToString();
+        isCounting = true;
 
-  
+        if (isCounting == true)
+        {
+            
+            txtTiempo.text = Mathf.Floor(time + 1).ToString();
+            time -= Time.deltaTime;
+
+            if (time <= 0)
+            {
+                txtTiempo.text = "se te acabo el tiempo";
+                isCounting = false;
+                
+            }
+            if (txtTiempo.text == "se te acabo el tiempo")
+            {
+                btnContinuar.GetComponent<Button>().interactable = true;
+
+            }
+        }
     }
+    public void tocaBoton()
+    {
+        isCounting = true;
+        btnContinuar.GetComponent<Button>().interactable = false;
+    }
+    public void Continua()
+    {
+        btnContinuar.GetComponent<Button>().interactable = false;
+        time = 10;
+       
+    }
+
+
     public void RandomizarResta()
     {
 

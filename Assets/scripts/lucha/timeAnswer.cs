@@ -5,29 +5,51 @@
 
 //public class timeAnswer : MonoBehaviour
 //{
-//    public float timeRes = 10;
+//    public Text txtTiempo;
 
-//    // Start is called before the first frame update
-//    void Start()
+//    public bool isCounting;
+//    float time;
+//    int ayuda;
+//    public GameObject btnContinuar;
+
+//    public void start()
 //    {
-       
-        
+//        time = 10;
+//        isCounting = false;
+//    }
+//    public void update()
+//    {
+//        timeResp();
 //    }
 
-//    // Update is called once per frame
-//    void Update()
+//    public void timeResp()
 //    {
 
-//        if (Time.time > timeRes)
+//        if (isCounting == true)
 //        {
-//            Debug.Log("Hacer algo");
+//            txtTiempo.text = Mathf.Floor(time).ToString();
+            
+//            time -= Time.deltaTime;
+//            Debug.Log(time);
+           
+//            if (time <= 0)
+//            {
+//                txtTiempo.text = "Se te acabo el tiempo";
+//                isCounting = false;
+//                btnContinuar.GetComponent<Button>().interactable = true;
+//                Debug.Log("Se acabo el tiempo");
+//            }
 //        }
-
-//        if (Input.GetKeyDown(KeyCode.Return))
-//        {
-//            timeRes = 0;
-//        }
-
+//    }
+//    public void tocaBoton()
+//    {
+//        isCounting = true;
+//        btnContinuar.GetComponent<Button>().interactable = true;
+//    }
+//    public void Continua()
+//    {
+//        btnContinuar.GetComponent<Button>().interactable = false;
+//        time = 10;
+//    }
 
 //    }
-//}
