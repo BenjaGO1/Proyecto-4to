@@ -34,15 +34,33 @@ public class EligeCuenta : MonoBehaviour
         //RandomizarEnTexto();
         RandomizarMulti();
 
-
-        btnContinuar.GetComponent<Button>().interactable = false;
         correccionado.SetActive(false);
     }
 
+    bool btnContinuo = false;
+    bool inpEscribir = true;
     void Update()
     {
-
+        
         timeResp();
+        if (inpEscribir == true)
+        {
+            Respuesta.GetComponent<InputField>().interactable = true;
+        }
+        else
+        {
+            Respuesta.GetComponent<InputField>().interactable = false;
+            isCounting = false;
+        }
+
+        if (btnContinuo == true)
+        {
+            btnContinuar.GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            btnContinuar.GetComponent<Button>().interactable = false;
+        }
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
@@ -52,9 +70,11 @@ public class EligeCuenta : MonoBehaviour
             //CorrecciónSuma();
             Correccionado();
             isCounting = false;
-
-            btnContinuar.GetComponent<Button>().interactable = true;
+            btnContinuo = true;
+            inpEscribir = false;
         }
+
+
     }
 
     public void RandomizarEnTexto()
@@ -116,7 +136,8 @@ public class EligeCuenta : MonoBehaviour
         Object.SetActive(true);
         Ataque.SetActive(true);
 
-        btnContinuar.GetComponent<Button>().interactable = false;
+        btnContinuo = false;
+        inpEscribir = true;
 
         //RandomizarDivi();
         //RandomizarEnTexto();
@@ -138,11 +159,16 @@ public class EligeCuenta : MonoBehaviour
 
     public void timeResp()
     {
+        if (isCounting == false)
+        {
+            txtTiempo.text = Mathf.Floor(time + 1).ToString();
+        }
+
         isCounting = true;
 
         if (isCounting == true)
         {
-            
+            isCounting = true;
             txtTiempo.text = Mathf.Floor(time + 1).ToString();
             time -= Time.deltaTime;
 
@@ -150,25 +176,26 @@ public class EligeCuenta : MonoBehaviour
             {
                 txtTiempo.text = "se te acabo el tiempo";
                 isCounting = false;
-                
+                btnContinuo = true;
             }
-            if (txtTiempo.text == "se te acabo el tiempo")
+            if (inpEscribir == false)
             {
-                btnContinuar.GetComponent<Button>().interactable = true;
-
+                isCounting = false;
             }
         }
     }
     public void tocaBoton()
     {
         isCounting = true;
-        btnContinuar.GetComponent<Button>().interactable = false;
+        btnContinuo = false;
+        inpEscribir = true;
+
     }
     public void Continua()
     {
-        btnContinuar.GetComponent<Button>().interactable = false;
+        btnContinuo = false;
         time = 10;
-       
+        inpEscribir = true;
     }
 
 
@@ -184,6 +211,7 @@ public class EligeCuenta : MonoBehaviour
         N1Text.text = n1text + " -";
         N2Text.text = n2text + " =";
     }
+
     public void CorrecciónResta()
     {
         insertRes = (int.Parse(Respuesta.text));
@@ -207,6 +235,7 @@ public class EligeCuenta : MonoBehaviour
         }
 
     }
+
     public void RandomizarMulti()
     {
         randomnum = Random.Range(minInt, maxInt);
@@ -217,6 +246,8 @@ public class EligeCuenta : MonoBehaviour
 
         N1Text.text = n1text + " x";
         N2Text.text = n2text + " =";
+
+        inpEscribir = true;
     }
 
     public void CorrecciónMulti()
@@ -249,7 +280,7 @@ public class EligeCuenta : MonoBehaviour
         
         
             maxInt = 50;
-        minInt = 10;
+            minInt = 10;
             randomnum = Random.Range(maxInt, minInt);
 
             bool esPrimo = true;
