@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6b665153b9e035c42b4b5c453516faae
+guid: 7ac7663f6ddc009408789da0095095b0
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -11,7 +11,9 @@ ModelImporter:
     100010: Luz
     100012: Luz.001
     100014: Piedra
-    100016: SoporteLuz
+    100016: Point
+    100018: Point.001
+    100020: SoporteLuz
     400000: Cueva
     400002: //RootNode
     400004: EntradaArriba
@@ -20,7 +22,9 @@ ModelImporter:
     400010: Luz
     400012: Luz.001
     400014: Piedra
-    400016: SoporteLuz
+    400016: Point
+    400018: Point.001
+    400020: SoporteLuz
     2100000: Material
     2100002: Material.001
     2100004: Material.003
@@ -53,47 +57,9 @@ ModelImporter:
     4300010: SoporteLuz
     4300012: Piedra
     4300014: Luz.001
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Luz
-    second: {fileID: 2100000, guid: 71284d868d1a8bf45937595b4e5f57ae, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Luz.001
-    second: {fileID: 2100000, guid: 5e5835e4035e8c14db5c2e6edda06f21, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: 77e436c0a7ef18945ac505e5cef870a5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: f4049f3660fc7ba4880b079bf56b561a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.002
-    second: {fileID: 2100000, guid: ac061a14305f60849bd8d1e73015224d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.003
-    second: {fileID: 2100000, guid: d9263197b14ee734489d1af90ab82a31, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.004
-    second: {fileID: 2100000, guid: f61b7618599e20b4dbd7a8a89b51d627, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 2100000, guid: b7b0baff8ab37524aaac58712f70d004, type: 2}
+    10800000: Point
+    10800002: Point.001
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
