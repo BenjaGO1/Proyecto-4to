@@ -27,7 +27,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(0, 0, WalkSpeed);
-            if (Input.GetKey(KeyCode.LeftShift) && hasJump > 0)
+            if (Input.GetKey(KeyCode.LeftShift))
             {
                 transform.Translate(0, 0, RunSpeed);
 
@@ -36,7 +36,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             transform.Translate(0, 0, -WalkSpeed);
-            if (Input.GetKey(KeyCode.LeftShift) && hasJump > 0)
+            if (Input.GetKey(KeyCode.LeftShift))
             {
                 transform.Translate(0, 0, -RunSpeed);
 
@@ -45,7 +45,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(WalkSpeed, 0, 0);
-            if (Input.GetKey(KeyCode.LeftShift) && hasJump > 0)
+            if (Input.GetKey(KeyCode.LeftShift))
             {
                 transform.Translate(RunSpeed, 0, 0);
             }
@@ -53,7 +53,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             transform.Translate(-WalkSpeed, 0, 0);
-            if (Input.GetKey(KeyCode.LeftShift) && hasJump > 0)
+            if (Input.GetKey(KeyCode.LeftShift))
             {
                 transform.Translate(-RunSpeed, 0, 0);
             }
@@ -82,7 +82,11 @@ public class Movement : MonoBehaviour
         {
             SceneManager.LoadScene("Lucha");
         }
+        if (col.gameObject.name == "cueva con luz");
+        {
+            hasJump = maxJumps;
+        }
     }
-    
+
 
 }
