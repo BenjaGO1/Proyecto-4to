@@ -306,7 +306,6 @@ MonoBehaviour:
   Heal: {fileID: 1480576952}
   Object: {fileID: 1574832764}
   Ataque: {fileID: 1031176407}
-  isCounting: 0
 --- !u!114 &162293391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1912,19 +1911,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1031176414}
-        m_MethodName: timeResp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1031176414}
-        m_MethodName: tocaBoton
+      - m_Target: {fileID: 1697165616}
+        m_MethodName: PressAttack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2024,7 +2012,6 @@ MonoBehaviour:
   Heal: {fileID: 1480576952}
   Object: {fileID: 1574832764}
   Ataque: {fileID: 1031176407}
-  isCounting: 0
 --- !u!1 &1083834234
 GameObject:
   m_ObjectHideFlags: 0
@@ -3254,6 +3241,57 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 90}
+--- !u!1 &1697165614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1697165615}
+  - component: {fileID: 1697165616}
+  m_Layer: 0
+  m_Name: '[time]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1697165615
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697165614}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 435, y: 19.050003, z: -137}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1697165616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697165614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da52036f26d34654793114887fa0c1d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btnContinuar: {fileID: 162293388}
+  Correcionando: {fileID: 1877614525}
+  txtTiempo: {fileID: 2131535284}
+  txtCorreccionando: {fileID: 1877614526}
+  Respuesta: {fileID: 701222964}
+  isCounting: 0
+  dejaSeguir: 0
+  inpEscribir: 0
 --- !u!1 &1747852581
 GameObject:
   m_ObjectHideFlags: 0
@@ -3572,7 +3610,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 87.4, y: 191}
+  m_AnchoredPosition: {x: 136, y: 191}
   m_SizeDelta: {x: 334.80292, y: 65.16974}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1932232934
@@ -3618,7 +3656,6 @@ MonoBehaviour:
   Heal: {fileID: 1480576952}
   Object: {fileID: 1574832764}
   Ataque: {fileID: 1031176407}
-  isCounting: 0
 --- !u!4 &1932232936
 Transform:
   m_ObjectHideFlags: 0
@@ -3631,7 +3668,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1955610530
 GameObject:

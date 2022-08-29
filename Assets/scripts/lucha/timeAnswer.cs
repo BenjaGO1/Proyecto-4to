@@ -1,55 +1,81 @@
-﻿//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
-//using UnityEngine.UI;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 
-//public class timeAnswer : MonoBehaviour
-//{
-//    public Text txtTiempo;
+public class timeAnswer : MonoBehaviour
+{
+    //el tiempo empieza siendo 10, toca el boton attack empieza a contar y no deja tocar btncontinuar. 
+    //Si contesta se inhabilta el input y se pausa el tiempo y se habilita btnContinuar. 
+    //Si no contesta antes de los 10 segundos el tiempo se frena en 0 y en el text corrección 
+    //aparece se te acabo el tiempo y se habilita el btnContinuar.
 
-//    public bool isCounting;
-//    float time;
-//    int ayuda;
-//    public GameObject btnContinuar;
+    float time;
+    public GameObject btnContinuar;
+    public GameObject Correcionando;
+    public Text txtTiempo;
+    public Text txtCorreccionando;
+    public InputField Respuesta;
 
-//    public void start()
-//    {
-//        time = 10;
-//        isCounting = false;
-//    }
-//    public void update()
-//    {
-//        timeResp();
-//    }
+    public bool isCounting;
+    public bool dejaSeguir;
+    public bool inpEscribir;
 
-//    public void timeResp()
-//    {
 
-//        if (isCounting == true)
-//        {
-//            txtTiempo.text = Mathf.Floor(time).ToString();
-            
-//            time -= Time.deltaTime;
-//            Debug.Log(time);
-           
-//            if (time <= 0)
-//            {
-//                txtTiempo.text = "Se te acabo el tiempo";
-//                isCounting = false;
-//                btnContinuar.GetComponent<Button>().interactable = true;
-//                Debug.Log("Se acabo el tiempo");
-//            }
-//        }
-//    }
-//    public void tocaBoton()
-//    {
-//        isCounting = true;
-//        btnContinuar.GetComponent<Button>().interactable = true;
-//    }
-//    public void Continua()
-//    {
-//        btnContinuar.GetComponent<Button>().interactable = false;
-//        time = 10;
-//    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            dejaSeguir = true;
+            isCounting = false;
+            inpEscribir = false;
+        }
 
-//    }
+        if (isCounting == true)
+        {
+            timeResp();
+        }
+
+        if (dejaSeguir == true)
+        {
+            btnContinuar.GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            btnContinuar.GetComponent<Button>().interactable = false;
+        }
+        if (inpEscribir == true)
+        {
+            Respuesta.GetComponent<InputField>().interactable = true;
+        }
+        else
+        {
+            Respuesta.GetComponent<InputField>().interactable = false;
+            isCounting = false;
+        }
+    }
+
+    public void timeResp()
+    {
+        txtTiempo.text = Mathf.Floor(time + 1).ToString();
+        time -= Time.deltaTime;
+
+        if (time <= -1)
+        {
+            txtCorreccionando.text = "se te acabo el tiempo";
+            Correcionando.SetActive(true);
+            isCounting = false;
+            dejaSeguir = true;
+            inpEscribir = false;
+        }
+     
+    }
+
+    public void PressAttack()
+    {
+        isCounting = true;
+        dejaSeguir = false;
+        inpEscribir = true;
+        time = 10;
+    }
+}

@@ -37,12 +37,12 @@ public class EligeCuenta : MonoBehaviour
         correccionado.SetActive(false);
     }
 
-    bool btnContinuo = false;
-    bool inpEscribir = true;
+    //bool btnContinuo = false;
+    //bool inpEscribir = true;
     void Update()
     {
        
-        timeResp();
+       /* timeResp();
        
         if (inpEscribir == true)
         {
@@ -62,7 +62,7 @@ public class EligeCuenta : MonoBehaviour
         {
             btnContinuar.GetComponent<Button>().interactable = false;
         }
-
+        */
         if (Input.GetKeyDown(KeyCode.Return))
         {
             //CorrecciónDivi();
@@ -70,10 +70,10 @@ public class EligeCuenta : MonoBehaviour
             //CorrecciónResta();
             //CorrecciónSuma();
             Correccionado();
-            isCounting = false;
-            btnContinuo = true;
-            inpEscribir = false;
-            txtTiempo.text = "";
+            //isCounting = false;
+            //btnContinuo = true;
+            //inpEscribir = false;
+            //txtTiempo.text = "";
         }
 
 
@@ -130,8 +130,8 @@ public class EligeCuenta : MonoBehaviour
         Object.SetActive(true);
         Ataque.SetActive(true);
 
-        btnContinuo = false;
-        inpEscribir = true;
+        //btnContinuo = false;
+        //inpEscribir = true;
 
         //RandomizarDivi();
         //RandomizarEnTexto();
@@ -146,14 +146,9 @@ public class EligeCuenta : MonoBehaviour
         Respuesta.text = InputReset;
     }
 
+    /*
     public bool isCounting = false;
     float time = 10;
-
-
-    //el tiempo empieza siendo 10, toca el boton attack empieza a contar y no deja tocar btncontinuar. 
-    //Si contesta se inhabilta el input y se pausa el tiempo y se habilita btnContinuar. 
-    //Si no contesta antes de los 10 segundos el tiempo se frena en 0 y en el text corrección 
-    //aparece se te acabo el tiempo y se habilita el btnContinuar.
 
     public void timeResp()
     {
@@ -190,7 +185,7 @@ public class EligeCuenta : MonoBehaviour
         time = 10;
         inpEscribir = true;
     }
-
+    */
 
     public void RandomizarResta()
     {
@@ -240,7 +235,7 @@ public class EligeCuenta : MonoBehaviour
         N1Text.text = n1text + " x";
         N2Text.text = n2text + " =";
 
-        inpEscribir = true;
+        //inpEscribir = true;
     }
 
     public void CorrecciónMulti()
