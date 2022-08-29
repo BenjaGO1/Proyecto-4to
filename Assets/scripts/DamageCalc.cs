@@ -20,6 +20,6 @@ public class DamageCalc : MonoBehaviour
     {
         daño = Res.text;
         Debug.Log(dañoInt);
-        
+       
     }
 }
