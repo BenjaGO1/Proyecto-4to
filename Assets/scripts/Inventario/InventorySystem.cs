@@ -1,51 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using System.Linq;
 
-public class InventorySystem : MonoBehaviour
+[System.Serializable]
+public class InventorySystem
 {
-    private Dictionary<InventoryItemData, InventoryItem> m_itemDictonary;
-    public List<InventoryItem> inventory { get; private set; }
+    [SerializeField] private List<InventorySlots> inventorySlots;
 
-    private void Awake()
-    {
-        inventory = new List<InventoryItem>();
-        m_itemDictonary = new Dictionary<InventoryItemData, InventoryItem>();
-    }
+    public List<InventorySlots> InventorySlots => inventorySlots;
+    public int InventorySize => InventorySlots.Count;
 
-    public InventoryItem Get(InventoryItemData referenceData)
-    {
-        if(m_itemDictonary.TryGetValue(referenceData, out InventoryItem value))
-        {
-            return value;
-        }
-        return null;
-    }
+    public UnityAction<InventorySlots> OnInventorySlotChanged;
 
-    public void Add(InventoryItemData referenceData)
+    public InventorySystem(int size)
     {
-        if(m_itemDictonary.TryGetValue(referenceData, out InventoryItem value))
+        inventorySlots = new List<InventorySlots>(size);
+
+        for (int i = 0; i <size; i++)
         {
-            value.AddToStack();
-        }
-        else
-        {
-            InventoryItem newItem = new InventoryItem(referenceData);
-            inventory.Add(newItem);
-            m_itemDictonary.Add(referenceData, newItem);
+            inventorySlots.Add(new InventorySlots());
         }
     }
 
-    public void Remove(InventoryItemData referenceData)
+    public bool AddToInventory(InventoryItemData itemToAdd, int amountToAdd)
     {
-        if(m_itemDictonary.TryGetValue(referenceData, out InventoryItem))
-        {
-            value.RemoveFromStack();
-            if(value.stackSize == 0)
-            {
-                inventory.Remove(value);
-                m_itemDictonary.Remove(referenceData);
-            }
-        }
+        inventorySlots[0] = new InventorySlots(itemToAdd, amountToAdd);
+        return true;
     }
 }

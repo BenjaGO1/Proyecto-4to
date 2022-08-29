@@ -7,25 +7,25 @@ public class EnemyLife : MonoBehaviour
 {
     public int health = 1;
 
-    DamageCalc damageCalc;
+    //DamageCalc damageCalc;
 
     public GameObject res;
 
     public void awake()
     {
-        damageCalc = res.GetComponent<DamageCalc>();
+        //damageCalc = res.GetComponent<DamageCalc>();
 
     }
 
     public void update()
     {
-        damageCalc.GuardarRes();
+        //damageCalc.GuardarRes();
         TakeDamage();
     }
 
     public void TakeDamage()
     {
-        health -= damageCalc.dañoInt;
+        //health -= damageCalc.dañoInt;
             //int barhealth = damageCalc.dañoInt * gameObject.transform.localScale * 100;
         if (health <= 0)
         {
