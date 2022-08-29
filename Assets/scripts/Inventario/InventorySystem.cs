@@ -36,16 +36,16 @@ public class InventorySystem : MonoBehaviour
         }
     }
 
-    public void Remove(InventoryItemData referenceData)
-    {
-        if(m_itemDictonary.TryGetValue(referenceData, out InventoryItem))
-        {
-            value.RemoveFromStack();
-            if(value.stackSize == 0)
-            {
-                inventory.Remove(value);
-                m_itemDictonary.Remove(referenceData);
-            }
-        }
-    }
+    //public void Remove(InventoryItemData referenceData)
+    //{
+    //    if(m_itemDictonary.TryGetValue(referenceData, out InventoryItem))
+    //    {
+    //        value.RemoveFromStack();
+    //        if(value.stackSize == 0)
+    //        {
+    //            inventory.Remove(value);
+    //            m_itemDictonary.Remove(referenceData);
+    //        }
+    //    }
+    //}
 }
