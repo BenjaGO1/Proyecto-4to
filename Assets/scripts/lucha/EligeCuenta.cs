@@ -41,8 +41,9 @@ public class EligeCuenta : MonoBehaviour
     bool inpEscribir = true;
     void Update()
     {
-        
+       
         timeResp();
+       
         if (inpEscribir == true)
         {
             Respuesta.GetComponent<InputField>().interactable = true;
@@ -72,6 +73,7 @@ public class EligeCuenta : MonoBehaviour
             isCounting = false;
             btnContinuo = true;
             inpEscribir = false;
+            txtTiempo.text = "";
         }
 
 
@@ -85,11 +87,8 @@ public class EligeCuenta : MonoBehaviour
         string n1text = randomnum.ToString();
         string n2text = randomnum2.ToString();
 
-
-
         N1Text.text = n1text + " +";
-        N2Text.text = n2text + " =";
-    
+        N2Text.text = n2text + " =";    
     }
 
     public void CorrecciónSuma()
@@ -102,10 +101,8 @@ public class EligeCuenta : MonoBehaviour
     if (insertRes == res)
         {
             //Debug.Log("Respuesta correcta");
-
             string correcionando = ("Respuesta correcta");
             correccionando.text = correcionando;
-
         }
      
         else
@@ -114,8 +111,6 @@ public class EligeCuenta : MonoBehaviour
             string correcionando = ("Respuesta incorrecta");
             correccionando.text = correcionando;
         }
-
-      
     }
 
     public void Correccionado()
@@ -127,7 +122,6 @@ public class EligeCuenta : MonoBehaviour
     public GameObject Heal;
     public GameObject Object;
     public GameObject Ataque;
-
 
     public void Reset()
     {
@@ -150,25 +144,23 @@ public class EligeCuenta : MonoBehaviour
 
         string InputReset = "";
         Respuesta.text = InputReset;
-
     }
 
     public bool isCounting = false;
     float time = 10;
-    int ayuda;
+
+
+    //el tiempo empieza siendo 10, toca el boton attack empieza a contar y no deja tocar btncontinuar. 
+    //Si contesta se inhabilta el input y se pausa el tiempo y se habilita btnContinuar. 
+    //Si no contesta antes de los 10 segundos el tiempo se frena en 0 y en el text corrección 
+    //aparece se te acabo el tiempo y se habilita el btnContinuar.
 
     public void timeResp()
     {
-        if (isCounting == false)
-        {
-            txtTiempo.text = Mathf.Floor(time + 1).ToString();
-        }
-
         isCounting = true;
 
-        if (isCounting == true)
-        {
-            isCounting = true;
+        if (time <= 11)
+        { 
             txtTiempo.text = Mathf.Floor(time + 1).ToString();
             time -= Time.deltaTime;
 
@@ -177,6 +169,7 @@ public class EligeCuenta : MonoBehaviour
                 txtTiempo.text = "se te acabo el tiempo";
                 isCounting = false;
                 btnContinuo = true;
+                Respuesta.GetComponent<InputField>().interactable = false;
             }
             if (inpEscribir == false)
             {
