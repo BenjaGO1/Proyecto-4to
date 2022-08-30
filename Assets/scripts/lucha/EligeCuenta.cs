@@ -37,32 +37,10 @@ public class EligeCuenta : MonoBehaviour
         correccionado.SetActive(false);
     }
 
-    //bool btnContinuo = false;
-    //bool inpEscribir = true;
+   
     void Update()
     {
        
-       /* timeResp();
-       
-        if (inpEscribir == true)
-        {
-            Respuesta.GetComponent<InputField>().interactable = true;
-        }
-        else
-        {
-            Respuesta.GetComponent<InputField>().interactable = false;
-            isCounting = false;
-        }
-
-        if (btnContinuo == true)
-        {
-            btnContinuar.GetComponent<Button>().interactable = true;
-        }
-        else
-        {
-            btnContinuar.GetComponent<Button>().interactable = false;
-        }
-        */
         if (Input.GetKeyDown(KeyCode.Return))
         {
             //CorrecciónDivi();
@@ -130,9 +108,6 @@ public class EligeCuenta : MonoBehaviour
         Object.SetActive(true);
         Ataque.SetActive(true);
 
-        //btnContinuo = false;
-        //inpEscribir = true;
-
         //RandomizarDivi();
         //RandomizarEnTexto();
         // RandomizarResta();
@@ -146,46 +121,6 @@ public class EligeCuenta : MonoBehaviour
         Respuesta.text = InputReset;
     }
 
-    /*
-    public bool isCounting = false;
-    float time = 10;
-
-    public void timeResp()
-    {
-        isCounting = true;
-
-        if (time <= 11)
-        { 
-            txtTiempo.text = Mathf.Floor(time + 1).ToString();
-            time -= Time.deltaTime;
-
-            if (time <= 0)
-            {
-                txtTiempo.text = "se te acabo el tiempo";
-                isCounting = false;
-                btnContinuo = true;
-                Respuesta.GetComponent<InputField>().interactable = false;
-            }
-            if (inpEscribir == false)
-            {
-                isCounting = false;
-            }
-        }
-    }
-    public void tocaBoton()
-    {
-        isCounting = true;
-        btnContinuo = false;
-        inpEscribir = true;
-
-    }
-    public void Continua()
-    {
-        btnContinuo = false;
-        time = 10;
-        inpEscribir = true;
-    }
-    */
 
     public void RandomizarResta()
     {

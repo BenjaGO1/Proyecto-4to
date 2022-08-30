@@ -1,7 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
+//using UnityEngine.UI;
+
+
 
 //public class DamageCalc : MonoBehaviour
 //{
@@ -9,8 +11,17 @@ using UnityEngine.UI;
    
 //    public InputField Res;
 //    public string daño;
-//    public int dañoInt;
+//    public int dañoInt = 5;
 
+//    public void Update()
+//    {
+
+//        if (Input.GetKeyDown(KeyCode.Return))
+//        {
+//            awake();
+//            GuardarRes();
+//        }
+//    }
 //    public void awake()
 //    {
 //        dañoInt = int.Parse(daño);
@@ -20,6 +31,6 @@ using UnityEngine.UI;
 //    {
 //        daño = Res.text;
 //        Debug.Log(dañoInt);
-        
+       
 //    }
 //}

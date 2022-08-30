@@ -1,42 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class EnemyLife : MonoBehaviour
 {
-    public int health = 1;
+    public int health = 40;
+    public InputField Res;
+    public int daño;
+    public string dañop;
 
-    DamageCalc damageCalc;
+    public GameObject enemy;
 
-    public GameObject res;
-
-    public void awake()
+    public void Update()
     {
-        damageCalc = res.GetComponent<DamageCalc>();
-
-    }
-
-    public void update()
-    {
-        damageCalc.GuardarRes();
-        TakeDamage();
-    }
-
-    public void TakeDamage()
-    {
-        health -= damageCalc.dañoInt;
-            //int barhealth = damageCalc.dañoInt * gameObject.transform.localScale * 100;
-        if (health <= 0)
+        if (Input.GetKeyDown(KeyCode.Return))
         {
-            Die();
-        }
+            dañop = Res.text;
+            daño = int.Parse(dañop);
+            health -= daño;
+            Debug.Log(health);
 
+            if (health <= 0)
+            {
+                Die();
+            }
+        }
+     
     }
 
     void Die()
     {
         Destroy(gameObject);
-        SceneManager.LoadScene("Primera pantalla");
+       //SceneManager.LoadScene("Primera pantalla");
     }
 }
