@@ -295,13 +295,11 @@ MonoBehaviour:
   btnContinuar: {fileID: 162293388}
   N1Text: {fileID: 803102301}
   N2Text: {fileID: 698825152}
-  minInt: 1
-  maxInt: 10
   Respuesta: {fileID: 701222964}
   res: 0
   correccionando: {fileID: 1877614526}
   correccionado: {fileID: 1877614525}
-  txtTiempo: {fileID: 2131535284}
+  correcta: 0
   Cuenta: {fileID: 1955610530}
   Heal: {fileID: 1480576952}
   Object: {fileID: 1574832764}
@@ -1044,9 +1042,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 20
   Res: {fileID: 701222964}
-  "da\xF1o": 0
-  "da\xF1op": 
+  correcta2: 0
   enemy: {fileID: 532560393}
+  eligeCuenta: {fileID: 0}
+  go: {fileID: 0}
 --- !u!1 &554151173
 GameObject:
   m_ObjectHideFlags: 0
@@ -1113,9 +1112,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 40
   Res: {fileID: 701222964}
-  "da\xF1o": 0
-  "da\xF1op": 
-  enemy: {fileID: 0}
+  correcta2: 0
+  enemy: {fileID: 532560393}
+  eligeCuenta: {fileID: 0}
+  go: {fileID: 0}
 --- !u!4 &628352315
 Transform:
   m_ObjectHideFlags: 0
@@ -2006,13 +2006,11 @@ MonoBehaviour:
   btnContinuar: {fileID: 162293388}
   N1Text: {fileID: 803102301}
   N2Text: {fileID: 698825152}
-  minInt: 1
-  maxInt: 10
   Respuesta: {fileID: 701222964}
   res: 0
   correccionando: {fileID: 1877614526}
   correccionado: {fileID: 1877614525}
-  txtTiempo: {fileID: 2131535284}
+  correcta: 0
   Cuenta: {fileID: 1955610530}
   Heal: {fileID: 1480576952}
   Object: {fileID: 1574832764}
@@ -3630,7 +3628,7 @@ GameObject:
   - component: {fileID: 1932232935}
   m_Layer: 0
   m_Name: '[numeroscuenta]'
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3650,13 +3648,11 @@ MonoBehaviour:
   btnContinuar: {fileID: 162293388}
   N1Text: {fileID: 803102301}
   N2Text: {fileID: 698825152}
-  minInt: 1
-  maxInt: 10
   Respuesta: {fileID: 701222964}
   res: 0
   correccionando: {fileID: 1877614526}
   correccionado: {fileID: 1877614525}
-  txtTiempo: {fileID: 2131535284}
+  correcta: 0
   Cuenta: {fileID: 1955610530}
   Heal: {fileID: 1480576952}
   Object: {fileID: 1574832764}

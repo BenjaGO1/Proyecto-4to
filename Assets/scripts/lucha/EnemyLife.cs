@@ -8,28 +8,37 @@ public class EnemyLife : MonoBehaviour
 {
     public int health = 40;
     public InputField Res;
-    public int daño;
-    public string dañop;
+    int daño;
+    string dañop;
 
     public bool correcta2;
     public GameObject enemy;
+    public EligeCuenta eligeCuenta;
+    public GameObject go;
 
-    public void awake()
+    void Start()
     {
-        
+        go = GameObject.FindGameObjectWithTag("Finish");
+        eligeCuenta = GameObject.FindGameObjectWithTag("Finish").GetComponent<EligeCuenta>();
     }
 
     public void Update()
     {
-        //EligeCuenta correctan = GetComponent<EligeCuenta>();
-        //correcta2 = correctan.correcta;
+
+        if (eligeCuenta.correcta == true)
+        {
+            damage();
+        }
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            //if (correcta2 == true)
-            //{
+
+            Debug.Log(eligeCuenta.correcta);
+
+            if (correcta2 == true)
+            {
                 damage();
-            //}
+            }
             
             if (health <= 0)
             {

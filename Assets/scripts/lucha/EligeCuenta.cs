@@ -10,8 +10,8 @@ public class EligeCuenta : MonoBehaviour
     public Text N1Text;
     public Text N2Text;
 
-    public int minInt = 1;
-    public int maxInt = 10;
+    int minInt = 1;
+    int maxInt = 10;
 
     int randomnum;
     int randomnum2;
@@ -24,12 +24,11 @@ public class EligeCuenta : MonoBehaviour
     public Text correccionando;
     public GameObject correccionado;
 
-    public Text txtTiempo;
+    public bool correcta;
 
-    public bool correcta ;
- 
     public void Start()
     {
+     
         //RandomizarDivi();
         //RandomizarResta();
         //RandomizarEnTexto();
@@ -45,11 +44,13 @@ public class EligeCuenta : MonoBehaviour
         {
             string correcionando = ("Respuesta incorrecta");
             correccionando.text = correcionando;
+            
         }
         else
         {
             string correcionando = ("Respuesta correcta");
             correccionando.text = correcionando;
+            
         }
 
         if (Input.GetKeyDown(KeyCode.Return))
@@ -90,6 +91,7 @@ public class EligeCuenta : MonoBehaviour
     if (insertRes == res)
         {
             correcta = true;
+
         }
      
         else
