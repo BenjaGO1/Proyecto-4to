@@ -26,7 +26,7 @@ public class EligeCuenta : MonoBehaviour
 
     public Text txtTiempo;
 
-    public bool correcta;
+    public bool correcta ;
  
     public void Start()
     {

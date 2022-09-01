@@ -11,18 +11,31 @@ public class EnemyLife : MonoBehaviour
     public int daño;
     public string dañop;
 
+    public bool correcta2;
     public GameObject enemy;
+
+    public void awake()
+    {
+        
+    }
 
     public void Update()
     {
+        //EligeCuenta correctan = GetComponent<EligeCuenta>();
+        //correcta2 = correctan.correcta;
+
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            damage();
-
+            //if (correcta2 == true)
+            //{
+                damage();
+            //}
+            
             if (health <= 0)
             {
                 Die();
             }
+            
         }
      
     }
