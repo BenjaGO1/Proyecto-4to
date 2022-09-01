@@ -26,6 +26,7 @@ public class EligeCuenta : MonoBehaviour
 
     public Text txtTiempo;
 
+    public bool correcta;
  
     public void Start()
     {
@@ -37,10 +38,20 @@ public class EligeCuenta : MonoBehaviour
         correccionado.SetActive(false);
     }
 
-   
+
     void Update()
     {
-       
+        if (correcta == false)
+        {
+            string correcionando = ("Respuesta incorrecta");
+            correccionando.text = correcionando;
+        }
+        else
+        {
+            string correcionando = ("Respuesta correcta");
+            correccionando.text = correcionando;
+        }
+
         if (Input.GetKeyDown(KeyCode.Return))
         {
             //CorrecciónDivi();
@@ -78,16 +89,12 @@ public class EligeCuenta : MonoBehaviour
 
     if (insertRes == res)
         {
-            //Debug.Log("Respuesta correcta");
-            string correcionando = ("Respuesta correcta");
-            correccionando.text = correcionando;
+            correcta = true;
         }
      
         else
         {
-            //Debug.Log("Respuesta incorrecta");
-            string correcionando = ("Respuesta incorrecta");
-            correccionando.text = correcionando;
+            correcta = false;
         }
     }
 
@@ -112,7 +119,8 @@ public class EligeCuenta : MonoBehaviour
         //RandomizarEnTexto();
         // RandomizarResta();
         RandomizarMulti();
-        
+
+        correccionado.SetActive(false); 
 
         string textReset = ("");
         correccionando.text = textReset;
@@ -143,18 +151,13 @@ public class EligeCuenta : MonoBehaviour
 
         if (insertRes == res)
         {
-            Debug.Log("Respuesta correcta");
-
-            string correcionando = ("Respuesta correcta");
-            correccionando.text = correcionando;
+            correcta = true;
 
         }
 
         else
         {
-            //Debug.Log("Respuesta incorrecta");
-            string correcionando = ("Respuesta incorrecta");
-            correccionando.text = correcionando;
+            correcta = false;
         }
 
     }
@@ -181,18 +184,12 @@ public class EligeCuenta : MonoBehaviour
 
         if (insertRes == res)
         {
-            Debug.Log("Respuesta correcta");
-
-            string correcionando = ("Respuesta correcta");
-            correccionando.text = correcionando;
-
+            correcta = true;
         }
 
         else
         {
-            //Debug.Log("Respuesta incorrecta");
-            string correcionando = ("Respuesta incorrecta");
-            correccionando.text = correcionando;
+            correcta = false;
         }
 
     }
@@ -262,18 +259,13 @@ public class EligeCuenta : MonoBehaviour
 
         if (insertRes == res)
         {
-            Debug.Log("Respuesta correcta");
-
-            string correcionando = ("Respuesta correcta");
-            correccionando.text = correcionando;
+            correcta = true;
 
         }
 
         else
         {
-            //Debug.Log("Respuesta incorrecta");
-            string correcionando = ("Respuesta incorrecta");
-            correccionando.text = correcionando;
+            correcta = false;
         }
 
     }

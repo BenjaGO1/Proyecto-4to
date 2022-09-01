@@ -17,10 +17,7 @@ public class EnemyLife : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            dañop = Res.text;
-            daño = int.Parse(dañop);
-            health -= daño;
-            Debug.Log(health);
+            damage();
 
             if (health <= 0)
             {
@@ -30,9 +27,22 @@ public class EnemyLife : MonoBehaviour
      
     }
 
+    void damage()
+    {
+        dañop = Res.text;
+        daño = int.Parse(dañop);
+        health -= daño;
+        Debug.Log(health);
+    }
+
     void Die()
     {
         Destroy(gameObject);
-       //SceneManager.LoadScene("Primera pantalla");
+        Invoke("CambioEscena",2);
+    }
+
+    void CambioEscena()
+    {
+        SceneManager.LoadScene("Primera pantalla");
     }
 }
