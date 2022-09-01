@@ -8,7 +8,7 @@ public class PickUpItem : MonoBehaviour
     public float PickUpRadius = 1f;
     public InventoryItemData ItemData;
 
-    public SphereCollider myCollider;
+    private SphereCollider myCollider;
 
     private void Awake()
     {
@@ -25,7 +25,7 @@ public class PickUpItem : MonoBehaviour
 
         if (inventory.InventorySystem.AddToInventory(ItemData, 1))
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 }
