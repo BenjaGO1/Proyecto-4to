@@ -3205,7 +3205,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 388, y: -151.4}
+  m_AnchoredPosition: {x: 389.4, y: -148.5}
   m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1574832766
@@ -4005,6 +4005,7 @@ GameObject:
   - component: {fileID: 2126988405}
   - component: {fileID: 2126988404}
   - component: {fileID: 2126988408}
+  - component: {fileID: 2126988409}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4100,6 +4101,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2126988409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126988403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa891696f03a694faf35d3db068cc05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 40
+  Res: {fileID: 701222964}
+  correcta: 0
+  player: {fileID: 2126988403}
+  Cuenta1: {fileID: 803102301}
+  Cuenta2: {fileID: 698825152}
+  operacion: {fileID: 164638597}
 --- !u!1 &2131535281
 GameObject:
   m_ObjectHideFlags: 0

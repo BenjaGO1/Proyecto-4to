@@ -61,10 +61,7 @@ public class EligeCuenta : MonoBehaviour
             //CorrecciónResta();
             //CorrecciónSuma();
             Correccionado();
-            //isCounting = false;
-            //btnContinuo = true;
-            //inpEscribir = false;
-            //txtTiempo.text = "";
+           
         }
 
 

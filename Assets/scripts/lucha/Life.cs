@@ -4,28 +4,29 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class EnemyLife : MonoBehaviour
+public class Life : MonoBehaviour
 {
     public int health = 40;
     public InputField Res;
-    int daño;
-    string dañop;
 
     public bool correcta;
-    public GameObject enemy;
-   
+    public GameObject player;
+
+
     public Text Cuenta1;
     public Text Cuenta2;
     public Text operacion;
 
-    public void Update()
+    int autodamage;
+
+    void Update()
     {
 
         if (Input.GetKeyDown(KeyCode.Return))
         {
             esCorrecta();
 
-            if (correcta == true)
+            if (correcta == false)
             {
                 damage();
             }
@@ -37,18 +38,10 @@ public class EnemyLife : MonoBehaviour
         }
     }
 
-    void damage()
-    {
-        dañop = Res.text;
-        daño = int.Parse(dañop);
-        health -= daño;
-       //Debug.Log(health);
-    }
-
     void Die()
     {
         Destroy(gameObject);
-       // Invoke("CambioEscena",2);
+        // Invoke("CambioEscena",2);
     }
 
     void CambioEscena()
@@ -86,7 +79,11 @@ public class EnemyLife : MonoBehaviour
         {
             correcta = true;
         }
-     
-    }
 
+    }
+    void damage()
+    {
+        health -= resul;
+        Debug.Log(health);
+    }
 }
