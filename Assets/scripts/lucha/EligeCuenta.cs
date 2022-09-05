@@ -9,6 +9,7 @@ public class EligeCuenta : MonoBehaviour
 
     public Text N1Text;
     public Text N2Text;
+    public Text operacion;
 
     int minInt = 1;
     int maxInt = 10;
@@ -77,8 +78,9 @@ public class EligeCuenta : MonoBehaviour
         string n1text = randomnum.ToString();
         string n2text = randomnum2.ToString();
 
-        N1Text.text = n1text + " +";
-        N2Text.text = n2text + " =";    
+        N1Text.text = n1text;
+        N2Text.text = n2text;
+        operacion.text = "+";
     }
 
     public void CorrecciónSuma()
@@ -141,8 +143,9 @@ public class EligeCuenta : MonoBehaviour
         string n1text = randomnum.ToString();
         string n2text = randomnum2.ToString();
 
-        N1Text.text = n1text + " -";
-        N2Text.text = n2text + " =";
+        N1Text.text = n1text;
+        N2Text.text = n2text;
+        operacion.text = "-";
     }
 
     public void CorrecciónResta()
@@ -172,10 +175,10 @@ public class EligeCuenta : MonoBehaviour
         string n1text = randomnum.ToString();
         string n2text = randomnum2.ToString();
 
-        N1Text.text = n1text + " x";
-        N2Text.text = n2text + " =";
+        N1Text.text = n1text;
+        N2Text.text = n2text;
+        operacion.text = "x";
 
-        //inpEscribir = true;
     }
 
     public void CorrecciónMulti()
@@ -198,10 +201,7 @@ public class EligeCuenta : MonoBehaviour
 
     public void RandomizarDivi()
     {
-
-        
-        
-            maxInt = 50;
+          maxInt = 50;
             minInt = 10;
             randomnum = Random.Range(maxInt, minInt);
 
@@ -247,8 +247,9 @@ public class EligeCuenta : MonoBehaviour
         string n1text = randomnum.ToString();
         string n2text = randomnum2.ToString();
 
-        N1Text.text = n1text + " /";
-        N2Text.text = n2text + " =";
+        N1Text.text = n1text;
+        N2Text.text = n2text;
+        operacion.text = "/";
         
     }
 

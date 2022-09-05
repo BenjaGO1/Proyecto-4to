@@ -11,42 +11,30 @@ public class EnemyLife : MonoBehaviour
     int daño;
     string dañop;
 
-    public bool correcta2;
+    public bool correcta;
     public GameObject enemy;
-    public EligeCuenta eligeCuenta;
-    public GameObject go;
-
-    void Start()
-    {
-        go = GameObject.FindGameObjectWithTag("Finish");
-        eligeCuenta = GameObject.FindGameObjectWithTag("Finish").GetComponent<EligeCuenta>();
-    }
+   
+    public Text Cuenta1;
+    public Text Cuenta2;
+    public Text operacion;
 
     public void Update()
     {
 
-        if (eligeCuenta.correcta == true)
-        {
-            damage();
-        }
-
         if (Input.GetKeyDown(KeyCode.Return))
         {
+            esCorrecta();
 
-            Debug.Log(eligeCuenta.correcta);
-
-            if (correcta2 == true)
+            if (correcta == true)
             {
                 damage();
             }
-            
+
             if (health <= 0)
             {
                 Die();
             }
-            
         }
-     
     }
 
     void damage()
@@ -67,4 +55,37 @@ public class EnemyLife : MonoBehaviour
     {
         SceneManager.LoadScene("Primera pantalla");
     }
+    int resul;
+
+    void esCorrecta()
+    {
+
+        string N1 = Cuenta1.text;
+        string N2 = Cuenta2.text;
+
+        if (operacion.text == "x")
+        {
+            resul = int.Parse(N1) * int.Parse(N2);
+        }
+        else if (operacion.text == "+")
+        {
+            resul = int.Parse(N1) + int.Parse(N2);
+        }
+        else if (operacion.text == "-")
+        {
+            resul = int.Parse(N1) - int.Parse(N2);
+        }
+        else if (operacion.text == "/")
+        {
+            resul = int.Parse(N1) / int.Parse(N2);
+        }
+
+        string Resint = Res.text;
+
+        if (resul == int.Parse(Resint))
+        {
+            correcta = true;
+        }
+    }
+
 }
