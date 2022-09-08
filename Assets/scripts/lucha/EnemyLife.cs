@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
 public class EnemyLife : MonoBehaviour
 {
     public int health = 40;
@@ -20,7 +21,7 @@ public class EnemyLife : MonoBehaviour
 
     public void Update()
     {
-
+      
         if (Input.GetKeyDown(KeyCode.Return))
         {
             esCorrecta();
