@@ -108,6 +108,7 @@ public class EligeCuenta : MonoBehaviour
     public GameObject Heal;
     public GameObject Object;
     public GameObject Ataque;
+    public GameObject Escape;
 
     public void Reset()
     {
@@ -115,11 +116,17 @@ public class EligeCuenta : MonoBehaviour
         Heal.SetActive(true);
         Object.SetActive(true);
         Ataque.SetActive(true);
+        btnContinuar.transform.position = new Vector3(1000, 1000, 0);
 
         //RandomizarDivi();
         //RandomizarEnTexto();
         // RandomizarResta();
         RandomizarMulti();
+
+        Heal.GetComponent<Button>().interactable = false;
+        Ataque.GetComponent<Button>().interactable = false;
+        Object.GetComponent<Button>().interactable = false;
+        Escape.GetComponent<Button>().interactable = false;
 
         correccionado.SetActive(false); 
 

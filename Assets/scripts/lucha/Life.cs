@@ -11,6 +11,10 @@ public class Life : MonoBehaviour
 
     public bool correcta;
     public GameObject player;
+    public GameObject Heal;
+    public GameObject Object;
+    public GameObject Ataque;
+    public GameObject Escape;
 
 
     public Text Cuenta1;
@@ -85,5 +89,21 @@ public class Life : MonoBehaviour
     {
         health -= resul;
         Debug.Log(health);
+    }
+    IEnumerator AtaqueEnemigo()
+    {
+            
+        yield return new WaitForSeconds(1);
+        health -= 10;
+        Debug.Log("Perdiste vida");
+        yield return new WaitForSeconds(1);
+        Heal.GetComponent<Button>().interactable = true;
+        Ataque.GetComponent<Button>().interactable = true;
+        Object.GetComponent<Button>().interactable = true;
+        Escape.GetComponent<Button>().interactable = true;
+    }
+    public void CorrerFuncion()
+    {
+        StartCoroutine(AtaqueEnemigo());
     }
 }

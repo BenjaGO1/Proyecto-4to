@@ -5,12 +5,10 @@ using UnityEngine;
 public class Invoker : MonoBehaviour
 {
     public GameObject btn;
-    public GameObject TxT;
+    public GameObject txt;
     void Start()
     {
-        InvokeRepeating("DesaparecerBoton", 5, 3);
-
-        CancelInvoke();
+        Invoke("DesaparecerBoton", 5);
 
     }
 
@@ -23,6 +21,8 @@ public class Invoker : MonoBehaviour
     void DesaparecerBoton()
     {
         btn.SetActive(false);
-        TxT.SetActive(true);
+        txt.SetActive(true);
+        Debug.Log("Funciona");
+
     }
 }
