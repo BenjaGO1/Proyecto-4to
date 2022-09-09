@@ -4,43 +4,39 @@ using UnityEngine;
 
 public class AgarraDeja : MonoBehaviour
 {
-    public GameObject barril;
-    public GameObject player;
+    public GameObject quien;
+    public GameObject agarrado;
+    public Transform agarrador;
 
-    float Yplayer;
-    float Xplayer;
-    float Zplayer;
+    bool sedeja;
 
-    float Ybarril;
-    float Xbarril;
-    float Zbarril;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        Ybarril = barril.transform.localPosition.y;
-        Xbarril = barril.transform.localPosition.x;
-        Zbarril = barril.transform.localPosition.z;
-    }
-  
-    // Update is called once per frame
     void Update()
     {
-        Yplayer = player.transform.localPosition.y;
-        Xplayer = player.transform.localPosition.x;
-        Zplayer = player.transform.localPosition.z;
-
-    }
-
-    void OnCollisionEnter(Collision col)
-    {
-        if (col.gameObject.name == "Barril")
+        if (quien != null && quien.GetComponent<SePuedeAgarrar>().seAgarra == true && agarrado == null)
         {
-            //Ybarril = Yplayer;
-            //Xbarril = Xplayer;
-            //Zbarril = Zplayer;        
+            if (Input.GetKey(KeyCode.E))
+            {
+                agarrado = quien;
+                agarrado.GetComponent<SePuedeAgarrar>().seAgarra = false;
+                agarrado.transform.SetParent(agarrador);
+                agarrado.transform.localPosition = agarrador.transform.localPosition;
+                agarrado.GetComponent<Rigidbody>().useGravity = false;
+                agarrado.GetComponent<Rigidbody>().isKinematic = true;
+                sedeja = true;
+            }
         }
 
-        
+        else if (agarrado != null && sedeja == true)
+        {
+            if (Input.GetKey(KeyCode.F))
+            {
+                agarrado.GetComponent<SePuedeAgarrar>().seAgarra = true;
+                agarrado.transform.SetParent(null);
+                agarrado.GetComponent<Rigidbody>().useGravity = true;
+                agarrado.GetComponent<Rigidbody>().isKinematic = false;
+                agarrado = null;
+                sedeja = false;
+            }
+        }
     }
 }
