@@ -18,8 +18,12 @@ public class EnemyLife : MonoBehaviour
     public Text Cuenta1;
     public Text Cuenta2;
     public Text operacion;
-    private string N1;
-    private string N2;
+
+    public void Start()
+    {
+        
+    }
+
 
     public void Update()
     {
@@ -66,10 +70,10 @@ public class EnemyLife : MonoBehaviour
     }
     int resul;
 
-    void esCorrecta()
+     public void esCorrecta()
     {
-        N1 = Cuenta1.text;
-        N2 = Cuenta2.text;
+        string N1 = Cuenta1.text;
+        string N2 = Cuenta2.text;
 
         if (operacion.text == "x")
         {
