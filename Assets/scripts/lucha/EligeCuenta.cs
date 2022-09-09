@@ -123,10 +123,7 @@ public class EligeCuenta : MonoBehaviour
         // RandomizarResta();
         RandomizarMulti();
 
-        Heal.GetComponent<Button>().interactable = false;
-        Ataque.GetComponent<Button>().interactable = false;
-        Object.GetComponent<Button>().interactable = false;
-        Escape.GetComponent<Button>().interactable = false;
+        
 
         correccionado.SetActive(false); 
 

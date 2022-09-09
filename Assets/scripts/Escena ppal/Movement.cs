@@ -78,8 +78,9 @@ public class Movement : MonoBehaviour
         {
             hasJump = maxJumps;
         }
-        if (col.gameObject.name == "enemigo")
+        if (col.gameObject.tag == "Enemigo")
         {
+            PlayerPrefs.SetInt("valor", col.gameObject.GetComponent<enemigo>().enemydata.orden);
             SceneManager.LoadScene("Lucha");
         }
     }

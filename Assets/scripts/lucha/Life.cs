@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Life : MonoBehaviour
 {
-    public int health = 40;
+    private int health = 40;
     public InputField Res;
 
     public bool correcta;
@@ -44,8 +44,9 @@ public class Life : MonoBehaviour
 
     void Die()
     {
-        Destroy(gameObject);
-        // Invoke("CambioEscena",2);
+        gameObject.transform.localPosition = new Vector3(1000, 1000, 123);
+        StartCoroutine(CambiandoEscena());
+        
     }
 
     void CambioEscena()
@@ -87,23 +88,31 @@ public class Life : MonoBehaviour
     }
     void damage()
     {
+        StartCoroutine(AtaqueEnemigo());
         health -= resul;
         Debug.Log(health);
     }
     IEnumerator AtaqueEnemigo()
     {
-            
+
+        Heal.GetComponent<Button>().interactable = false;
+        Ataque.GetComponent<Button>().interactable = false;
+        Object.GetComponent<Button>().interactable = false;
+        Escape.GetComponent<Button>().interactable = false;
         yield return new WaitForSeconds(1);
-        health -= 10;
         Debug.Log("Perdiste vida");
         yield return new WaitForSeconds(1);
+        Debug.Log("volves a tener el control");
         Heal.GetComponent<Button>().interactable = true;
         Ataque.GetComponent<Button>().interactable = true;
         Object.GetComponent<Button>().interactable = true;
         Escape.GetComponent<Button>().interactable = true;
     }
-    public void CorrerFuncion()
+
+    IEnumerator CambiandoEscena()
     {
-        StartCoroutine(AtaqueEnemigo());
+        yield return new WaitForSeconds(2);
+        CambioEscena();
     }
-}
+
+    }

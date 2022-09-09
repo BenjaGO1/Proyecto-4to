@@ -11,6 +11,7 @@ public class Attack : MonoBehaviour
     public GameObject Ataque;
    // EligeCuenta eligecuenta;
     public GameObject Lugar;
+    public GameObject btnContinuar;
 
 
     private void awake()
@@ -32,6 +33,7 @@ public class Attack : MonoBehaviour
     public void Activar()
     {
         Cuenta.SetActive(true);
+        btnContinuar.transform.localPosition = new Vector3(115, -115, 0);
         Heal.SetActive(false);
         Object.SetActive(false);
         Ataque.SetActive(false);

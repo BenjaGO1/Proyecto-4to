@@ -7,17 +7,19 @@ using UnityEngine.SceneManagement;
 
 public class EnemyLife : MonoBehaviour
 {
-    public int health = 40;
+    private int health = 40;
+    public EnemyData enemydata;
     public InputField Res;
     int daño;
     string dañop;
 
     public bool correcta;
-    public GameObject enemy;
    
     public Text Cuenta1;
     public Text Cuenta2;
     public Text operacion;
+    private string N1;
+    private string N2;
 
     public void Update()
     {
@@ -48,8 +50,14 @@ public class EnemyLife : MonoBehaviour
 
     void Die()
     {
+        enemydata.derrotado = true;
         Destroy(gameObject);
-       // Invoke("CambioEscena",2);
+        StartCoroutine(CambiandoEscena());
+    }
+    IEnumerator CambiandoEscena()
+    {
+        yield return new WaitForSeconds(2);
+        CambioEscena();
     }
 
     void CambioEscena()
@@ -60,9 +68,8 @@ public class EnemyLife : MonoBehaviour
 
     void esCorrecta()
     {
-
-        string N1 = Cuenta1.text;
-        string N2 = Cuenta2.text;
+        N1 = Cuenta1.text;
+        N2 = Cuenta2.text;
 
         if (operacion.text == "x")
         {
