@@ -1,26 +1,20 @@
 fileFormatVersion: 2
-guid: 11db8e1de42c69f47ae0b489b9ef88d5
+guid: b720ca5623e04374cb7277efd12814bb
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Trunk_2
-    2100002: Treetop_2
+    2100000: MaterialDePiedra
     2300000: //RootNode
     3300000: //RootNode
-    4300000: arbol2
+    4300000: Piedra
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Treetop_2
-    second: {fileID: 2100000, guid: a77de32b1c7a01c489a7fac6108cfda7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Trunk_2
-    second: {fileID: 2100000, guid: af01c2158c9f3b6408522bd589f54d77, type: 2}
+      name: MaterialDePiedra
+    second: {fileID: 2100000, guid: f3c0bd66fdabedb42a6a5f65f90dabe5, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
