@@ -896,7 +896,6 @@ GameObject:
   - component: {fileID: 1119216853}
   - component: {fileID: 1119216852}
   - component: {fileID: 1119216851}
-  - component: {fileID: 1119216854}
   - component: {fileID: 1119216855}
   m_Layer: 5
   m_Name: VolverAlJuego
@@ -1011,18 +1010,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1119216849}
   m_CullTransparentMesh: 0
---- !u!114 &1119216854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1119216849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 728abbeab035e904194492e20a1986d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1119216855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1342,9 +1329,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a52c9cb6e869a6b4a8b99727fb55fca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WalkSpeed: 0.1
-  RunSpeed: 0.3
-  jumpForce: 3
+  WalkSpeed: 0.3
+  RunSpeed: 0.6
+  jumpForce: 9
   maxJumps: 2
   counter: 2
   DialogoTuto: {fileID: 0}
@@ -1736,5 +1723,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7213790740566977223, guid: 7ef7f2041028a2948a30a23b41ea9176, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7ef7f2041028a2948a30a23b41ea9176, type: 3}
