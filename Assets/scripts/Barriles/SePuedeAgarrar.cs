@@ -10,7 +10,11 @@ public class SePuedeAgarrar : MonoBehaviour
     {
         if (other.tag == "agarrador")
         {
-            other.GetComponentInParent<AgarraDeja>().quien = this.gameObject;
+            other.GetComponentInParent<Agarra>().quien = this.gameObject;
+        }
+        if (other.tag == "soporte")
+        {
+            other.GetComponentInParent<Agarra>().queColider = this.gameObject;
         }
     }
 
@@ -18,7 +22,7 @@ public class SePuedeAgarrar : MonoBehaviour
     {
         if (other.tag == "agarrador")
         {
-            other.GetComponentInParent<AgarraDeja>().quien = null;
+            other.GetComponentInParent<Agarra>().quien = null;
         }
     }
 }

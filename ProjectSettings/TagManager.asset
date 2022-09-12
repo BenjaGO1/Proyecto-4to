@@ -6,6 +6,9 @@ TagManager:
   tags:
   - NROSCUENTA
   - Enemigo
+  - agarrables
+  - agarrador
+  - soporte
   layers:
   - Default
   - TransparentFX

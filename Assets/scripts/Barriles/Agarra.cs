@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AgarraDeja : MonoBehaviour
+public class Agarra : MonoBehaviour
 {
     public GameObject quien;
     public GameObject agarrado;
     public Transform agarrador;
+    public GameObject queColider;
 
-    bool sedeja;
+    bool seSuelta;
 
     void Update()
     {
@@ -22,21 +23,23 @@ public class AgarraDeja : MonoBehaviour
                 agarrado.transform.localPosition = agarrador.transform.localPosition;
                 agarrado.GetComponent<Rigidbody>().useGravity = false;
                 agarrado.GetComponent<Rigidbody>().isKinematic = true;
-                sedeja = true;
+               //yield return WaitForSeconds(2);
+                seSuelta = true;
             }
         }
 
-        else if (agarrado != null && sedeja == true)
+        else if (agarrado != null && seSuelta == true)
         {
-            if (Input.GetKey(KeyCode.F))
+            if (Input.GetKey(KeyCode.E))
             {
                 agarrado.GetComponent<SePuedeAgarrar>().seAgarra = true;
                 agarrado.transform.SetParent(null);
                 agarrado.GetComponent<Rigidbody>().useGravity = true;
                 agarrado.GetComponent<Rigidbody>().isKinematic = false;
                 agarrado = null;
-                sedeja = false;
+                seSuelta = false;
             }
         }
     }
+
 }
