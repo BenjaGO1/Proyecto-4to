@@ -907,7 +907,7 @@ PrefabInstance:
     - target: {fileID: 1917343039200784387, guid: e046d8c761996834ead2d0237b8c0e95,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1917343039200784505, guid: e046d8c761996834ead2d0237b8c0e95,
         type: 3}
@@ -1279,6 +1279,10 @@ MonoBehaviour:
   Elfo: {fileID: 8086193039393478963, guid: 7ef7f2041028a2948a30a23b41ea9176, type: 3}
   Ogro: {fileID: 1917343039200784387, guid: e046d8c761996834ead2d0237b8c0e95, type: 3}
   Duende: {fileID: 2250812997270351518, guid: 355ac6c92a3f5ab4e93326d7b0e5d1b4, type: 3}
+  ogro: {fileID: 11400000, guid: 942e56f0fa670e742abc8e4563219de8, type: 2}
+  duende: {fileID: 11400000, guid: 3661b50e22b51c84f972c27ca72b3421, type: 2}
+  elfo: {fileID: 11400000, guid: e72223f9279076c448f81c85aeea7dd0, type: 2}
+  enemylife: {fileID: 628352314}
 --- !u!1 &628352313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1308,7 +1312,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e7092d6b59877e4db5653e8c5d03a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemydata: {fileID: 0}
+  datosenemigos: {fileID: 0}
+  enemyPrefab: {fileID: 0}
   Res: {fileID: 701222964}
   correcta: 0
   Cuenta1: {fileID: 803102301}
@@ -1963,7 +1968,7 @@ PrefabInstance:
     - target: {fileID: 8086193039393478963, guid: 7ef7f2041028a2948a30a23b41ea9176,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8086193039393478966, guid: 7ef7f2041028a2948a30a23b41ea9176,
         type: 3}
@@ -3209,7 +3214,7 @@ PrefabInstance:
     - target: {fileID: 2250812997270351518, guid: 355ac6c92a3f5ab4e93326d7b0e5d1b4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4988609094839965133, guid: 355ac6c92a3f5ab4e93326d7b0e5d1b4,
         type: 3}

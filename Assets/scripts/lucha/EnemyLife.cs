@@ -8,7 +8,8 @@ using UnityEngine.SceneManagement;
 public class EnemyLife : MonoBehaviour
 {
     private int health = 40;
-    public EnemyData enemydata;
+    public EnemyData datosenemigos;
+    public GameObject enemyPrefab;
     public InputField Res;
     int daño;
     string dañop;
@@ -18,10 +19,13 @@ public class EnemyLife : MonoBehaviour
     public Text Cuenta1;
     public Text Cuenta2;
     public Text operacion;
+    private string N1;
+    private string N2;
+
 
     public void Start()
     {
-        
+        datosenemigos.derrotado = false;
     }
 
 
@@ -54,8 +58,8 @@ public class EnemyLife : MonoBehaviour
 
     void Die()
     {
-        enemydata.derrotado = true;
-        Destroy(gameObject);
+        datosenemigos.derrotado = true;
+        DestroyImmediate(enemyPrefab, true);
         StartCoroutine(CambiandoEscena());
     }
     IEnumerator CambiandoEscena()
@@ -70,10 +74,10 @@ public class EnemyLife : MonoBehaviour
     }
     int resul;
 
-     public void esCorrecta()
+    public void esCorrecta()
     {
-        string N1 = Cuenta1.text;
-        string N2 = Cuenta2.text;
+        N1 = Cuenta1.text;
+        N2 = Cuenta2.text;
 
         if (operacion.text == "x")
         {

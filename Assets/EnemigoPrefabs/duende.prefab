@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2250812997270351515}
   - component: {fileID: 2250812997270351516}
   - component: {fileID: 2250812997270351517}
-  - component: {fileID: 4988609094839965133}
   m_Layer: 0
   m_Name: duende
   m_TagString: Enemigo
@@ -123,22 +122,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemydata: {fileID: 11400000, guid: 3661b50e22b51c84f972c27ca72b3421, type: 2}
---- !u!114 &4988609094839965133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2250812997270351518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e7092d6b59877e4db5653e8c5d03a7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemydata: {fileID: 11400000, guid: 3661b50e22b51c84f972c27ca72b3421, type: 2}
-  Res: {fileID: 0}
-  correcta: 0
-  enemy: {fileID: 2250812997270351518}
-  Cuenta1: {fileID: 0}
-  Cuenta2: {fileID: 0}
-  operacion: {fileID: 0}
