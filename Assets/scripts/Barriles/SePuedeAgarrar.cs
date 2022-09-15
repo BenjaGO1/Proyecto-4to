@@ -8,14 +8,16 @@ public class SePuedeAgarrar : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        
+
+        
         if (other.tag == "agarrador")
         {
-            other.GetComponentInParent<Agarra>().quien = this.gameObject;
+            
+                other.GetComponentInParent<Agarra>().quien = this.gameObject;
+            
         }
-        if (other.tag == "soporte")
-        {
-            other.GetComponentInParent<Agarra>().queColider = this.gameObject;
-        }
+       
     }
 
     void OnTriggerExit(Collider other)
