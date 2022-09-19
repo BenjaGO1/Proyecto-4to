@@ -7,9 +7,8 @@ public class Agarra : MonoBehaviour
     public GameObject quien;
     public GameObject agarrado;
     public Transform agarrador;
-    public GameObject queColider;
-
-    bool seSuelta;
+   
+    public bool seSuelta;
 
     void Update()
     {
@@ -25,6 +24,7 @@ public class Agarra : MonoBehaviour
                 agarrado.GetComponent<Rigidbody>().isKinematic = true;
                //yield return WaitForSeconds(2);
                 seSuelta = true;
+                
             }
         }
 
@@ -42,4 +42,5 @@ public class Agarra : MonoBehaviour
         }
     }
 
+   
 }
