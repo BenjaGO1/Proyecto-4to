@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b484fd34b5bdf24b8dc2a21d589f059, type: 3}
+  m_Name: PotionData
+  m_EditorClassIdentifier: 
+  contador: 0
+  Pota: {fileID: 5867011962462811336, guid: 9cf1815f3e34ae6418cc450138ea2ac9, type: 3}
+  Pota1: {fileID: 1514852214896015665, guid: 8ba2c3588b314e2488d071c35306567b, type: 3}
+  Pota2: {fileID: 1875724838826705819, guid: b7fef601f619c344f8cd9c7d45a6cb7a, type: 3}
+  Pota3: {fileID: 1650261398446126129, guid: df6626940b302444a8c2a203b478a304, type: 3}

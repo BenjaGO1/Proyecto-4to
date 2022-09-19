@@ -14,6 +14,7 @@ public class Movement : MonoBehaviour
 
     int hasJump;
     Rigidbody rb;
+    public PotionData pocion;
 
     void Start()
     {
@@ -84,6 +85,31 @@ public class Movement : MonoBehaviour
             SceneManager.LoadScene("Lucha");
         }
     }
-    
+    private void OnTriggerEnter(Collider Other)
+    {
+        if (Other.gameObject.name == "pota")
+        {
+            pocion.contador++;
+            pocion.Pota.SetActive(false);
+        }
+        if (Other.gameObject.name == "pota1")
+        {
+            pocion.contador++;
+            pocion.Pota1.SetActive(false);
+        }
+        if (Other.gameObject.name == "pota2")
+        {
+            pocion.contador++;
+            pocion.Pota2.SetActive(false);
+        }
+        if (Other.gameObject.name == "pota3")
+        {
+            pocion.contador++;
+            pocion.Pota3.SetActive(false);
+
+        }
+    }
+
+
 
 }

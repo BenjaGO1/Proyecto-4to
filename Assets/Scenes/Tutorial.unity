@@ -1899,6 +1899,7 @@ MonoBehaviour:
   jumpForce: 3
   maxJumps: 2
   counter: 2
+  pocion: {fileID: 0}
   DialogoTuto: {fileID: 0}
 --- !u!65 &1751797199
 BoxCollider:
