@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class EnemyLife : MonoBehaviour
 {
-    private int health = 40;
+    public int health = 40;
     public EnemyData datosenemigos;
     public GameObject enemyPrefab;
     public InputField Res;

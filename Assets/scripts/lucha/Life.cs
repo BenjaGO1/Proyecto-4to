@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Life : MonoBehaviour
 {
-    private int health = 40;
+    public int health = 40;
     public InputField Res;
 
     public bool correcta;
