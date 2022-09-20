@@ -14,7 +14,11 @@ public class Movement : MonoBehaviour
 
     int hasJump;
     Rigidbody rb;
-    public PotionData pocion;
+    public PotionData pocion1;
+    public PotionData pocion2;
+    public PotionData pocion3;
+    public PotionData pocion4;
+    public CounterData counterData;
 
     void Start()
     {
@@ -87,29 +91,44 @@ public class Movement : MonoBehaviour
     }
     private void OnTriggerEnter(Collider Other)
     {
-        if (Other.gameObject.name == "pota")
+        if(Other.gameObject.name == "pota1")
         {
-            pocion.contador++;
-            pocion.Pota.SetActive(false);
-        }
-        if (Other.gameObject.name == "pota1")
-        {
-            pocion.contador++;
-            pocion.Pota1.SetActive(false);
+            counterData.counter++;
         }
         if (Other.gameObject.name == "pota2")
         {
-            pocion.contador++;
-            pocion.Pota2.SetActive(false);
+            counterData.counter++;
         }
         if (Other.gameObject.name == "pota3")
         {
-            pocion.contador++;
-            pocion.Pota3.SetActive(false);
-
+            counterData.counter++;
+        }
+        if (Other.gameObject.name == "pota4")
+        {
+            counterData.counter++;
         }
     }
-
-
-
+    private void OnTriggerExit(Collider Other)
+    {
+        if (Other.gameObject.name == "pota1")
+        {
+            pocion1.Pota.SetActive(false);
+            pocion1.isgrabbed =true;
+        }
+        if (Other.gameObject.name == "pota2")
+        {
+            pocion2.Pota.SetActive(false);
+            pocion2.isgrabbed = true;
+        }
+        if (Other.gameObject.name == "pota3")
+        {
+            pocion3.Pota.SetActive(false);
+            pocion3.isgrabbed = true;
+        }
+        if (Other.gameObject.name == "pota4")
+        {
+            pocion4.Pota.SetActive(false);
+            pocion4.isgrabbed = true;
+        }
+    }
 }

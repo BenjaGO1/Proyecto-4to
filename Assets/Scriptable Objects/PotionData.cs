@@ -6,8 +6,6 @@ using UnityEngine;
 public class PotionData : ScriptableObject
 {
     public int contador = 0;
+    public bool isgrabbed;
     public GameObject Pota;
-    public GameObject Pota1;
-    public GameObject Pota2;
-    public GameObject Pota3;
 }
