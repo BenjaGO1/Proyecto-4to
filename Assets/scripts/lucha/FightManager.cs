@@ -17,19 +17,20 @@ public class FightManager : MonoBehaviour
         
         if (PlayerPrefs.GetInt("valor") == 1)
         {
-            Instantiate(Duende, new Vector3(12, 2, 13), Quaternion.identity);
+            Instantiate(Duende, new Vector3(14, 0, 14), Quaternion.identity);
+
             enemylife.datosenemigos = duende;
             enemylife.enemyPrefab = Duende;
         }
         if (PlayerPrefs.GetInt("valor") == 2)
         {
-            Instantiate(Elfo, new Vector3(12, 2, 13), Quaternion.identity);
+            Instantiate(Elfo, new Vector3(14, 0, 14), Quaternion.identity);
             enemylife.datosenemigos = elfo;
             enemylife.enemyPrefab = Elfo;
         }
         if (PlayerPrefs.GetInt("valor") == 3)
         {
-            Instantiate(Ogro, new Vector3(12, 2, 13), Quaternion.identity);
+            Instantiate(Ogro, new Vector3(14, 0, 14), Quaternion.identity);
             enemylife.datosenemigos = ogro;
             enemylife.enemyPrefab = Ogro;
         }
