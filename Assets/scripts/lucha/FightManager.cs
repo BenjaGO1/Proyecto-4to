@@ -12,6 +12,8 @@ public class FightManager : MonoBehaviour
     public EnemyData duende;
     public EnemyData elfo;
     public EnemyLife enemylife;
+    //public EnemyData elegido;
+    //public GameObject seleccionado;
     void Start()
     {
         
@@ -34,11 +36,5 @@ public class FightManager : MonoBehaviour
             enemylife.datosenemigos = ogro;
             enemylife.enemyPrefab = Ogro;
         }
-    }
-
-    
-    void Update()
-    {
-        
     }
 }

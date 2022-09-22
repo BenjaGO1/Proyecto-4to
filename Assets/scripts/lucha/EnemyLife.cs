@@ -11,11 +11,11 @@ public class EnemyLife : MonoBehaviour
     public EnemyData datosenemigos;
     public GameObject enemyPrefab;
     public InputField Res;
+    public FightManager fightManager;
     int daño;
     string dañop;
 
     public bool correcta;
-   
     public Text Cuenta1;
     public Text Cuenta2;
     public Text operacion;
@@ -25,7 +25,8 @@ public class EnemyLife : MonoBehaviour
 
     public void Start()
     {
-        datosenemigos.derrotado = false;
+        //datosenemigos = fightManager.elegido;
+        //enemyPrefab = fightManager.seleccionado;
     }
 
 

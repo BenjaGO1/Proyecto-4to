@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class barraVida : MonoBehaviour
+public class barraVidaEnemigo : MonoBehaviour
 {
     private Slider slider;
+    public EnemyLife enemylife;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,7 @@ public class barraVida : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        slider.value = GetComponent<EnemyLife>().health;
+        //slider.value = GetComponent<EnemyLife>().health;
+        slider.value = enemylife.health;
     }
 }

@@ -3017,6 +3017,7 @@ MonoBehaviour:
   datosenemigos: {fileID: 0}
   enemyPrefab: {fileID: 0}
   Res: {fileID: 701222964}
+  fightManager: {fileID: 606345181}
   correcta: 0
   Cuenta1: {fileID: 803102301}
   Cuenta2: {fileID: 698825152}
@@ -3033,6 +3034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1624026ec0658a749a353b1322f61cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemylife: {fileID: 628352314}
 --- !u!114 &270585005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4142,6 +4144,27 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 377191701}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &377191703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377191702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7092d6b59877e4db5653e8c5d03a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 40
+  datosenemigos: {fileID: 11400000, guid: 942e56f0fa670e742abc8e4563219de8, type: 2}
+  enemyPrefab: {fileID: 377191702}
+  Res: {fileID: 701222964}
+  fightManager: {fileID: 606345181}
+  correcta: 0
+  Cuenta1: {fileID: 803102301}
+  Cuenta2: {fileID: 698825152}
+  operacion: {fileID: 164638597}
 --- !u!1001 &377716114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5915,8 +5938,8 @@ GameObject:
   m_Component:
   - component: {fileID: 604401805}
   - component: {fileID: 604401807}
-  - component: {fileID: 604401806}
   - component: {fileID: 604401808}
+  - component: {fileID: 604401806}
   m_Layer: 5
   m_Name: vida
   m_TagString: Untagged
@@ -5953,9 +5976,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 604401804}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1624026ec0658a749a353b1322f61cf5, type: 3}
+  m_Script: {fileID: 11500000, guid: a7c00696972a4654bb82ea5c791a55c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  life: {fileID: 604401808}
 --- !u!114 &604401807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6244,9 +6268,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 40
-  datosenemigos: {fileID: 0}
+  datosenemigos: {fileID: 11400000, guid: 3661b50e22b51c84f972c27ca72b3421, type: 2}
   enemyPrefab: {fileID: 0}
   Res: {fileID: 701222964}
+  fightManager: {fileID: 606345181}
   correcta: 0
   Cuenta1: {fileID: 803102301}
   Cuenta2: {fileID: 698825152}
@@ -11395,6 +11420,27 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1462073721}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1064328431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064328430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7092d6b59877e4db5653e8c5d03a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 40
+  datosenemigos: {fileID: 11400000, guid: 3661b50e22b51c84f972c27ca72b3421, type: 2}
+  enemyPrefab: {fileID: 1064328430}
+  Res: {fileID: 701222964}
+  fightManager: {fileID: 606345181}
+  correcta: 0
+  Cuenta1: {fileID: 803102301}
+  Cuenta2: {fileID: 698825152}
+  operacion: {fileID: 164638597}
 --- !u!1 &1070477692 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 11db8e1de42c69f47ae0b489b9ef88d5,
@@ -15536,6 +15582,27 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 206458214049123051}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1496555836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496555835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7092d6b59877e4db5653e8c5d03a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 40
+  datosenemigos: {fileID: 11400000, guid: e72223f9279076c448f81c85aeea7dd0, type: 2}
+  enemyPrefab: {fileID: 1496555835}
+  Res: {fileID: 701222964}
+  fightManager: {fileID: 606345181}
+  correcta: 0
+  Cuenta1: {fileID: 803102301}
+  Cuenta2: {fileID: 698825152}
+  operacion: {fileID: 164638597}
 --- !u!1 &1497363648
 GameObject:
   m_ObjectHideFlags: 0
