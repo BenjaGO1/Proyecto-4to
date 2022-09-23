@@ -91,44 +91,52 @@ public class Movement : MonoBehaviour
     }
     private void OnTriggerEnter(Collider Other)
     {
-        if(Other.gameObject.name == "pota1")
+        if(Other.gameObject.name == "pocion1")
         {
             counterData.counter++;
+            Debug.Log("Entraste");
         }
-        if (Other.gameObject.name == "pota2")
+        if (Other.gameObject.name == "pocion2")
         {
             counterData.counter++;
+            Debug.Log("Entraste");
         }
-        if (Other.gameObject.name == "pota3")
+        if (Other.gameObject.name == "pocion3")
         {
             counterData.counter++;
+            Debug.Log("Entraste");
         }
-        if (Other.gameObject.name == "pota4")
+        if (Other.gameObject.name == "pocion4")
         {
             counterData.counter++;
+            Debug.Log("Entraste");
         }
     }
     private void OnTriggerExit(Collider Other)
     {
-        if (Other.gameObject.name == "pota1")
+        if (Other.gameObject.name == "pocion1")
         {
             pocion1.Pota.SetActive(false);
             pocion1.isgrabbed =true;
+            Debug.Log("Saliste");
         }
-        if (Other.gameObject.name == "pota2")
+        if (Other.gameObject.name == "pocion2")
         {
             pocion2.Pota.SetActive(false);
             pocion2.isgrabbed = true;
+            Debug.Log("Saliste");
         }
-        if (Other.gameObject.name == "pota3")
+        if (Other.gameObject.name == "pocion3")
         {
             pocion3.Pota.SetActive(false);
             pocion3.isgrabbed = true;
+            Debug.Log("Saliste");
         }
-        if (Other.gameObject.name == "pota4")
+        if (Other.gameObject.name == "pocion4")
         {
             pocion4.Pota.SetActive(false);
             pocion4.isgrabbed = true;
+            Debug.Log("Saliste");
         }
     }
 }

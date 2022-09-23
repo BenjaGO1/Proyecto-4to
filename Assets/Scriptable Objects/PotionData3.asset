@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PotionData3
   m_EditorClassIdentifier: 
   contador: 0
-  isgrabbed: 1
-  Pota: {fileID: 9092594392222175341, guid: e6ff6a2aea912474b823402ade0497dc, type: 3}
+  isgrabbed: 0
+  Pota: {fileID: 3423649843864919459, guid: a49e86e5694a36b4bb510a399e1d5f22, type: 3}
