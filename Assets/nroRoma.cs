@@ -4,26 +4,70 @@ using UnityEngine;
 
 public class nroRoma : MonoBehaviour
 {
-    public int I = 1;
-    public int II = 2;
-    public int III = 3;
-    public int IV = 4;
-    public int V = 5;
-    public int VI = 6;
-    public int VII = 7;
-    public int VIII = 8;
-    public int IX = 9;
-    public int X = 10;
+    private int[] arrays;
+    public string nroRomanoS;
 
+    public GameObject pizarra;
+    public GameObject option1;
+    public GameObject option2;
+    public GameObject option3;
+
+    public int nroRomano;
     // Start is called before the first frame update
     void Start()
     {
-        
+        nroRomano = Random.Range(1, 20);
+
+        Romanificar();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        pizarra.textmesh = nroRomanoS;
+    }
+
+    void Romanificar()
+    {
+        if (nroRomano == 1)
+        {
+            nroRomanoS = "I";
+        }
+        else if (nroRomano == 2)
+        {
+            nroRomanoS = "II";
+        }
+        else if (nroRomano == 3)
+        {
+            nroRomanoS = "III";
+        }
+        else if (nroRomano == 4)
+        {
+            nroRomanoS = "IV";
+        }
+        else if (nroRomano == 5)
+        {
+            nroRomanoS = "V";
+        }
+        if (nroRomano == 6)
+        {
+            nroRomanoS = "VI";
+        }
+        else if (nroRomano == 7)
+        {
+            nroRomanoS = "VII";
+        }
+        else if (nroRomano == 8)
+        {
+            nroRomanoS = "VIII";
+        }
+        else if (nroRomano == 9)
+        {
+            nroRomanoS = "IX";
+        }
+        else if (nroRomano == 10)
+        {
+            nroRomanoS = "X";
+        }
     }
 }
