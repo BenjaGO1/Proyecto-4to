@@ -120,7 +120,7 @@ public class EligeCuenta : MonoBehaviour
 
         //RandomizarDivi();
         //RandomizarEnTexto();
-        // RandomizarResta();
+        //RandomizarResta();
         RandomizarMulti();
 
         

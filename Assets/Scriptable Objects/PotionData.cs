@@ -8,4 +8,13 @@ public class PotionData : ScriptableObject
     public int contador = 0;
     public bool isgrabbed;
     public GameObject Pota;
+
+        //private void OnTriggerEnter(Collider Other)
+        //{
+        //    if (Other.gameObject.tag == "Player")
+        //    {
+        //        Pota.SetActive(false);
+        //        isgrabbed = true;
+        //    }
+        //}
 }
