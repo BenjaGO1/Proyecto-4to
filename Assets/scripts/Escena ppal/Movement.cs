@@ -94,41 +94,45 @@ public class Movement : MonoBehaviour
         if(Other.gameObject.name == "pota1")
         {
             counterData.counter++;
-        }
-        if (Other.gameObject.name == "pota2")
-        {
-            counterData.counter++;
-        }
-        if (Other.gameObject.name == "pota3")
-        {
-            counterData.counter++;
-        }
-        if (Other.gameObject.name == "pota4")
-        {
-            counterData.counter++;
-        }
-    }
-    private void OnTriggerExit(Collider Other)
-    {
-        if (Other.gameObject.name == "pota1")
-        {
             pocion1.Pota.SetActive(false);
-            pocion1.isgrabbed =true;
+            pocion1.isgrabbed = true;
         }
         if (Other.gameObject.name == "pota2")
         {
+            counterData.counter++;
             pocion2.Pota.SetActive(false);
             pocion2.isgrabbed = true;
         }
         if (Other.gameObject.name == "pota3")
         {
+            counterData.counter++;
             pocion3.Pota.SetActive(false);
             pocion3.isgrabbed = true;
         }
         if (Other.gameObject.name == "pota4")
         {
+            counterData.counter++;
             pocion4.Pota.SetActive(false);
             pocion4.isgrabbed = true;
         }
     }
+    //private void OnTriggerExit(Collider Other)
+    //{
+    //    if (Other.gameObject.name == "pota1")
+    //    {
+            
+    //    }
+    //    if (Other.gameObject.name == "pota2")
+    //    {
+            
+    //    }
+    //    if (Other.gameObject.name == "pota3")
+    //    {
+            
+    //    }
+    //    if (Other.gameObject.name == "pota4")
+    //    {
+            
+    //    }
+    //}
 }
