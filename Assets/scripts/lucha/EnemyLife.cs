@@ -21,20 +21,22 @@ public class EnemyLife : MonoBehaviour
     public Text operacion;
     private string N1;
     private string N2;
+    public bool isPressed;
 
 
     public void Start()
     {
-        datosenemigos.derrotado = false;
+        //datosenemigos.derrotado = false;
     }
 
 
     public void Update()
     {
       
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return) && isPressed == false)
         {
             esCorrecta();
+            isPressed = true;
 
             if (correcta == true)
             {
@@ -78,6 +80,7 @@ public class EnemyLife : MonoBehaviour
     {
         N1 = Cuenta1.text;
         N2 = Cuenta2.text;
+        Res.GetComponent<InputField>().interactable = false;
 
         if (operacion.text == "x")
         {
@@ -103,6 +106,10 @@ public class EnemyLife : MonoBehaviour
             correcta = true;
         }
      
+    }
+    public void reseteoBool()
+    {
+        isPressed = false;
     }
 
 }
