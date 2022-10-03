@@ -15,6 +15,7 @@ public class Life : MonoBehaviour
     public GameObject Object;
     public GameObject Ataque;
     public GameObject Escape;
+    private bool isPressed = false;
 
 
     public Text Cuenta1;
@@ -26,9 +27,10 @@ public class Life : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return) && isPressed == false)
         {
             esCorrecta();
+            isPressed = true;
 
             if (correcta == false)
             {
@@ -114,5 +116,8 @@ public class Life : MonoBehaviour
         yield return new WaitForSeconds(2);
         CambioEscena();
     }
-
+    public void Resetearbooleano()
+    {
+        isPressed = false;
+    }
     }

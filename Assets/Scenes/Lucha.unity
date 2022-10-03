@@ -1530,6 +1530,7 @@ GameObject:
   - component: {fileID: 162293391}
   - component: {fileID: 162293390}
   - component: {fileID: 162293394}
+  - component: {fileID: 162293395}
   m_Layer: 5
   m_Name: btnContinuar
   m_TagString: Untagged
@@ -1634,6 +1635,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 162293395}
+        m_MethodName: reseteoBool
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 162293394}
+        m_MethodName: Resetearbooleano
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &162293392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1689,6 +1712,26 @@ MonoBehaviour:
   Object: {fileID: 1574832764}
   Ataque: {fileID: 1031176407}
   Escape: {fileID: 240618204}
+  Cuenta1: {fileID: 803102301}
+  Cuenta2: {fileID: 698825152}
+  operacion: {fileID: 164638597}
+--- !u!114 &162293395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162293388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7092d6b59877e4db5653e8c5d03a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 40
+  datosenemigos: {fileID: 0}
+  enemyPrefab: {fileID: 0}
+  Res: {fileID: 701222964}
+  correcta: 0
   Cuenta1: {fileID: 803102301}
   Cuenta2: {fileID: 698825152}
   operacion: {fileID: 164638597}
@@ -2998,8 +3041,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 186, y: 159.91}
-  m_SizeDelta: {x: 172.07999, y: 110.1761}
+  m_AnchoredPosition: {x: 234, y: 168}
+  m_SizeDelta: {x: 175, y: 110}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &270585003
 MonoBehaviour:
@@ -3033,6 +3076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1624026ec0658a749a353b1322f61cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemylife: {fileID: 270585003}
 --- !u!114 &270585005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5915,8 +5959,8 @@ GameObject:
   m_Component:
   - component: {fileID: 604401805}
   - component: {fileID: 604401807}
-  - component: {fileID: 604401806}
   - component: {fileID: 604401808}
+  - component: {fileID: 604401806}
   m_Layer: 5
   m_Name: vida
   m_TagString: Untagged
@@ -5953,9 +5997,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 604401804}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1624026ec0658a749a353b1322f61cf5, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d95c0ec3c603bb489f144353ccfdebc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  life: {fileID: 604401808}
 --- !u!114 &604401807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6075,7 +6120,7 @@ MonoBehaviour:
   ogro: {fileID: 11400000, guid: 942e56f0fa670e742abc8e4563219de8, type: 2}
   duende: {fileID: 11400000, guid: 3661b50e22b51c84f972c27ca72b3421, type: 2}
   elfo: {fileID: 11400000, guid: e72223f9279076c448f81c85aeea7dd0, type: 2}
-  enemylife: {fileID: 628352314}
+  enemylife: {fileID: 162293388}
 --- !u!1001 &614409340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6958,6 +7003,7 @@ GameObject:
   - component: {fileID: 701222966}
   - component: {fileID: 701222965}
   - component: {fileID: 701222964}
+  - component: {fileID: 701222967}
   m_Layer: 5
   m_Name: Respuesta
   m_TagString: Untagged
@@ -7037,7 +7083,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 628352314}
+      - m_Target: {fileID: 701222967}
         m_MethodName: esCorrecta
         m_Mode: 1
         m_Arguments:
@@ -7093,6 +7139,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701222962}
   m_CullTransparentMesh: 0
+--- !u!114 &701222967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701222962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7092d6b59877e4db5653e8c5d03a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 40
+  datosenemigos: {fileID: 0}
+  enemyPrefab: {fileID: 0}
+  Res: {fileID: 701222964}
+  correcta: 0
+  Cuenta1: {fileID: 803102301}
+  Cuenta2: {fileID: 698825152}
+  operacion: {fileID: 164638597}
 --- !u!1001 &703959162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15265,7 +15331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1480576953
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16246,7 +16312,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1574832765
 RectTransform:
   m_ObjectHideFlags: 0
