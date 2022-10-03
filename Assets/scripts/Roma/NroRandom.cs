@@ -10,10 +10,10 @@ public class NroRandom : MonoBehaviour
     public int NroFinal;
     public string RomaFinal;
     bool esM10;
-    public Text NroRomaFinal;
-    public Text txtopcion1;
-    public Text txtopcion2;
-    public Text txtopcion3;
+    public TextMesh NroRomaFinal;
+    public TextMesh txtopcion1;
+    public TextMesh txtopcion2;
+    public TextMesh txtopcion3;
 
     int option1;
     int option2;
@@ -21,6 +21,7 @@ public class NroRandom : MonoBehaviour
     int mezcla;
 
     bool esCorrecta;
+    
 
     void Start()
     {
@@ -170,6 +171,14 @@ public class NroRandom : MonoBehaviour
         {
             esCorrecta = false;
         }
-       
+
+    }
+
+    void Desplomar()
+    {
+        if (esCorrecta == true)
+        {
+                
+        }
     }
 }
