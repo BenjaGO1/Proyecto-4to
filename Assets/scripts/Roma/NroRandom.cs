@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class NroRandom : MonoBehaviour
 {
 
@@ -18,6 +19,8 @@ public class NroRandom : MonoBehaviour
     int option2;
     int option3;
     int mezcla;
+
+    bool esCorrecta;
 
     void Start()
     {
@@ -155,5 +158,18 @@ public class NroRandom : MonoBehaviour
 
         Debug.Log(NroFinal);
         Debug.Log(NroRomaFinal.text);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.name == mezcla.ToString())
+        {
+            esCorrecta = true;
+        }
+        else if (other.name != mezcla.ToString())
+        {
+            esCorrecta = false;
+        }
+       
     }
 }
