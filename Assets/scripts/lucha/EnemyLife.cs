@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class EnemyLife : MonoBehaviour
 {
-    public int health = 40;
+    public int health = 100;
     public EnemyData datosenemigos;
     public GameObject enemyPrefab;
     public InputField Res;
@@ -23,10 +23,32 @@ public class EnemyLife : MonoBehaviour
     private string N2;
     public bool isPressed;
 
+    public GameObject Elfo;
+    public GameObject Ogro;
+    public GameObject Duende;
+    public EnemyData ogro;
+    public EnemyData duende;
+    public EnemyData elfo;
+
 
     public void Start()
     {
-        //datosenemigos.derrotado = false;
+        if (PlayerPrefs.GetInt("valor") == 1)
+        {
+            datosenemigos = duende;
+            enemyPrefab = Duende;
+
+        }
+        if (PlayerPrefs.GetInt("valor") == 2)
+        {
+            datosenemigos = elfo;
+            enemyPrefab = Elfo;
+        }
+        if (PlayerPrefs.GetInt("valor") == 3)
+        {
+            datosenemigos = ogro;
+            enemyPrefab = Ogro;
+        }
     }
 
 

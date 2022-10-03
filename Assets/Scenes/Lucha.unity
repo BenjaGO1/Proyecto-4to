@@ -1735,6 +1735,13 @@ MonoBehaviour:
   Cuenta1: {fileID: 803102301}
   Cuenta2: {fileID: 698825152}
   operacion: {fileID: 164638597}
+  isPressed: 0
+  Elfo: {fileID: 1496555835}
+  Ogro: {fileID: 377191702}
+  Duende: {fileID: 1064328430}
+  ogro: {fileID: 11400000, guid: 942e56f0fa670e742abc8e4563219de8, type: 2}
+  duende: {fileID: 11400000, guid: 3661b50e22b51c84f972c27ca72b3421, type: 2}
+  elfo: {fileID: 11400000, guid: e72223f9279076c448f81c85aeea7dd0, type: 2}
 --- !u!1 &164638594
 GameObject:
   m_ObjectHideFlags: 0
@@ -3064,6 +3071,13 @@ MonoBehaviour:
   Cuenta1: {fileID: 803102301}
   Cuenta2: {fileID: 698825152}
   operacion: {fileID: 164638597}
+  isPressed: 0
+  Elfo: {fileID: 1496555835}
+  Ogro: {fileID: 377191702}
+  Duende: {fileID: 1064328430}
+  ogro: {fileID: 11400000, guid: 942e56f0fa670e742abc8e4563219de8, type: 2}
+  duende: {fileID: 11400000, guid: 3661b50e22b51c84f972c27ca72b3421, type: 2}
+  elfo: {fileID: 11400000, guid: e72223f9279076c448f81c85aeea7dd0, type: 2}
 --- !u!114 &270585004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6120,7 +6134,7 @@ MonoBehaviour:
   ogro: {fileID: 11400000, guid: 942e56f0fa670e742abc8e4563219de8, type: 2}
   duende: {fileID: 11400000, guid: 3661b50e22b51c84f972c27ca72b3421, type: 2}
   elfo: {fileID: 11400000, guid: e72223f9279076c448f81c85aeea7dd0, type: 2}
-  enemylife: {fileID: 162293388}
+  enemylife: {fileID: 0}
 --- !u!1001 &614409340
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6296,6 +6310,13 @@ MonoBehaviour:
   Cuenta1: {fileID: 803102301}
   Cuenta2: {fileID: 698825152}
   operacion: {fileID: 164638597}
+  isPressed: 0
+  Elfo: {fileID: 0}
+  Ogro: {fileID: 0}
+  Duende: {fileID: 0}
+  ogro: {fileID: 0}
+  duende: {fileID: 0}
+  elfo: {fileID: 0}
 --- !u!4 &628352315
 Transform:
   m_ObjectHideFlags: 0
@@ -7159,6 +7180,13 @@ MonoBehaviour:
   Cuenta1: {fileID: 803102301}
   Cuenta2: {fileID: 698825152}
   operacion: {fileID: 164638597}
+  isPressed: 0
+  Elfo: {fileID: 0}
+  Ogro: {fileID: 0}
+  Duende: {fileID: 0}
+  ogro: {fileID: 0}
+  duende: {fileID: 0}
+  elfo: {fileID: 0}
 --- !u!1001 &703959162
 PrefabInstance:
   m_ObjectHideFlags: 0
