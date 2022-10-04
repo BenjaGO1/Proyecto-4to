@@ -17,7 +17,6 @@ public class barraVidaPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //slider.value = GetComponent<EnemyLife>().health;
-        slider.value = life.health;
+            slider.value = life.health;
     }
 }

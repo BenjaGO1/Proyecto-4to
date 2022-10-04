@@ -88,7 +88,7 @@ public class Life : MonoBehaviour
         }
 
     }
-    void damage()
+    public void damage()
     {
         StartCoroutine(AtaqueEnemigo());
         health -= resul;
