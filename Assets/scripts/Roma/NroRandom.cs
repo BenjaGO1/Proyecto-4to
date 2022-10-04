@@ -174,9 +174,13 @@ public class NroRandom : MonoBehaviour
 
     }
 
+    bool caen1y2;
+    bool caen2y3;
+    bool caen1y3;
+
     void Desplomar()
     {
-        if (esCorrecta == true)
+        if 
         {
                 
         }
