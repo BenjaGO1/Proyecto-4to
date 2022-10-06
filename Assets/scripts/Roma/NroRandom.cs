@@ -180,7 +180,7 @@ public class NroRandom : MonoBehaviour
 
     void Desplomar()
     {
-        if 
+        if(caen1y2 == true) 
         {
                 
         }

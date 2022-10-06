@@ -10,7 +10,7 @@ public class enemigo : MonoBehaviour
     {
         if(enemydata.derrotado == true)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }
