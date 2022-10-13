@@ -119,7 +119,7 @@ public class EligeCuenta : MonoBehaviour
         btnContinuar.transform.position = new Vector3(1000, 1000, 0);
 
         //RandomizarDivi();
-        //RandomizarEnTexto();
+        //RandomizarEnTexto();  
         // RandomizarResta();
         RandomizarMulti();
 

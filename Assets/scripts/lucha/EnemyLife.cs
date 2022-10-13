@@ -72,7 +72,7 @@ public class EnemyLife : MonoBehaviour
         }
     }
 
-    void damage()
+    public void damage()
     {
         dañop = Res.text;
         daño = int.Parse(dañop);
