@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class EligeResp : MonoBehaviour
 {
+    bool esCorrecta;
+    public NroRandom nrorandom;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,5 +23,15 @@ public class EligeResp : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
 
+        if (other.tag == nrorandom.mezcla.ToString())
+        {
+            esCorrecta = true;
+            Debug.Log(esCorrecta);
+        }
+        else if (other.tag != nrorandom.mezcla.ToString())
+        {
+            esCorrecta = false;
+            Debug.Log(esCorrecta);
+        }
     }
 }

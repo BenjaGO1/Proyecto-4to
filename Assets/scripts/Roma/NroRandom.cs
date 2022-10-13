@@ -18,9 +18,8 @@ public class NroRandom : MonoBehaviour
     int option1;
     int option2;
     int option3;
-    int mezcla;
+    public int mezcla;
 
-    bool esCorrecta;
     
 
     void Start()
@@ -42,6 +41,7 @@ public class NroRandom : MonoBehaviour
     public void MezclarOpciones()
     {
         mezcla = Random.Range(1, 3);
+        Debug.Log(mezcla);
         option1 = Random.Range(1, 20);
         option2 = Random.Range(1, 20);
         option3 = Random.Range(1, 20);
@@ -161,28 +161,21 @@ public class NroRandom : MonoBehaviour
         Debug.Log(NroRomaFinal.text);
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter (Collider other)
     {
-        if (other.name == mezcla.ToString())
-        {
-            esCorrecta = true;
-        }
-        else if (other.name != mezcla.ToString())
-        {
-            esCorrecta = false;
-        }
 
+        
     }
 
     bool caen1y2;
     bool caen2y3;
     bool caen1y3;
 
-    void Desplomar()
-    {
-        if 
-        {
+    //void Desplomar()
+    //{
+    //    if()
+    //    {
                 
-        }
-    }
+    //    }
+    //}
 }
