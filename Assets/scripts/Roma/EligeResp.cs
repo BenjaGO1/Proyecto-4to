@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EligeResp : MonoBehaviour
 {
     bool esCorrecta;
     public NroRandom nrorandom;
-
+    public int contador;
+    public Text puntaje;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +19,13 @@ public class EligeResp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        puntaje.text = "puntaje = "+contador.ToString();
 
+        if (contador >= 9)
+        {
+            //aca se abre la puerta al castillo y te deja pasar
+            
+        }
     }
 
     void OnTriggerEnter(Collider other)
@@ -32,6 +40,18 @@ public class EligeResp : MonoBehaviour
         {
             esCorrecta = false;
             Debug.Log(esCorrecta);
+        }
+    }
+    void OnTriggerExit(Collider col)
+    {
+        if(col.tag == nrorandom.mezcla.ToString())
+        {
+            nrorandom.NroFinal = Random.Range(1, 20);
+
+            nrorandom.Romanificar();
+            nrorandom.MezclarOpciones();
+            
+            contador++;
         }
     }
 }

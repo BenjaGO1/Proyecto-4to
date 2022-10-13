@@ -27,9 +27,11 @@ public class NroRandom : MonoBehaviour
 
         NroFinal = Random.Range(1, 20);
 
+        Romanificar();
+
         MezclarOpciones();
 
-        Romanificar();
+       
     }
 
     // Update is called once per frame
@@ -40,53 +42,120 @@ public class NroRandom : MonoBehaviour
 
     public void MezclarOpciones()
     {
-        mezcla = Random.Range(1, 3);
+        mezcla = Random.Range(1, 4);
         Debug.Log(mezcla);
         option1 = Random.Range(1, 20);
         option2 = Random.Range(1, 20);
         option3 = Random.Range(1, 20);
 
-        if (NroFinal == option1 || option1 == option2)
+        if (esM10 == false)
         {
-            option1 = Random.Range(1, 20);
 
-            if (NroFinal == option1 || option1 == option2)
+            if (NroFinal == option1)
             {
-                option1 = Random.Range(1, 20);
+                if (NroFinal < 10)
+                {
+                    option1 = NroFinal + 1;
+                }
+                else
+                {
+                    option1 = NroFinal - 1;
+                }
+            }
+
+            if (NroFinal == option2)
+            {
+                if (NroFinal < 10)
+                {
+                    option1 = NroFinal + 1;
+                }
+                else
+                {
+                    option1 = NroFinal - 1;
+                }
+            }
+
+            if (NroFinal == option3)
+            {
+                if (NroFinal < 10)
+                {
+                    option1 = NroFinal + 1;
+                }
+                else
+                {
+                    option1 = NroFinal - 1;
+                }
+            }
+
+            if (mezcla == 1)
+            {
+                option1 = NroFinal;
+            }
+            else if (mezcla == 2)
+            {
+                option2 = NroFinal;
+            }
+            else if (mezcla == 3)
+            {
+                option3 = NroFinal;
             }
         }
 
-        if (NroFinal == option2 || option3 == option2)
+        else if (esM10 == true)
         {
-            option1 = Random.Range(1, 20);
 
-            if (NroFinal == option2 || option3 == option2)
+            if (NroFinal == option1)
             {
-                option1 = Random.Range(1, 20);
+                if (NroFinal + 10 < 10)
+                {
+                    option1 = NroFinal + 11;
+                }
+                else
+                {
+                    option1 = NroFinal + 9;
+                }
             }
-        }
 
-        if (NroFinal == option3 || option1 == option3)
-        {
-            option1 = Random.Range(1, 20);
-
-            if (NroFinal == option3 || option1 == option3)
+            if (NroFinal+ 10 == option2)
             {
-                option1 = Random.Range(1, 20);
+                if (NroFinal + 10< 10)
+                {
+                    option1 = NroFinal + 11;
+                }
+                else
+                {
+                    option1 = NroFinal + 9;
+                }
             }
-        }
 
-        if (mezcla == 1)
-        {
-            option1 = NroFinal;
-        }
-        else if (mezcla == 2)
-        {
-            option2 = NroFinal;
-        }
-        else if (mezcla == 3)
-        {
-            option3 = NroFinal;
+            if (NroFinal +10 == option3)
+            {
+                if (NroFinal + 10 < 10)
+                {
+                    option1 = NroFinal + 11;
+                }
+                else
+                {
+                    option1 = NroFinal + 9;
+                }
+            }
+
+
+            else
+            {
+                if (mezcla == 1)
+                {
+                    option1 = NroFinal + 10;
+                }
+                else if (mezcla == 2)
+                {
+                    option2 = NroFinal + 10;
+                }
+                else if (mezcla == 3)
+                {
+                    option3 = NroFinal + 10;
+                }
+            }
         }
 
         txtopcion1.text = option1.ToString();
@@ -156,16 +225,10 @@ public class NroRandom : MonoBehaviour
         {
             NroRomaFinal.text = RomaFinal;
         }
-
-        Debug.Log(NroFinal);
         Debug.Log(NroRomaFinal.text);
     }
 
-    void OnTriggerEnter (Collider other)
-    {
-
-        
-    }
+    
 
     bool caen1y2;
     bool caen2y3;
