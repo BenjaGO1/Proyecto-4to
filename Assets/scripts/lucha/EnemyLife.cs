@@ -94,7 +94,7 @@ public class EnemyLife : MonoBehaviour
 
     void CambioEscena()
     {
-        SceneManager.LoadScene("Primera pantalla");
+        SceneManager.LoadScene("Reino suma");
     }
     int resul;
 
