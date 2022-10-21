@@ -61,11 +61,12 @@ public class EnemyLife : MonoBehaviour
 
             esCorrecta();
             isPressed = true;
-            slider.value = health;
+            
 
             if (correcta == true)
             {
                 damage();
+                slider.value = health;
             }
 
             if (health <= 0)
@@ -80,7 +81,8 @@ public class EnemyLife : MonoBehaviour
     {
         dañop = Res.text;
         daño = int.Parse(dañop);
-        health -= daño;        
+        health -= daño;
+        
     }
 
     void Die()

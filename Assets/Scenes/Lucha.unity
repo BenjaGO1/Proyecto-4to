@@ -1712,6 +1712,7 @@ MonoBehaviour:
   Object: {fileID: 1574832764}
   Ataque: {fileID: 1031176407}
   Escape: {fileID: 240618204}
+  slider: {fileID: 604401807}
   Cuenta1: {fileID: 803102301}
   Cuenta2: {fileID: 698825152}
   operacion: {fileID: 164638597}
@@ -6131,6 +6132,7 @@ MonoBehaviour:
   Object: {fileID: 1574832764}
   Ataque: {fileID: 1031176407}
   Escape: {fileID: 240618204}
+  slider: {fileID: 604401807}
   Cuenta1: {fileID: 803102301}
   Cuenta2: {fileID: 698825152}
   operacion: {fileID: 164638597}
@@ -21035,6 +21037,7 @@ MonoBehaviour:
   Object: {fileID: 1574832764}
   Ataque: {fileID: 1031176407}
   Escape: {fileID: 240618204}
+  slider: {fileID: 604401807}
   Cuenta1: {fileID: 803102301}
   Cuenta2: {fileID: 698825152}
   operacion: {fileID: 164638597}

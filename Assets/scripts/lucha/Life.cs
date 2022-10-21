@@ -16,6 +16,7 @@ public class Life : MonoBehaviour
     public GameObject Ataque;
     public GameObject Escape;
     private bool isPressed = false;
+    public Slider slider;
 
 
     public Text Cuenta1;
@@ -35,11 +36,13 @@ public class Life : MonoBehaviour
             if (correcta == false)
             {
                 damage();
+                slider.value = health;
             }
 
             if (health <= 0)
             {
                 Die();
+                slider.value = 0;
             }
         }
     }
@@ -93,6 +96,7 @@ public class Life : MonoBehaviour
         StartCoroutine(AtaqueEnemigo());
         health -= resul;
         Debug.Log(health);
+        
     }
     IEnumerator AtaqueEnemigo()
     {
