@@ -22,6 +22,7 @@ public class EnemyLife : MonoBehaviour
     private string N1;
     private string N2;
     public bool isPressed;
+    public Slider slider;
 
     public GameObject Elfo;
     public GameObject Ogro;
@@ -57,8 +58,10 @@ public class EnemyLife : MonoBehaviour
       
         if (Input.GetKeyDown(KeyCode.Return) && isPressed == false)
         {
+
             esCorrecta();
             isPressed = true;
+            slider.value = health;
 
             if (correcta == true)
             {
@@ -68,6 +71,7 @@ public class EnemyLife : MonoBehaviour
             if (health <= 0)
             {
                 Die();
+                slider.value = 0;
             }
         }
     }
@@ -76,8 +80,7 @@ public class EnemyLife : MonoBehaviour
     {
         dañop = Res.text;
         daño = int.Parse(dañop);
-        health -= daño;
-        //Debug.Log(health);
+        health -= daño;        
     }
 
     void Die()
@@ -133,5 +136,4 @@ public class EnemyLife : MonoBehaviour
     {
         isPressed = false;
     }
-
 }

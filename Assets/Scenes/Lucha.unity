@@ -1736,6 +1736,7 @@ MonoBehaviour:
   Cuenta2: {fileID: 698825152}
   operacion: {fileID: 164638597}
   isPressed: 0
+  slider: {fileID: 270585005}
   Elfo: {fileID: 1496555835}
   Ogro: {fileID: 377191702}
   Duende: {fileID: 1064328430}
@@ -3097,7 +3098,6 @@ GameObject:
   m_Component:
   - component: {fileID: 270585002}
   - component: {fileID: 270585005}
-  - component: {fileID: 270585004}
   - component: {fileID: 270585003}
   m_Layer: 5
   m_Name: vidaEnemy
@@ -3147,25 +3147,13 @@ MonoBehaviour:
   Cuenta2: {fileID: 698825152}
   operacion: {fileID: 164638597}
   isPressed: 0
+  slider: {fileID: 270585005}
   Elfo: {fileID: 1496555835}
   Ogro: {fileID: 377191702}
   Duende: {fileID: 1064328430}
   ogro: {fileID: 11400000, guid: 942e56f0fa670e742abc8e4563219de8, type: 2}
   duende: {fileID: 11400000, guid: 3661b50e22b51c84f972c27ca72b3421, type: 2}
   elfo: {fileID: 11400000, guid: e72223f9279076c448f81c85aeea7dd0, type: 2}
---- !u!114 &270585004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 270585001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1624026ec0658a749a353b1322f61cf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemylife: {fileID: 270585003}
 --- !u!114 &270585005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6049,7 +6037,6 @@ GameObject:
   - component: {fileID: 604401805}
   - component: {fileID: 604401807}
   - component: {fileID: 604401808}
-  - component: {fileID: 604401806}
   m_Layer: 5
   m_Name: vida
   m_TagString: Untagged
@@ -6077,19 +6064,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &604401806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 604401804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d95c0ec3c603bb489f144353ccfdebc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  life: {fileID: 604401808}
 --- !u!114 &604401807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6386,6 +6360,7 @@ MonoBehaviour:
   Cuenta2: {fileID: 698825152}
   operacion: {fileID: 164638597}
   isPressed: 0
+  slider: {fileID: 270585005}
   Elfo: {fileID: 1496555835}
   Ogro: {fileID: 377191702}
   Duende: {fileID: 1064328430}
@@ -7256,6 +7231,7 @@ MonoBehaviour:
   Cuenta2: {fileID: 698825152}
   operacion: {fileID: 164638597}
   isPressed: 0
+  slider: {fileID: 270585005}
   Elfo: {fileID: 1496555835}
   Ogro: {fileID: 377191702}
   Duende: {fileID: 1064328430}
