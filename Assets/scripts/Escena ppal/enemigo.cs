@@ -16,7 +16,7 @@ public class enemigo : MonoBehaviour
     }
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "Enemigo")
+        if (col.gameObject.tag == "Player")
         {
             PlayerPrefs.SetInt("valor", col.gameObject.GetComponent<enemigo>().enemydata.orden);
             SceneManager.LoadScene("Lucha");

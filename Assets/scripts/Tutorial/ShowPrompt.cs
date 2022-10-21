@@ -17,7 +17,7 @@ public class ShowPrompt : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E) && trigger == true)
         {
-            Eprompt.SetActive(false);
+            Eprompt.SetActive(true);
         }
         
     }
