@@ -20,7 +20,7 @@ public class NroRandom : MonoBehaviour
     int option3;
     public int mezcla;
 
-    
+
 
     void Start()
     {
@@ -31,7 +31,7 @@ public class NroRandom : MonoBehaviour
 
         MezclarOpciones();
 
-       
+
     }
 
     // Update is called once per frame
@@ -48,116 +48,94 @@ public class NroRandom : MonoBehaviour
         option2 = Random.Range(1, 20);
         option3 = Random.Range(1, 20);
 
-        if (esM10 == false)
+        if (esM10 == true)
         {
-
-            if (NroFinal == option1)
-            {
-                if (NroFinal < 10)
-                {
-                    option1 = NroFinal + 1;
-                }
-                else
-                {
-                    option1 = NroFinal - 1;
-                }
-            }
-
-            if (NroFinal == option2)
-            {
-                if (NroFinal < 10)
-                {
-                    option1 = NroFinal + 1;
-                }
-                else
-                {
-                    option1 = NroFinal - 1;
-                }
-            }
-
-            if (NroFinal == option3)
-            {
-                if (NroFinal < 10)
-                {
-                    option1 = NroFinal + 1;
-                }
-                else
-                {
-                    option1 = NroFinal - 1;
-                }
-            }
-
-            if (mezcla == 1)
-            {
-                option1 = NroFinal;
-            }
-            else if (mezcla == 2)
-            {
-                option2 = NroFinal;
-            }
-            else if (mezcla == 3)
-            {
-                option3 = NroFinal;
-            }
+            NroFinal = NroFinal + 10;
         }
 
-        else if (esM10 == true)
+        if (mezcla == 1)
         {
+            option1 = NroFinal;
 
-            if (NroFinal == option1)
+            if (option1 == option2)
             {
-                if (NroFinal + 10 < 10)
+                if (NroFinal < 10)
                 {
-                    option1 = NroFinal + 11;
+                    option2 = NroFinal + 1;
                 }
                 else
                 {
-                    option1 = NroFinal + 9;
+                    option2 = NroFinal - 1;
                 }
             }
-
-            if (NroFinal+ 10 == option2)
+            if (option1 == option3)
             {
-                if (NroFinal + 10< 10)
+                if (NroFinal < 10)
                 {
-                    option1 = NroFinal + 11;
+                    option3 = NroFinal + 1;
                 }
                 else
                 {
-                    option1 = NroFinal + 9;
+                    option3 = NroFinal - 1;
                 }
             }
 
-            if (NroFinal +10 == option3)
+        }
+        else if (mezcla == 2)
+        {
+            option2 = NroFinal;
+
+            if (option2 == option1)
             {
-                if (NroFinal + 10 < 10)
+                if (NroFinal < 10)
                 {
-                    option1 = NroFinal + 11;
+                    option1 = NroFinal + 1;
                 }
                 else
                 {
-                    option1 = NroFinal + 9;
+                    option1 = NroFinal - 1;
                 }
             }
-
-
-            else
+            if (option1 == option3)
             {
-                if (mezcla == 1)
+                if (NroFinal < 10)
                 {
-                    option1 = NroFinal + 10;
+                    option3 = NroFinal + 1;
                 }
-                else if (mezcla == 2)
+                else
                 {
-                    option2 = NroFinal + 10;
-                }
-                else if (mezcla == 3)
-                {
-                    option3 = NroFinal + 10;
+                    option3 = NroFinal - 1;
                 }
             }
         }
+        else if (mezcla == 3)
+        {
+            option3 = NroFinal;
 
+            if (option3 == option2)
+            {
+                if (NroFinal < 10)
+                {
+                    option2 = NroFinal + 1;
+                }
+                else
+                {
+                    option2 = NroFinal - 1;
+                }
+            }
+            if (option3 == option1)
+            {
+                if (NroFinal < 10)
+                {
+                    option1 = NroFinal + 1;
+                }
+                else
+                {
+                    option1 = NroFinal - 1;
+                }
+            }
+        }  
+            
         txtopcion1.text = option1.ToString();
         txtopcion2.text = option2.ToString();
         txtopcion3.text = option3.ToString();
@@ -227,18 +205,4 @@ public class NroRandom : MonoBehaviour
         }
         Debug.Log(NroRomaFinal.text);
     }
-
-    
-
-    bool caen1y2;
-    bool caen2y3;
-    bool caen1y3;
-
-    //void Desplomar()
-    //{
-    //    if()
-    //    {
-                
-    //    }
-    //}
 }
