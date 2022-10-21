@@ -17,6 +17,6 @@ public class barraVidaEnemigo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            slider.value = enemylife.health;
+        slider.value = enemylife.health;
     }
 }

@@ -47,7 +47,7 @@ public class DialogueManager : MonoBehaviour
     }
     void EndDialogue()
     {
-        SceneManager.LoadScene("Primera pantalla");
+        SceneManager.LoadScene("Reino suma");
     }
 
 }
