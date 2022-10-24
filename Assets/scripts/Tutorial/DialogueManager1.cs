@@ -11,14 +11,22 @@ public class DialogueManager1 : MonoBehaviour
     public Text dialogueText;
     public Movement movimiento;
     public CursorLookAt lookAt;
+    public GameObject fondo;
 
-    private Queue<string> sentences;
+    public Queue<string> sentences;
     
 
 
     void Start()
     {
         sentences = new Queue<string>();
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            DisplayNextSentence();
+        }
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -35,21 +43,24 @@ public class DialogueManager1 : MonoBehaviour
 
         foreach (string sentence in dialogue.sentences)
         {
-            sentences.Enqueue(sentence);
+            sentences.Enqueue(sentence);    
         }
-
+        
+        
         DisplayNextSentence();
     }
 
     public void DisplayNextSentence()
     {
-        if (sentences.Count==0)
+        if (sentences.Count == 0)
         {
             EndDialogue();
+            Debug.Log("fin dialogo");
             return;
         }
 
         string sentence = sentences.Dequeue();
+        Debug.Log(sentences.Count);
         dialogueText.text = sentence;
     }
     void EndDialogue()
@@ -58,6 +69,7 @@ public class DialogueManager1 : MonoBehaviour
         movimiento.RunSpeed = 0.6f;
         lookAt.Sensitivity = 8;
         Cursor.visible = false;
+        fondo.SetActive(false);
     }
 
 }

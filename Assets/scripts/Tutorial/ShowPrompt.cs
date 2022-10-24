@@ -35,7 +35,11 @@ public class ShowPrompt : MonoBehaviour
     }
     void OnTriggerExit(Collider SalirTrigger)
     {
-        Debug.Log("Estas lejos del NPC");
-        EPromptCanvas.enabled = false;
+        if (SalirTrigger.tag == "Player")
+        {
+            Debug.Log("Estas lejos del NPC" + SalirTrigger.gameObject);
+            EPromptCanvas.enabled = false;
+        }
+            
     }
 }

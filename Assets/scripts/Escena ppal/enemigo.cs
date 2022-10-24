@@ -18,8 +18,8 @@ public class enemigo : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            PlayerPrefs.SetInt("valor", col.gameObject.GetComponent<enemigo>().enemydata.orden);
-            SceneManager.LoadScene("Lucha");
+            PlayerPrefs.SetInt("valor", GetComponent<enemigo>().enemydata.orden);
+            //SceneManager.LoadScene("Lucha");
         }
     }
 }

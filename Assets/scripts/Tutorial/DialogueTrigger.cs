@@ -7,11 +7,12 @@ public class DialogueTrigger : MonoBehaviour
     public GameObject dialogo;
     public DialogueManager1 dialogueManager1;
     public Dialogue dialogue;
+    public GameObject canvasDialogo;
     
     
     private void Update()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.E) && canvasDialogo.activeInHierarchy)
         {
             TriggerDialogue();
             dialogo.SetActive(true);

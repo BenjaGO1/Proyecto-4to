@@ -11781,6 +11781,7 @@ GameObject:
   - component: {fileID: 954186352}
   - component: {fileID: 954186351}
   - component: {fileID: 954186350}
+  - component: {fileID: 954186353}
   m_Layer: 5
   m_Name: Continuar
   m_TagString: Untagged
@@ -11848,7 +11849,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 954186353}
         m_MethodName: DisplayNextSentence
         m_Mode: 1
         m_Arguments:
@@ -11894,6 +11895,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954186348}
   m_CullTransparentMesh: 0
+--- !u!114 &954186353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954186348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a57ca51d76610643b08e11543cfd4a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 1627579460}
+  dialogueText: {fileID: 917063857}
+  movimiento: {fileID: 1904462076}
+  lookAt: {fileID: 1904462081}
+  fondo: {fileID: 59852842}
 --- !u!1 &965877909
 GameObject:
   m_ObjectHideFlags: 0
@@ -17673,6 +17691,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Elfo
       objectReference: {fileID: 0}
+    - target: {fileID: 8086193039393478963, guid: 7ef7f2041028a2948a30a23b41ea9176,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8086193039393478966, guid: 7ef7f2041028a2948a30a23b41ea9176,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20716,7 +20739,7 @@ Transform:
   m_GameObject: {fileID: 1739784568}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -247.43764, y: 2.3483753, z: 45.80612}
-  m_LocalScale: {x: -41.257965, y: -50.88054, z: -331.09927}
+  m_LocalScale: {x: 41.25797, y: 50.88054, z: 331.0993}
   m_Children: []
   m_Father: {fileID: 1376516219}
   m_RootOrder: 0
@@ -23397,6 +23420,7 @@ MonoBehaviour:
     - "Ahora a la lucha, es relativemente simple calcula bien la cuenta haces da\xF1o
       a tu enemigo"
     - "Pero si respondes mal te haces da\xF1o a vos mismo, prueba con ese monstruo"
+  canvasDialogo: {fileID: 397623991}
 --- !u!65 &1934138382
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24035,9 +24059,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 1627579460}
-  dialogueText: {fileID: 144032156}
+  dialogueText: {fileID: 917063857}
   movimiento: {fileID: 1904462076}
   lookAt: {fileID: 1904462081}
+  fondo: {fileID: 59852842}
 --- !u!4 &1978406249
 Transform:
   m_ObjectHideFlags: 0
@@ -25968,6 +25993,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ogro
       objectReference: {fileID: 0}
+    - target: {fileID: 1917343039200784387, guid: e046d8c761996834ead2d0237b8c0e95,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1917343039200784505, guid: e046d8c761996834ead2d0237b8c0e95,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26184,6 +26214,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: duende
+      objectReference: {fileID: 0}
+    - target: {fileID: 2250812997270351518, guid: 355ac6c92a3f5ab4e93326d7b0e5d1b4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1589836660081169822, guid: 355ac6c92a3f5ab4e93326d7b0e5d1b4, type: 3}
