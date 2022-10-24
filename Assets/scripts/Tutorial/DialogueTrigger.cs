@@ -5,7 +5,9 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     public GameObject dialogo;
+    public DialogueManager1 dialogueManager1;
     public Dialogue dialogue;
+    
     
     private void Update()
     {
@@ -19,7 +21,8 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        //FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        dialogueManager1.StartDialogue(dialogue);
     }
 
 

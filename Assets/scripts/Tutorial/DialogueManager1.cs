@@ -10,6 +10,7 @@ public class DialogueManager1 : MonoBehaviour
     public Text nameText;
     public Text dialogueText;
     public Movement movimiento;
+    public CursorLookAt lookAt;
 
     private Queue<string> sentences;
     
@@ -29,6 +30,8 @@ public class DialogueManager1 : MonoBehaviour
 
         movimiento.WalkSpeed = 0;
         movimiento.RunSpeed = 0;
+        lookAt.Sensitivity = 0;
+        Cursor.visible = true;
 
         foreach (string sentence in dialogue.sentences)
         {
@@ -53,6 +56,8 @@ public class DialogueManager1 : MonoBehaviour
     {
         movimiento.WalkSpeed = 0.3f;
         movimiento.RunSpeed = 0.6f;
+        lookAt.Sensitivity = 8;
+        Cursor.visible = false;
     }
 
 }

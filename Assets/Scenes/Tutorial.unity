@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.009783074, g: 0.051865667, b: 0.15223667, a: 1}
+  m_IndirectSpecularColor: {r: 0.009783053, g: 0.05186598, b: 0.1522367, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -803,6 +803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogo: {fileID: 189101338}
+  dialogueManager1: {fileID: 852249699}
   dialogue:
     name: Ernesto
     sentences:
@@ -1102,6 +1103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 852249698}
   - component: {fileID: 852249697}
+  - component: {fileID: 852249699}
   m_Layer: 0
   m_Name: '{DialogueManager}'
   m_TagString: Untagged
@@ -1137,6 +1139,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &852249699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852249696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a57ca51d76610643b08e11543cfd4a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 1130204463}
+  dialogueText: {fileID: 1157722639}
+  movimiento: {fileID: 1751797198}
+  lookAt: {fileID: 1751797196}
 --- !u!1 &858813862
 GameObject:
   m_ObjectHideFlags: 0
@@ -2036,7 +2054,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sensitivity: 8
-  ShowCursor: 0
 --- !u!54 &1751797197
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2070,11 +2087,6 @@ MonoBehaviour:
   jumpForce: 3
   maxJumps: 2
   counter: 2
-  pocion1: {fileID: 0}
-  pocion2: {fileID: 0}
-  pocion3: {fileID: 0}
-  pocion4: {fileID: 0}
-  counterData: {fileID: 0}
   DialogoTuto: {fileID: 0}
 --- !u!65 &1751797199
 BoxCollider:

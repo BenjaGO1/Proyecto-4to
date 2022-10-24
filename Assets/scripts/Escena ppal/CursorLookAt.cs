@@ -6,15 +6,14 @@ public class CursorLookAt : MonoBehaviour
 {
 
     public float Sensitivity;
-    public bool ShowCursor = false;
+    //public bool ShowCursor = false;
     
 
     void Start()
     {
-        if(ShowCursor == false)
-        {
-            Cursor.visible = false;
-        }
+        
+      Cursor.visible = false;
+
     }
 
     
