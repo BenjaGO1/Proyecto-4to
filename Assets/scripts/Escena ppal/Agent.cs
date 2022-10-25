@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class Agent : MonoBehaviour
 {
@@ -23,7 +24,15 @@ public class Agent : MonoBehaviour
     {
         if (Other.gameObject.tag == "Player")
         {
-            agente.speed = 3.5f;
+            agente.speed = 10;
+
+            if (Vector3.Distance(transform.position, destinationTransform.position) < 2)
+            {
+                SceneManager.LoadScene("Lucha");
+                Debug.Log("Esta cerca el enemigo");
+            }
         }
     }
+
+
 }

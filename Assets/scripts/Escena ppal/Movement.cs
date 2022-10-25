@@ -71,8 +71,6 @@ public class Movement : MonoBehaviour
         }
     }
 
-    public GameObject DialogoTuto;
-
     private void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.name == "ground")

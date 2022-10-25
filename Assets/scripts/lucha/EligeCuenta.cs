@@ -105,18 +105,16 @@ public class EligeCuenta : MonoBehaviour
     }
 
     public GameObject Cuenta;
-    public GameObject Heal;
-    public GameObject Object;
     public GameObject Ataque;
     public GameObject Escape;
 
     public void Reset()
     {
         Cuenta.SetActive(false);
-        Heal.SetActive(true);
-        Object.SetActive(true);
         Ataque.SetActive(true);
         btnContinuar.transform.position = new Vector3(1000, 1000, 0);
+        Escape.transform.localScale = new Vector3(2.2f, 2.2f, 2.2f);
+        Escape.transform.localPosition = new Vector3(280, -195, 0);
 
         //RandomizarDivi();
         //RandomizarEnTexto();  

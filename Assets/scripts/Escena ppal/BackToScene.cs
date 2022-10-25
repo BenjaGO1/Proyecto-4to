@@ -7,6 +7,6 @@ public class BackToScene : MonoBehaviour
 {
     public void Volver()
     {
-        SceneManager.LoadScene("Primera pantalla");
+        SceneManager.LoadScene("Reino suma");
     }
 }

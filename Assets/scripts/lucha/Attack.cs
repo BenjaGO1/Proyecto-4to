@@ -6,10 +6,8 @@ using UnityEngine.UI;
 public class Attack : MonoBehaviour
 {    
     public GameObject Cuenta;
-    public GameObject Heal;
-    public GameObject Object;
     public GameObject Ataque;
-   // EligeCuenta eligecuenta;
+    public GameObject Escape;
     public GameObject Lugar;
     public GameObject btnContinuar;
 
@@ -22,8 +20,6 @@ public class Attack : MonoBehaviour
     private void Start()
     {
         Cuenta.SetActive(false);
-        Heal.SetActive(true);
-        Object.SetActive(true);
         Ataque.SetActive(true);
         //eligecuenta.timeResp();
         
@@ -34,17 +30,15 @@ public class Attack : MonoBehaviour
     {
         Cuenta.SetActive(true);
         btnContinuar.transform.localPosition = new Vector3(115, -115, 0);
-        Heal.SetActive(false);
-        Object.SetActive(false);
         Ataque.SetActive(false);
-       // eligecuenta.isCounting = true;
+        Escape.transform.localScale = new Vector3(1, 1, 1);
+        Escape.transform.localPosition = new Vector3(375, -220, 0);
+        //eligecuenta.isCounting = true;
     }
 
     public void Desactivar()
     {
         Cuenta.SetActive(false);
-        Heal.SetActive(true);
-        Object.SetActive(true);
         Ataque.SetActive(true);
         //eligecuenta.isCounting = false;
     }
