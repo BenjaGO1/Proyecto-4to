@@ -198,9 +198,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC4
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0239955fc2597f147b5aad3b0dd203fa, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0239955fc2597f147b5aad3b0dd203fa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -52.208725
+      value: -24.7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0239955fc2597f147b5aad3b0dd203fa, type: 3}
       propertyPath: m_LocalPosition.y
@@ -208,7 +212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0239955fc2597f147b5aad3b0dd203fa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -279.46826
+      value: -295.7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0239955fc2597f147b5aad3b0dd203fa, type: 3}
       propertyPath: m_LocalRotation.x
@@ -351,7 +355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &397623992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -604,7 +608,6 @@ GameObject:
   - component: {fileID: 954186352}
   - component: {fileID: 954186351}
   - component: {fileID: 954186350}
-  - component: {fileID: 954186353}
   m_Layer: 5
   m_Name: Continuar
   m_TagString: Untagged
@@ -672,7 +675,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 954186353}
+      - m_Target: {fileID: 0}
         m_MethodName: DisplayNextSentence
         m_Mode: 1
         m_Arguments:
@@ -718,23 +721,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954186348}
   m_CullTransparentMesh: 0
---- !u!114 &954186353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 954186348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a57ca51d76610643b08e11543cfd4a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: {fileID: 1627579460}
-  dialogueText: {fileID: 917063857}
-  movimiento: {fileID: 1904462076}
-  lookAt: {fileID: 1904462081}
-  fondo: {fileID: 59852842}
 --- !u!1001 &1067171794
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -845,8 +831,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96c522d0a5a71584c8ea1de4a612a0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EPromptCanvas: {fileID: 397623994}
-  Eprompt: {fileID: 144032154}
 --- !u!65 &1242076697
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1143,6 +1127,7 @@ GameObject:
   - component: {fileID: 1904462076}
   - component: {fileID: 1904462075}
   - component: {fileID: 1904462081}
+  - component: {fileID: 1904462082}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1272,6 +1257,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Sensitivity: 8
+--- !u!114 &1904462082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904462074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c23c49591d8f3f45a8ccd959e8e10bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueUI: {fileID: 397623991}
+  textoDelDialogo: {fileID: 144032156}
+  fondo: {fileID: 59852842}
 --- !u!1001 &1917138741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1370,30 +1370,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.429189, y: 2.3222919, z: 10.344892}
   m_Center: {x: 0.154954, y: 0.17767486, z: -5.8607845}
---- !u!114 &1934138381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934138379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8355173c4aa4bc4f8b776f560df7659, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogo: {fileID: 59852842}
-  dialogueManager1: {fileID: 1978406248}
-  dialogue:
-    name: Ernesto
-    sentences:
-    - "Buenos D\xEDas viajero, nos encontramos en el asentamiento humano m\xE1s cercano
-      a los monstruos"
-    - "De ahora en adelante ya no veras a nadie m\xE1s"
-    - "Ahora a la lucha, es relativemente simple calcula bien la cuenta haces da\xF1o
-      a tu enemigo"
-    - "Pero si respondes mal te haces da\xF1o a vos mismo, prueba con ese monstruo"
-  canvasDialogo: {fileID: 397623991}
 --- !u!65 &1934138382
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1407,20 +1383,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.7906058, y: 2.3222919, z: 2.3809748}
   m_Center: {x: 0.0036178196, y: 0.17767486, z: 0.14263093}
---- !u!114 &1934138383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934138379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96c522d0a5a71584c8ea1de4a612a0b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EPromptCanvas: {fileID: 397623994}
-  Eprompt: {fileID: 144032154}
 --- !u!1 &1978406247
 GameObject:
   m_ObjectHideFlags: 0
@@ -1450,11 +1412,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a57ca51d76610643b08e11543cfd4a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 1627579460}
-  dialogueText: {fileID: 917063857}
-  movimiento: {fileID: 1904462076}
-  lookAt: {fileID: 1904462081}
-  fondo: {fileID: 59852842}
 --- !u!4 &1978406249
 Transform:
   m_ObjectHideFlags: 0
