@@ -31,10 +31,10 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKey(KeyCode.LeftShift) && puedoSaltar)
+        if (Input.GetKey(KeyCode.LeftShift) && puedoSaltar)
         {
             velocidadMovimiento = velCorrer;
-            if(y > 0)
+            if (y > 0)
             {
                 anim.SetBool("correr", true);
             }
@@ -64,7 +64,7 @@ public class Movement : MonoBehaviour
             }
             anim.SetBool("tocoSuelo", true);
         }
-        
+
 
         else
         {
@@ -94,17 +94,19 @@ public class Movement : MonoBehaviour
             //SceneManager.LoadScene("Lucha");
         }
     }
-    //private void OnTriggerEnter(Collider Other)
-    //{
-    //    if (Other.gameObject.tag == "Enemigo")
-    //    {
-    //        WalkSpeed = 0;
-    //        RunSpeed = 0;
-    //        PlayerPrefs.SetInt("valor", Other.gameObject.GetComponent<enemigo>().enemydata.orden);
-    //        //SceneManager.LoadScene("Lucha");
-    //    }
+    private void OnTriggerEnter(Collider Other)
+    {
+        if (Other.gameObject.tag == "Enemigo")
+        {
+            velocidadMovimiento = 0;
+            velocidadRotacion = 0;
+            PlayerPrefs.SetInt("valor", Other.gameObject.GetComponent<enemigo>().enemydata.orden);
+            //SceneManager.LoadScene("Lucha");
+        }
 
-    //}
+        //}
+    }
+
 }
 
 

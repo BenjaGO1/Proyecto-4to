@@ -8,11 +8,13 @@ public class Agent : MonoBehaviour
 {
     public Transform destinationTransform;
     public NavMeshAgent agente;
+    public Animator anim;
     
     // Start is called before the first frame update
     void Start()
     {
         agente.speed = 0;
+        anim.SetBool("Idle", true);
     }
 
     // Update is called once per frame
@@ -30,6 +32,7 @@ public class Agent : MonoBehaviour
             {
                 SceneManager.LoadScene("Lucha");
                 Debug.Log("Esta cerca el enemigo");
+                anim.SetBool("Idle", false);
             }
         }
     }

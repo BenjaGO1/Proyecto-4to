@@ -570,15 +570,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400116, guid: 7531569fc5354424a9c9ba46c7b42afb, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.33333334
+      value: 0.33
       objectReference: {fileID: 0}
     - target: {fileID: 400116, guid: 7531569fc5354424a9c9ba46c7b42afb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.16666667
+      value: 0.16
       objectReference: {fileID: 0}
     - target: {fileID: 400116, guid: 7531569fc5354424a9c9ba46c7b42afb, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.33333334
+      value: 0.33
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 7531569fc5354424a9c9ba46c7b42afb, type: 3}
       propertyPath: m_Controller
@@ -1019,7 +1019,6 @@ MonoBehaviour:
   textSpeed: 0.1
   DialogueBox: {fileID: 59852842}
   movimiento: {fileID: 1904462076}
-  miralo: {fileID: 0}
   PasaronCosas: 0
 --- !u!114 &1934138386
 MonoBehaviour:
@@ -1035,7 +1034,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogobox: {fileID: 59852842}
   movimiento: {fileID: 1904462076}
-  miralo: {fileID: 0}
 --- !u!95 &1963091920 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9500000, guid: 7531569fc5354424a9c9ba46c7b42afb,
