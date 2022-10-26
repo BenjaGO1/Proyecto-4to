@@ -5,94 +5,111 @@ using UnityEngine.SceneManagement;
 
 public class Movement : MonoBehaviour
 {
+    public float velocidadMovimiento = 20.0f;
+    public float velocidadRotacion = 200.0f;
+    public Animator anim;
+    public float x, y;
+    public int velCorrer;
 
-    public float WalkSpeed;
-    public float RunSpeed;
-    public float jumpForce;
-    public int maxJumps;
-    public int counter = 2;
 
-    int hasJump;
-    Rigidbody rb;
-    
+    public Rigidbody rb;
+    public float fuerzaDeSalto = 8f;
+    public bool puedoSaltar;
 
     void Start()
     {
-        hasJump = maxJumps;
-        rb = GetComponent<Rigidbody>();
+        Cursor.visible = false;
+        puedoSaltar = false;
     }
 
+
+    void FixedUpdate()
+    {
+        transform.Rotate(0, x * Time.deltaTime * velocidadRotacion, 0);
+        transform.Translate(0, 0, y * Time.deltaTime * velocidadMovimiento);
+    }
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        if(Input.GetKey(KeyCode.LeftShift) && puedoSaltar)
         {
-            transform.Translate(0, 0, WalkSpeed);
-            if (Input.GetKey(KeyCode.LeftShift))
+            velocidadMovimiento = velCorrer;
+            if(y > 0)
             {
-                transform.Translate(0, 0, RunSpeed);
+                anim.SetBool("correr", true);
+            }
+            else
+            {
+                anim.SetBool("correr", false);
+            }
+        }
+        else
+        {
+            anim.SetBool("correr", false);
+        }
 
-            }
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.Translate(0, 0, -WalkSpeed);
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                transform.Translate(0, 0, -RunSpeed);
 
-            }
-        }
-        if (Input.GetKey(KeyCode.D))
+
+        x = Input.GetAxis("Horizontal");
+        y = Input.GetAxis("Vertical");
+        anim.SetFloat("VelX", x);
+        anim.SetFloat("VelY", y);
+
+        if (puedoSaltar)
         {
-            transform.Translate(WalkSpeed, 0, 0);
-            if (Input.GetKey(KeyCode.LeftShift))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                transform.Translate(RunSpeed, 0, 0);
+                anim.SetBool("Salte", true);
+                rb.AddForce(new Vector3(0, fuerzaDeSalto, 0), ForceMode.Impulse);
             }
+            anim.SetBool("tocoSuelo", true);
         }
-        if (Input.GetKey(KeyCode.A))
+        
+
+        else
         {
-            transform.Translate(-WalkSpeed, 0, 0);
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                transform.Translate(-RunSpeed, 0, 0);
-            }
-        }
-        if (Input.GetKey(KeyCode.Space) && hasJump > 0)
-        {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            hasJump--;
-        }
-        if (transform.position.y <= -1)
-        {
-            transform.position=new Vector3(0, 1, 0);
-            transform.eulerAngles=new Vector3(0, 0, 0);
+            EstoyCayendo();
         }
     }
 
+    public void EstoyCayendo()
+    {
+        anim.SetBool("tocoSuelo", false);
+        anim.SetBool("Salte", false);
+    }
+
+
+
+    //if (Input.GetKey(KeyCode.LeftShift))
+    //{
+    //    transform.Translate(0, 0, y * Time.deltaTime * velocidadMovimiento * 2);
+    //}
+
     private void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.name == "ground")
-        {
-            hasJump = maxJumps;
-        }
+
         if (col.gameObject.tag == "Enemigo")
         {
             PlayerPrefs.SetInt("valor", col.gameObject.GetComponent<enemigo>().enemydata.orden);
             //SceneManager.LoadScene("Lucha");
         }
     }
-    private void OnTriggerEnter(Collider Other)
-    {
-        if (Other.gameObject.tag == "Enemigo")
-        {
-            WalkSpeed = 0;
-            RunSpeed = 0;
-            PlayerPrefs.SetInt("valor", Other.gameObject.GetComponent<enemigo>().enemydata.orden);
-            //SceneManager.LoadScene("Lucha");
-        }
+    //private void OnTriggerEnter(Collider Other)
+    //{
+    //    if (Other.gameObject.tag == "Enemigo")
+    //    {
+    //        WalkSpeed = 0;
+    //        RunSpeed = 0;
+    //        PlayerPrefs.SetInt("valor", Other.gameObject.GetComponent<enemigo>().enemydata.orden);
+    //        //SceneManager.LoadScene("Lucha");
+    //    }
 
-    }        
-    
+    //}
 }
+
+
+
+
+
+
+

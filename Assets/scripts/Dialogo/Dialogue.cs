@@ -10,7 +10,6 @@ public class Dialogue : MonoBehaviour
     public float textSpeed;
     public GameObject DialogueBox;
     public Movement movimiento;
-    public CursorLookAt miralo;
     public bool PasaronCosas;
 
     private int index;
@@ -68,10 +67,8 @@ public class Dialogue : MonoBehaviour
         {
             DialogueBox.SetActive(false);
             textComponent.enabled = false;
-            movimiento.WalkSpeed = 0.3f;
-            movimiento.RunSpeed = 0.6f;
-            movimiento.jumpForce = 6;
-            miralo.Sensitivity = 8;
+            movimiento.velocidadMovimiento = 20f;
+            movimiento.velocidadRotacion = 200f;
             PasaronCosas = true;
         }
     }

@@ -6,8 +6,6 @@ public class DialogueTrigger : MonoBehaviour
 {
     public GameObject dialogobox;
     public Movement movimiento;
-    public CursorLookAt miralo;
-
 
     void Start()
     {
@@ -24,10 +22,8 @@ public class DialogueTrigger : MonoBehaviour
         if (Other.gameObject.tag == "Player")
         {
             dialogobox.SetActive(true);
-            movimiento.WalkSpeed = 0;
-            movimiento.RunSpeed = 0;
-            movimiento.jumpForce = 0;
-            miralo.Sensitivity = 0;
+            movimiento.velocidadMovimiento = 0f;
+            movimiento.velocidadRotacion = 0f;
         }
 
     }
