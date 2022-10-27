@@ -35,7 +35,7 @@ public class Agent : MonoBehaviour
 
             if (Vector3.Distance(transform.position, destinationTransform.position) < 10)
             {
-                SceneManager.LoadScene("Lucha");
+                SceneManager.LoadScene("Lucha M");
                 Debug.Log("Esta cerca el enemigo");
                 agente.speed = 0;
                 
