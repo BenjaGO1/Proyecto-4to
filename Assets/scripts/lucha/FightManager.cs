@@ -18,15 +18,21 @@ public class FightManager : MonoBehaviour
         if (PlayerPrefs.GetInt("valor") == 1)
         {
             Instantiate(Duende, new Vector3(14, 0, 14), Quaternion.identity);
+            Duende.transform.eulerAngles = new Vector3(0, -90, 0);
+            Duende.transform.localScale = new Vector3(1, 1, 1);
             
         }
         if (PlayerPrefs.GetInt("valor") == 2)
         {
             Instantiate(Elfo, new Vector3(14, 0, 14), Quaternion.identity);
+            Elfo.transform.eulerAngles = new Vector3(0, -90, 0);
+            Elfo.transform.localScale = new Vector3(1, 1, 1);
         }
         if (PlayerPrefs.GetInt("valor") == 3)
         {
             Instantiate(Ogro, new Vector3(14, 0, 14), Quaternion.identity);
+            Ogro.transform.eulerAngles = new Vector3(0, -90, 0);
+            Ogro.transform.localScale = new Vector3(1, 1, 1);
         }
     }
 
