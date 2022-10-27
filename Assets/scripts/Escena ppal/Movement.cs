@@ -100,8 +100,9 @@ public class Movement : MonoBehaviour
         {
             velocidadMovimiento = 0;
             velocidadRotacion = 0;
+            velCorrer = 0;
             PlayerPrefs.SetInt("valor", Other.gameObject.GetComponent<enemigo>().enemydata.orden);
-            //SceneManager.LoadScene("Lucha");
+            
         }
 
         //}
