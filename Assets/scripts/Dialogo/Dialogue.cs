@@ -69,6 +69,8 @@ public class Dialogue : MonoBehaviour
             textComponent.enabled = false;
             movimiento.velocidadMovimiento = 20f;
             movimiento.velocidadRotacion = 200f;
+            movimiento.fuerzaDeSalto = 8f;
+            movimiento.puedoSaltar = true;
             PasaronCosas = true;
         }
     }

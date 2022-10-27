@@ -123,13 +123,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: DUENDEBIEN (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b00d50cee618b1349889fe6364bb3719, type: 3}
+      propertyPath: m_TagString
+      value: Enemigo
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: b00d50cee618b1349889fe6364bb3719, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: b00d50cee618b1349889fe6364bb3719, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.018
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: b00d50cee618b1349889fe6364bb3719, type: 3}
       propertyPath: m_LocalPosition.z
@@ -179,6 +183,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.4363301
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: b00d50cee618b1349889fe6364bb3719, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6d8bb2fe7c91d514fbb6b578ab1ed974, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b00d50cee618b1349889fe6364bb3719, type: 3}
 --- !u!4 &382645693 stripped

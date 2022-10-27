@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21178aadef85a35478bd985ac5534e5d, type: 3}
-  m_Name: ElfoData
+  m_Name: Duende2Data
   m_EditorClassIdentifier: 
   derrotado: 0
   orden: 2

@@ -24,17 +24,20 @@ public class Agent : MonoBehaviour
         agente.destination = destinationTransform.position;
         DistanceToPLayer = Vector3.Distance(transform.position, destinationTransform.position);
     }
+
+
     void OnTriggerEnter(Collider Other)
     {
         if (Other.gameObject.tag == "Player")
         {
-            agente.speed = 10;
+            agente.speed = 25;
             anim.SetBool("Idle", false);
 
-            if (Vector3.Distance(transform.position, destinationTransform.position) <= 5)
+            if (Vector3.Distance(transform.position, destinationTransform.position) < 10)
             {
                 SceneManager.LoadScene("Lucha");
                 Debug.Log("Esta cerca el enemigo");
+                agente.speed = 0;
                 
             }
         }

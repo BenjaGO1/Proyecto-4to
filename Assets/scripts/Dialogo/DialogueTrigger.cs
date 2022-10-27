@@ -24,6 +24,7 @@ public class DialogueTrigger : MonoBehaviour
             dialogobox.SetActive(true);
             movimiento.velocidadMovimiento = 0f;
             movimiento.velocidadRotacion = 0f;
+            movimiento.fuerzaDeSalto = 0f;
         }
 
     }
