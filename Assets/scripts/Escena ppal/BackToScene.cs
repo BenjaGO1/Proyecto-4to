@@ -7,6 +7,6 @@ public class BackToScene : MonoBehaviour
 {
     public void Volver()
     {
-        SceneManager.LoadScene("Reino suma");
+        SceneManager.LoadScene("Lucha M");
     }
 }
