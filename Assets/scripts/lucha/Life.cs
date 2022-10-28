@@ -56,7 +56,7 @@ public class Life : MonoBehaviour
 
     void CambioEscena()
     {
-        SceneManager.LoadScene("Primera pantalla");
+        SceneManager.LoadScene("Reino multi");
     }
     int resul;
 
@@ -88,6 +88,10 @@ public class Life : MonoBehaviour
         if (resul == int.Parse(Resint))
         {
             correcta = true;
+        }
+        else
+        {
+            correcta = false;
         }
 
     }
@@ -124,4 +128,4 @@ public class Life : MonoBehaviour
     {
         isPressed = false;
     }
-    }
+}

@@ -132,6 +132,10 @@ public class EnemyLife : MonoBehaviour
         {
             correcta = true;
         }
+        else
+        {
+            correcta = false;
+        }
      
     }
     public void reseteoBool()

@@ -60,8 +60,7 @@ public class EligeCuenta : MonoBehaviour
             CorrecciónMulti();
             //CorrecciónResta();
             //CorrecciónSuma();
-            Correccionado();
-           
+            Correccionado();           
         }
 
 
@@ -118,7 +117,7 @@ public class EligeCuenta : MonoBehaviour
 
         //RandomizarDivi();
         //RandomizarEnTexto();  
-        // RandomizarResta();
+        //RandomizarResta();
         RandomizarMulti();
 
         
