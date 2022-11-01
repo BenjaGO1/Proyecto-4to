@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - NROSCUENTA
+  - Enemigo
+  - agarrables
+  - agarrador
+  - soporte
+  - 1
+  - 2
+  - 3
+  - NPC
   layers:
   - Default
   - TransparentFX
