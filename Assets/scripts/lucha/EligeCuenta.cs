@@ -41,7 +41,7 @@ public class EligeCuenta : MonoBehaviour
     bool inpEscribir = true;
     void Update()
     {
-     //SI SE DESACTIVA EL INPUTFIELD ACTIVAR EL CONTINUAR Y DESHABILITAR EL TIEMPO   
+        
         timeResp();
         if (inpEscribir == true)
         {
